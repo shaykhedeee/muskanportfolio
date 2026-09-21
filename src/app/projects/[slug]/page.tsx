@@ -563,7 +563,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ) : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa" ? (
                 <Villa5BhkBedWallElevationSvg />
               ) : slug === "ekkat-boutique" ? (
-                <EkkatDisplayAlcoveElevationSvg />
+                <Image
+                  src="/images/projects/ekkat-boutique/cad-console-furniture-detail.png"
+                  alt="AutoCAD 2D Detail · Modular Console Table Furniture Detail (1:10)"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <BedroomWardrobeElevationSvg />
               )}
@@ -577,7 +582,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "AutoCAD 2D: Master Bed Wall (DWG-05)"
                   : slug === "ekkat-boutique"
-                  ? "AutoCAD 2D: Arched Display Alcoves (EK-01)"
+                  ? "AutoCAD 2D: Modular Console (1:10)"
                   : "Bedroom Wardrobe Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -588,7 +593,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "Backlit translucent quartzite stone slab (2000×1700mm) framed in fluted walnut with classic wainscoting boiserie and brass torch sconces."
                   : slug === "ekkat-boutique"
-                  ? "Monolithic Roman arched display alcoves with warm 2700K perimeter halo LED wash, sage green cabinetry, and tropical palm botanical backdrop."
+                  ? "Technical furniture detail (1:10): 2400W×450D×750H mm modular console with 18mm timber top, plain ply back, and 6 equal 394mm storage shutters."
                   : "A clean, functional wardrobe with laminate and rattan shutters."}
               </p>
             </div>
@@ -612,7 +617,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ) : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa" ? (
                 <KitchenElevationSvg />
               ) : slug === "ekkat-boutique" ? (
-                <EkkatGarmentRailElevationSvg />
+                <Image
+                  src="/images/projects/ekkat-boutique/cad-window-wall-elevation.png"
+                  alt="AutoCAD 2D Architectural Drawing · Window Wall Elevation & Seating Storage"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <KitchenElevationSvg />
               )}
@@ -626,7 +636,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "AutoCAD 2D: Heavy & Show Kitchen (DWG-06)"
                   : slug === "ekkat-boutique"
-                  ? "AutoCAD 2D: Modular Shelving & Rails (EK-03)"
+                  ? "AutoCAD 2D: Window Wall & Seating Storage"
                   : "Kitchen Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -637,7 +647,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "Dual-zone culinary architecture: high-output wok extraction in the rear heavy kitchen paired with seamless entertaining island in the show kitchen."
                   : slug === "ekkat-boutique"
-                  ? "Floor-to-ceiling black steel modular uprights with sage green base cabinetry, central Roman arched mirror portal, and suspended brushed brass garment rails."
+                  ? "Full architectural elevation: 1439W×2992H mm window wall with 900×1200mm glass, 550H upholstered seat cushion, four 350mm shutters, and 19/20mm site filler dummies."
                   : "Modular kitchen with warm tones and ample storage."}
               </p>
             </div>
@@ -671,7 +681,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "the-calm-house"
                   ? "/images/projects/sarthak-residence/floor-plan-3bhk.jpg"
                   : slug === "ekkat-boutique"
-                  ? "/images/projects/ekkat-boutique/cad-reception-counter.png"
+                  ? "/images/projects/ekkat-boutique/cad-master-floor-plan.png"
                   : project.spatialStudy?.floorPlanImage || project.heroImage
               }
               afterImage={
@@ -680,7 +690,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "the-calm-house"
                   ? "/images/projects/sarthak-residence/living-dining-panorama.png"
                   : slug === "ekkat-boutique"
-                  ? "/images/projects/ekkat-boutique/reception-cash-wrap.png"
+                  ? "/images/projects/ekkat-boutique/axonometric-furnished-cutaway.jpg"
                   : project.heroImage
               }
               beforeLabel={
@@ -689,7 +699,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "the-calm-house"
                   ? "2D Furniture Layout Blueprint"
                   : slug === "ekkat-boutique"
-                  ? "AutoCAD 2D Drawing (RC-002)"
+                  ? "AutoCAD Master Plan (A-106 REV 06)"
                   : "Architectural Planning"
               }
               afterLabel={
@@ -698,7 +708,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "the-calm-house"
                   ? "3D Render: Living & Dining Flow"
                   : slug === "ekkat-boutique"
-                  ? "3D Render: Reception & Cash Wrap"
+                  ? "3D Furnished Cutaway Model"
                   : "Final Photorealistic Render"
               }
               title={
@@ -707,7 +717,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "the-calm-house"
                   ? "Open Living & Dining Flow: Blueprint to Reality"
                   : slug === "ekkat-boutique"
-                  ? "Reception Counter: From CAD Drawing RC-002 to Built Reality"
+                  ? "Ekkat Flagship Architecture: Master Plan to 3D Furnished Cutaway"
                   : "Spatial Blueprint to Reality Transformation"
               }
               caption={
@@ -716,7 +726,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "the-calm-house"
                   ? "Slide to observe how the furniture layout plan transforms into an airy, interconnected living and dining hall with custom fluted mouldings."
                   : slug === "ekkat-boutique"
-                  ? "Slide horizontally to compare the technical AutoCAD external elevation (RC-002) with the finished reception cash-wrap featuring illuminated circular signage, framed fabrics, and sage green cabinetry."
+                  ? "Slide horizontally to compare the dimensioned 20.9m architectural floor plan (Drawing A-106 REV 06) with the fully furnished 3D isometric cutaway assembly showing reception, central display aisles, and rear suites."
                   : "Slide to compare the technical spatial design with the finished photorealistic visualization."
               }
             />
@@ -731,7 +741,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       src={view.url}
                       alt={view.viewLabel}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      className={
+                        view.url.includes("cad") || view.url.includes("floor-plan")
+                          ? "object-contain bg-white p-3 group-hover:scale-105 transition-transform duration-500 ease-out"
+                          : "object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      }
                     />
                   </div>
                   <div className="font-display text-xl text-brown">{view.viewLabel}</div>
