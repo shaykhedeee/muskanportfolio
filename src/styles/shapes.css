@@ -1,0 +1,82 @@
+/* Architectural Arches & Organic Masks */
+.mask-arch {
+  border-radius: 240px 240px 16px 16px;
+  overflow: hidden;
+}
+
+.mask-arch-tall {
+  border-radius: 360px 360px 20px 20px;
+  overflow: hidden;
+}
+
+.mask-arch-pill {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.arch-hero {
+  border-radius: 280px 280px 24px 24px;
+  overflow: hidden;
+}
+
+.arch-card {
+  border-radius: 140px 140px 24px 24px;
+  overflow: hidden;
+}
+
+.arch-portal {
+  border-radius: 160px 160px 24px 24px;
+  overflow: hidden;
+}
+
+.arch-sm {
+  border-radius: 56px 56px 20px 20px;
+  overflow: hidden;
+}
+
+.arch-full {
+  border-radius: 9999px 9999px 24px 24px;
+  overflow: hidden;
+}
+
+/* Wavy Paper Transition Edge */
+.wavy-separator {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wavy-separator svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 48px;
+}
+
+/* Taped Paper Note effect */
+.paper-tape-note {
+  position: relative;
+  background-color: #FFFDF7;
+  box-shadow: 0 4px 20px rgba(75, 52, 43, 0.06);
+  border: 1px solid rgba(216, 205, 187, 0.5);
+}
+
+.paper-tape-note::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 20px;
+  background-color: rgba(246, 216, 107, 0.45);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1px);
+}
+
+/* Grain texture overlay (subtle < 4% opacity) */
+.paper-grain {
+  background-image: radial-gradient(rgba(75, 52, 43, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
