@@ -509,7 +509,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ) : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa" ? (
                 <Villa5BhkStudyUnitElevationSvg />
               ) : slug === "ekkat-boutique" ? (
-                <EkkatDisplayAlcoveElevationSvg />
+                <Image
+                  src="/images/projects/ekkat-boutique/cad-reception-counter.png"
+                  alt="AutoCAD 2D Drawing · Reception Counter External Elevations (RC-002)"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <LivingRoomElevationSvg />
               )}
@@ -523,7 +528,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "AutoCAD 2D: Bespoke Study Unit (DWG-04)"
                   : slug === "ekkat-boutique"
-                  ? "AutoCAD 2D: Arched Display Alcove (EK-01)"
+                  ? "AutoCAD 2D: Reception Counter (RC-002)"
                   : "Living Room Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -534,7 +539,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "5 BHK Villa ergonomic study lounge: upper fluted glass cabinetry, arched open book display with warm cove LED, and cantilevered walnut desk."
                   : slug === "ekkat-boutique"
-                  ? "Monolithic plaster Roman arches with concealed 2700K perimeter LED halo wash, honed Roman travertine display plinths, and brushed brass rails."
+                  ? "Official shop drawing (DWG RC-002, 1:10 A3): 1500W×900H×1200D mm counter, 100mm plinth, 750mm desk, sage green laminate with 300mm fluted timber feature panel."
                   : "TV unit with open shelving and natural wood finish."}
               </p>
             </div>
@@ -558,7 +563,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ) : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa" ? (
                 <Villa5BhkBedWallElevationSvg />
               ) : slug === "ekkat-boutique" ? (
-                <EkkatCashWrapElevationSvg />
+                <EkkatDisplayAlcoveElevationSvg />
               ) : (
                 <BedroomWardrobeElevationSvg />
               )}
@@ -572,7 +577,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "AutoCAD 2D: Master Bed Wall (DWG-05)"
                   : slug === "ekkat-boutique"
-                  ? "AutoCAD 2D: Cash-Wrap Counter (EK-02)"
+                  ? "AutoCAD 2D: Arched Display Alcoves (EK-01)"
                   : "Bedroom Wardrobe Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -583,7 +588,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "Backlit translucent quartzite stone slab (2000×1700mm) framed in fluted walnut with classic wainscoting boiserie and brass torch sconces."
                   : slug === "ekkat-boutique"
-                  ? "Curved fluted oak reception counter with 30mm honed Roman travertine overhang, brushed brass trim, and recessed kickplate."
+                  ? "Monolithic Roman arched display alcoves with warm 2700K perimeter halo LED wash, sage green cabinetry, and tropical palm botanical backdrop."
                   : "A clean, functional wardrobe with laminate and rattan shutters."}
               </p>
             </div>
@@ -621,7 +626,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "AutoCAD 2D: Heavy & Show Kitchen (DWG-06)"
                   : slug === "ekkat-boutique"
-                  ? "AutoCAD 2D: Bespoke Garment Rail (EK-03)"
+                  ? "AutoCAD 2D: Modular Shelving & Rails (EK-03)"
                   : "Kitchen Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -632,7 +637,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
                   ? "Dual-zone culinary architecture: high-output wok extraction in the rear heavy kitchen paired with seamless entertaining island in the show kitchen."
                   : slug === "ekkat-boutique"
-                  ? "Ceiling-suspended continuous brushed champagne brass apparel rail with integrated travertine accessory cubes."
+                  ? "Floor-to-ceiling black steel modular uprights with sage green base cabinetry, central Roman arched mirror portal, and suspended brushed brass garment rails."
                   : "Modular kitchen with warm tones and ample storage."}
               </p>
             </div>
@@ -665,6 +670,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "/images/projects/mr-vivek-residence/cad-living-tv-unit.png"
                   : slug === "the-calm-house"
                   ? "/images/projects/sarthak-residence/floor-plan-3bhk.jpg"
+                  : slug === "ekkat-boutique"
+                  ? "/images/projects/ekkat-boutique/cad-reception-counter.png"
                   : project.spatialStudy?.floorPlanImage || project.heroImage
               }
               afterImage={
@@ -672,6 +679,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "/images/projects/mr-vivek-residence/hero-living-tv-unit.png"
                   : slug === "the-calm-house"
                   ? "/images/projects/sarthak-residence/living-dining-panorama.png"
+                  : slug === "ekkat-boutique"
+                  ? "/images/projects/ekkat-boutique/reception-cash-wrap.png"
                   : project.heroImage
               }
               beforeLabel={
@@ -679,6 +688,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "AutoCAD 2D Drawing (DWG-01)"
                   : slug === "the-calm-house"
                   ? "2D Furniture Layout Blueprint"
+                  : slug === "ekkat-boutique"
+                  ? "AutoCAD 2D Drawing (RC-002)"
                   : "Architectural Planning"
               }
               afterLabel={
@@ -686,6 +697,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "3D Render: Arched TV Wall"
                   : slug === "the-calm-house"
                   ? "3D Render: Living & Dining Flow"
+                  : slug === "ekkat-boutique"
+                  ? "3D Render: Reception & Cash Wrap"
                   : "Final Photorealistic Render"
               }
               title={
@@ -693,6 +706,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "Living TV Wall: From CAD Drawing to 3D Reality"
                   : slug === "the-calm-house"
                   ? "Open Living & Dining Flow: Blueprint to Reality"
+                  : slug === "ekkat-boutique"
+                  ? "Reception Counter: From CAD Drawing RC-002 to Built Reality"
                   : "Spatial Blueprint to Reality Transformation"
               }
               caption={
@@ -700,6 +715,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "Slide horizontally to compare the technical AutoCAD wall elevation with the final rendered finish featuring 2700K ambient cove lighting and acoustic oak battens."
                   : slug === "the-calm-house"
                   ? "Slide to observe how the furniture layout plan transforms into an airy, interconnected living and dining hall with custom fluted mouldings."
+                  : slug === "ekkat-boutique"
+                  ? "Slide horizontally to compare the technical AutoCAD external elevation (RC-002) with the finished reception cash-wrap featuring illuminated circular signage, framed fabrics, and sage green cabinetry."
                   : "Slide to compare the technical spatial design with the finished photorealistic visualization."
               }
             />
