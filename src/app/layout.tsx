@@ -23,13 +23,15 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://muskanpareek.com"),
   title: "Muskan Pareek — Interior Designer | AutoCAD, SketchUp & 3D Visualization",
   description:
-    "Interior Designer based in Bengaluru with 3+ years of experience across residential interiors, space planning, modular furniture, AutoCAD drafting, SketchUp modelling, and photorealistic 3D visualization.",
+    "Interior Designer based in Bengaluru and Jaipur with 4+ years of experience across residential interiors, space planning, modular furniture, AutoCAD drafting, SketchUp modelling, and photorealistic 3D visualization.",
   keywords: [
     "Muskan Pareek",
     "Interior Designer",
     "Bengaluru Interior Designer",
+    "Jaipur Interior Designer",
     "AutoCAD Drafting",
     "SketchUp 3D Modelling",
     "Photorealistic 3D Visualization",
@@ -39,8 +41,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Muskan Pareek — Interior Designer",
     description: "Designing spaces that feel like home. Thoughtful, functional, and visually refined interiors.",
+    url: "https://muskanpareek.com",
+    siteName: "Muskan Pareek Interior Design",
     type: "website",
     locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Muskan Pareek — Interior Designer",
+    description: "Designing spaces that feel like home. Thoughtful, functional, and visually refined interiors.",
   },
 };
 

@@ -110,36 +110,27 @@ export function ContactSection() {
             {/* Direct Contact Information */}
             <div className="bg-paper-card/80 p-4 rounded-xl border border-stone/30 flex flex-col gap-2">
               <a
-                href="mailto:hello@muskanpareek.com"
+                href="mailto:pareekmuskan01@gmail.com"
                 className="flex items-center gap-2 text-xs md:text-sm font-medium text-brown hover:text-charcoal transition-colors group"
               >
                 <div className="group-hover:rotate-12 transition-transform duration-300">
                   <SunBadge size={16} />
                 </div>
-                <span>hello@muskanpareek.com</span>
+                <span>pareekmuskan01@gmail.com</span>
               </a>
               <div className="flex items-center gap-2 text-xs text-brown-soft">
                 <MapPin className="w-3.5 h-3.5 text-olive shrink-0" />
-                <span>Jaipur, Rajasthan, India</span>
+                <span>Bengaluru &amp; Jaipur, India</span>
               </div>
               <div className="flex items-center gap-3 pt-2 border-t border-stone/20 text-brown-soft">
                 <a
-                  href="https://www.linkedin.com/in/muskan-pareek-76915b244/"
+                  href="https://www.linkedin.com/in/muskan-pareek-78b19a224"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Muskan Pareek on LinkedIn"
                   className="hover:text-charcoal transition-colors"
                 >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Muskan Pareek on Instagram"
-                  className="hover:text-charcoal transition-colors"
-                >
-                  <Instagram className="w-4 h-4" />
+                  <Linkedin className="w-4 h-4 text-sunflower-deep" />
                 </a>
               </div>
             </div>
@@ -167,12 +158,13 @@ export function ContactSection() {
           <Link href="/#home" className="hover:text-charcoal">Home</Link>
           <Link href="/about" className="hover:text-charcoal">About</Link>
           <Link href="/projects" className="hover:text-charcoal">Projects</Link>
-          <Link href="/work" className="hover:text-charcoal">Services</Link>
+          <Link href="/services" className="hover:text-charcoal">Services</Link>
+          <Link href="/resume" className="hover:text-charcoal">Resume</Link>
           <Link href="/process" className="hover:text-charcoal">Process</Link>
           <Link href="/contact" className="hover:text-charcoal">Contact</Link>
         </div>
         <div className="text-[11px] text-brown-soft/70">
-          © 2024 Muskan Pareek. All rights reserved.
+          © 2026 Muskan Pareek. All rights reserved.
         </div>
       </div>
     </section>

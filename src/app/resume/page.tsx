@@ -23,7 +23,7 @@ import { PaperNote } from "@/components/ui/PaperNote";
 export const metadata: Metadata = {
   title: "Resume | Muskan Pareek — Interior Designer in Bengaluru",
   description:
-    "Professional resume of Muskan Pareek, an Interior Designer with 3+ years of experience across residential space planning, AutoCAD drafting, SketchUp 3D modelling, modular design, and photorealistic visualization.",
+    "Professional resume of Muskan Pareek, an Interior Designer with 4+ years of experience across residential space planning, AutoCAD drafting, SketchUp 3D modelling, modular design, and photorealistic visualization.",
 };
 
 export default function ResumePage() {
@@ -183,7 +183,7 @@ export default function ResumePage() {
               </div>
 
               <p className="font-sans text-brown-soft text-sm md:text-base leading-relaxed pt-1">
-                Interior Designer with 3+ years of professional experience across residential interiors, space planning, modular furniture, technical AutoCAD drafting, SketchUp 3D modelling, photorealistic visualization, and client-vendor execution support. Leverages modern AI-assisted design workflows to accelerate design iteration and presentation excellence.
+                Interior Designer with 4+ years of professional experience across residential interiors, space planning, modular furniture, technical AutoCAD drafting, SketchUp 3D modelling, photorealistic visualization, and client-vendor execution support. Leverages modern AI-assisted design workflows to accelerate design iteration and presentation excellence.
               </p>
             </div>
 

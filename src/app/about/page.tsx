@@ -32,7 +32,7 @@ import { ArchitecturalFloorPlanWatermark } from "@/components/ui/ArchitecturalFl
 export const metadata = {
   title: "About Muskan Pareek — Interior Designer in Bengaluru",
   description:
-    "Muskan Pareek is an Interior Designer based in Bengaluru with 3+ years of experience across residential interiors, modular furniture design, space planning, AutoCAD drafting, SketchUp, and photorealistic 3D visualization.",
+    "Muskan Pareek is an Interior Designer based in Bengaluru with 4+ years of experience across residential interiors, modular furniture design, space planning, AutoCAD drafting, SketchUp, and photorealistic 3D visualization.",
 };
 
 export default function AboutPage() {
@@ -178,7 +178,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="font-sans text-brown-soft text-base md:text-lg leading-relaxed max-w-2xl mb-8">
-              I&apos;m Muskan Pareek, an Interior Designer based in Bengaluru, Karnataka, India, with over three years of experience creating functional, beautiful spaces that inspire a kinder, more intentional way of living.
+              I&apos;m Muskan Pareek, an Interior Designer based in Bengaluru, Karnataka, India, with over four years of experience creating functional, beautiful spaces that inspire a kinder, more intentional way of living.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -213,7 +213,7 @@ export default function AboutPage() {
         {/* 4 Proof Points Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-stone/40">
           <div className="p-4 bg-paper-card rounded-2xl border border-stone/30">
-            <div className="font-display text-3xl text-brown font-normal">3+</div>
+            <div className="font-display text-3xl text-brown font-normal">4+</div>
             <div className="text-xs font-semibold uppercase tracking-wider text-brown mt-1">
               Years Experience
             </div>
@@ -315,7 +315,7 @@ export default function AboutPage() {
             </div>
 
             <p className="font-sans text-brown text-sm md:text-base leading-relaxed">
-              Muskan Pareek is an Interior Designer based in Bengaluru, Karnataka, India, with over three years of experience across residential interiors, modular furniture design, space planning, design development, 2D drafting, 3D modelling, visualization, client coordination, and project execution.
+              Muskan Pareek is an Interior Designer based in Bengaluru, Karnataka, India, with over four years of experience across residential interiors, modular furniture design, space planning, design development, 2D drafting, 3D modelling, visualization, client coordination, and project execution.
             </p>
 
             <p className="font-sans text-brown text-sm md:text-base leading-relaxed">

@@ -22,7 +22,7 @@ export default function WorkDirectoryPage() {
         "Full-home transformations, living environments, tranquil bedrooms, and modular storage shaped around real family routines and natural light.",
       href: "/work/residential",
       image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-      stats: "6 Featured Projects · Full Case Studies",
+      stats: "5 Featured Projects · Full Case Studies",
       icon: Home,
     },
     {
@@ -32,7 +32,7 @@ export default function WorkDirectoryPage() {
         "Boutique retail, hospitality, and office spaces developed around seamless visitor flow, brand character, and efficient spatial layouts.",
       href: "/work/commercial",
       image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
-      stats: "3 Featured Projects · Workspace & Retail",
+      stats: "2 Featured Projects · Workspace & Retail",
       icon: Building2,
     },
     {

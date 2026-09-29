@@ -1066,7 +1066,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <span>Download Portfolio</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/muskan-pareek-76915b244/"
+                href="https://www.linkedin.com/in/muskan-pareek-78b19a224"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-paper-card text-brown border border-stone/60 px-5 py-2.5 rounded-full text-xs hover:bg-white transition-all shadow-sm"
