@@ -67,6 +67,18 @@ export default function ResumePage() {
       ],
     },
     {
+      company: "Giftyaari",
+      role: "Founder & Creative Lead",
+      period: "May 2025 – July 2025",
+      location: "Bengaluru, Karnataka · Remote",
+      summary:
+        "Founded handmade craft and design venture, leading creative direction, product curation, packaging aesthetics, pricing, and client relationship management.",
+      highlights: [
+        "Directed bespoke gifting aesthetics, product packaging, and creative brand identity.",
+        "Managed end-to-end client communications, vendor logistics, and design curation.",
+      ],
+    },
+    {
       company: "CubeDecors",
       role: "Interior Designer",
       period: "November 2022 – August 2024",

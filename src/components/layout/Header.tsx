@@ -12,6 +12,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeHash, setActiveHash] = useState("#home");
+  const [activeSectionId, setActiveSectionId] = useState("home");
   const [soundActive, setSoundActive] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
@@ -27,15 +28,43 @@ export function Header() {
 
     const handleHash = () => {
       if (window.location.hash) {
-        setActiveHash(window.location.hash);
+        const hash = window.location.hash;
+        setActiveHash(hash);
+        const cleanId = hash.replace("#", "");
+        if (cleanId) setActiveSectionId(cleanId);
       }
     };
+
+    // Observe data-section-id set by SectionNavigator on html tag
+    const updateFromHtmlAttr = () => {
+      const secId = document.documentElement.getAttribute("data-section-id");
+      if (secId) {
+        setActiveSectionId(secId);
+        setActiveHash(`#${secId}`);
+      }
+    };
+
+    updateFromHtmlAttr();
+
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (m.type === "attributes" && m.attributeName === "data-section-id") {
+          updateFromHtmlAttr();
+        }
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-section-id"],
+    });
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("hashchange", handleHash);
     handleHash();
 
     return () => {
+      observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("hashchange", handleHash);
     };
@@ -120,11 +149,13 @@ export function Header() {
               }
 
               const isActive = isHomePage
-                ? (link.label === "Home" && (activeHash === "#home" || !activeHash)) ||
-                  (link.label === "Projects" && activeHash === "#projects") ||
-                  (link.label === "Process" && activeHash === "#process") ||
-                  (link.label === "Contact" && activeHash === "#contact")
-                : pathname.startsWith(link.targetPath);
+                ? (link.label === "Home" && (activeSectionId === "home" || (!activeSectionId && (!activeHash || activeHash === "#home")))) ||
+                  (link.label === "Projects" && (activeSectionId === "projects" || activeSectionId === "work" || activeHash === "#projects")) ||
+                  (link.label === "Process" && (activeSectionId === "process" || activeSectionId === "style" || activeHash === "#process")) ||
+                  (link.label === "Contact" && (activeSectionId === "contact" || activeHash === "#contact"))
+                : link.targetPath === "/"
+                  ? pathname === "/"
+                  : pathname === link.targetPath || pathname.startsWith(`${link.targetPath}/`);
 
               return (
                 <Link

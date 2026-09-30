@@ -111,11 +111,11 @@ export function FurnitureGallery({ items }: FurnitureGalleryProps) {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute top-4 left-4 flex items-center gap-2">
-                <span className="px-2.5 py-1 rounded-full bg-paper/90 backdrop-blur-xs font-mono text-xs text-charcoal font-bold shadow-xs">
+              <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                <span className="px-2.5 py-1 rounded-full bg-paper/95 backdrop-blur-xs font-mono text-xs text-charcoal font-bold shadow-xs border border-stone/30">
                   {item.number}
                 </span>
-                <span className="px-2.5 py-1 rounded-full bg-brown/90 backdrop-blur-xs text-[11px] uppercase tracking-wider text-paper font-medium shadow-xs">
+                <span className="px-2.5 py-1 rounded-full bg-brown/95 backdrop-blur-xs text-[11px] uppercase tracking-wider text-paper font-medium shadow-xs">
                   {item.category}
                 </span>
               </div>

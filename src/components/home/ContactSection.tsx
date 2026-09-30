@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { PaperNote } from "@/components/ui/PaperNote";
 import { SunBadge } from "@/components/ui/SunBadge";
 import { AnimatedHeading } from "@/components/ui/AnimatedHeading";
+import { TestimonialSlider } from "@/components/home/TestimonialSlider";
 
 export function ContactSection() {
   return (
@@ -81,31 +82,8 @@ export function ContactSection() {
           {/* Right Column: Testimonial & Contact Links (cols 9-12) */}
           <div className="lg:col-span-4 flex flex-col space-y-3">
             
-            {/* Riya Sharma Testimonial Card */}
-            <div className="bg-paper-card p-4 rounded-2xl border border-stone/40 shadow-xs relative">
-              <span className="text-sunflower font-serif text-2xl leading-none block mb-1">“</span>
-              <p className="font-sans text-brown text-xs md:text-sm italic leading-relaxed mb-2.5">
-                Muskan understood our lifestyle perfectly and transformed our house into a warm, functional and beautiful home. The attention to detail and the overall experience was exceptional.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-paper border border-stone/40 overflow-hidden relative">
-                  <Image
-                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
-                    alt="Riya Sharma"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <div className="font-display text-sm text-brown font-normal">
-                    Riya Sharma
-                  </div>
-                  <div className="text-[10px] uppercase tracking-wider text-brown-soft">
-                    Homeowner, Jaipur
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Auto-sliding Testimonial Slider (changes every 10s) */}
+            <TestimonialSlider />
 
             {/* Direct Contact Information */}
             <div className="bg-paper-card/80 p-4 rounded-xl border border-stone/30 flex flex-col gap-2">

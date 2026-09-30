@@ -92,11 +92,11 @@ export function ResidentialGallery({ projects }: ResidentialGalleryProps) {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-paper/90 backdrop-blur-xs font-mono text-xs text-charcoal font-bold shadow-xs">
+              <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-paper/95 backdrop-blur-xs font-mono text-xs text-charcoal font-bold shadow-xs border border-stone/30">
                 {proj.number}
               </div>
               {proj.details?.area && (
-                <span className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-paper/90 backdrop-blur-xs font-mono text-[10px] text-charcoal font-semibold shadow-xs">
+                <span className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-paper/95 backdrop-blur-xs font-mono text-[10px] text-charcoal font-semibold shadow-xs border border-stone/30">
                   {proj.details.area}
                 </span>
               )}

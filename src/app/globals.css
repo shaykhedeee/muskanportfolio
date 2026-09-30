@@ -218,6 +218,20 @@
     animation: sectionFadeIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
+  /* 10s Testimonial Auto-Advance Progress */
+  @keyframes progress10s {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .animate-progress-10s {
+    animation: progress10s 10s linear infinite;
+  }
+
   /* Smooth architectural card transition with GPU layer promotion */
   .architectural-card {
     will-change: transform, box-shadow;

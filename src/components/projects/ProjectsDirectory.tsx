@@ -241,26 +241,24 @@ export function ProjectsDirectory({
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
 
-                      {/* Badges Overlay */}
-                      <div className="absolute top-4 left-4 flex flex-wrap items-center gap-2">
-                        <span className="px-2.5 py-1 rounded-full bg-paper/90 backdrop-blur-xs font-mono text-[10px] font-bold text-brown shadow-xs">
+                      {/* Badges Overlay at flat bottom of arch thumbnail so text is never clipped */}
+                      <div className="absolute bottom-3 left-3 right-14 flex flex-wrap items-center gap-1.5 z-10 pointer-events-none">
+                        <span className="px-2.5 py-1 rounded-full bg-paper/95 backdrop-blur-xs font-mono text-[10px] font-bold text-brown shadow-xs border border-stone/30">
                           {project.number || "01"}
                         </span>
-                        <span className="px-2.5 py-1 rounded-full bg-paper/90 backdrop-blur-xs font-sans text-[10px] font-semibold tracking-wider uppercase text-olive shadow-xs">
+                        <span className="px-2.5 py-1 rounded-full bg-paper/95 backdrop-blur-xs font-sans text-[10px] font-semibold tracking-wider uppercase text-olive shadow-xs border border-stone/30">
                           {project.category}
                         </span>
+                        {hasSpatialStudy && (
+                          <span className="px-2.5 py-1 rounded-full bg-sunflower text-charcoal font-sans text-[9px] font-bold tracking-wider uppercase flex items-center gap-1 shadow-sm">
+                            <Sparkles className="w-3 h-3" />
+                            <span>2D/3D Breakdown</span>
+                          </span>
+                        )}
                       </div>
 
-                      {/* Interactive Spatial Breakdown Badge */}
-                      {hasSpatialStudy && (
-                        <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-sunflower text-charcoal font-sans text-[9px] font-bold tracking-wider uppercase flex items-center gap-1 shadow-sm">
-                          <Sparkles className="w-3 h-3" />
-                          <span>2D/3D Breakdown</span>
-                        </div>
-                      )}
-
                       {/* Hover Arrow Icon */}
-                      <div className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-sunflower text-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                      <div className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-sunflower text-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
                         <ArrowUpRight className="w-4 h-4" />
                       </div>
                     </div>
@@ -317,6 +315,36 @@ export function ProjectsDirectory({
           {/* Bespoke Furniture Designs Grid */}
           {filteredFurniture.length > 0 && (
             <div className="space-y-6">
+              {selectedCategory === "Furniture" && (
+                <div className="bg-paper-card border border-stone/40 rounded-3xl p-6 md:p-8 space-y-4 shadow-xs">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone/30 pb-5">
+                    <div>
+                      <div className="flex items-center gap-2 text-xs font-sans font-bold uppercase tracking-widest text-olive mb-1">
+                        <Armchair className="w-4 h-4" />
+                        <span>System 32 Modular Engineering · 9 Bespoke Works</span>
+                      </div>
+                      <h2 className="font-display text-3xl sm:text-4xl text-brown font-normal">
+                        Bespoke Furniture &amp; Millwork Collection
+                      </h2>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="px-3 py-1 rounded-full bg-paper border border-stone/40 text-xs font-mono text-brown">
+                        32mm Grid System
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-paper border border-stone/40 text-xs font-mono text-brown">
+                        30mm Scribing Fillers
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-sunflower text-xs font-mono font-bold text-charcoal shadow-2xs">
+                        Blum Hardware Verified
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-xs sm:text-sm font-sans text-brown-soft leading-relaxed max-w-3xl">
+                    Every piece is engineered with millwork accuracy, Blum runner clearances, and System 32 hole spacing. Designed from real site survey measurements with custom finishes in American walnut, fluted oak, natural travertine, and brushed brass.
+                  </p>
+                </div>
+              )}
+
               {selectedCategory === "all" && (
                 <div className="border-t border-stone/30 pt-10 flex items-center justify-between">
                   <div>
@@ -355,22 +383,21 @@ export function ProjectsDirectory({
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
 
-                      {/* Badges Overlay */}
-                      <div className="absolute top-4 left-4 flex flex-wrap items-center gap-2">
-                        <span className="px-2.5 py-1 rounded-full bg-paper/90 backdrop-blur-xs font-mono text-[10px] font-bold text-olive shadow-xs">
+                      {/* Badges Overlay at flat bottom of arch thumbnail */}
+                      <div className="absolute bottom-3 left-3 right-14 flex flex-wrap items-center gap-1.5 z-10 pointer-events-none">
+                        <span className="px-2.5 py-1 rounded-full bg-paper/95 backdrop-blur-xs font-mono text-[10px] font-bold text-olive shadow-xs border border-stone/30">
                           {furniture.number}
                         </span>
-                        <span className="px-2.5 py-1 rounded-full bg-paper/90 backdrop-blur-xs font-sans text-[10px] font-semibold tracking-wider uppercase text-brown shadow-xs">
+                        <span className="px-2.5 py-1 rounded-full bg-paper/95 backdrop-blur-xs font-sans text-[10px] font-semibold tracking-wider uppercase text-brown shadow-xs border border-stone/30">
                           {furniture.category}
+                        </span>
+                        <span className="px-2.5 py-1 rounded-full bg-sunflower text-charcoal font-sans text-[9px] font-bold tracking-wider uppercase flex items-center gap-1 shadow-sm">
+                          <Sparkles className="w-3 h-3" />
+                          <span>System 32 CAD</span>
                         </span>
                       </div>
 
-                      <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-sunflower text-charcoal font-sans text-[9px] font-bold tracking-wider uppercase flex items-center gap-1 shadow-sm">
-                        <Sparkles className="w-3 h-3" />
-                        <span>System 32 CAD</span>
-                      </div>
-
-                      <div className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-sunflower text-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                      <div className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-sunflower text-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
                         <ArrowUpRight className="w-4 h-4" />
                       </div>
                     </div>

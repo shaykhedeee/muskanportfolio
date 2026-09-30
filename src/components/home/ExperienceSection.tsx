@@ -45,8 +45,8 @@ export function ExperienceSection() {
               Verified Career Timeline
             </div>
 
-            <div className="space-y-4 relative before:absolute before:top-2 before:bottom-2 before:left-[11px] before:w-[2px] before:bg-stone/60">
-              {EXPERIENCES.slice(0, 3).map((exp) => (
+            <div className="space-y-4 relative before:absolute before:top-2 before:bottom-2 before:left-[11px] before:w-[2px] before:bg-stone/60 max-h-[360px] overflow-y-auto pr-2 scrollbar-thin">
+              {EXPERIENCES.map((exp) => (
                 <div key={exp.id} className="relative pl-8 group">
                   <span
                     className={`absolute left-0 top-1.5 w-[24px] h-[24px] rounded-full border-2 flex items-center justify-center bg-paper-card transition-colors ${
