@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function CommercialWorkPage() {
   const commercialProjects = FEATURED_PROJECTS.filter(
-    (p) => p.category === "Commercial" || p.category === "Hospitality"
+    (p) => p.category === "Commercial" || p.category === "Hospitality" || p.category === "Café Interior"
   );
 
   return (
@@ -38,7 +38,7 @@ export default function CommercialWorkPage() {
                 PORTFOLIO CATEGORY
               </span>
               <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-olive/15 text-olive font-semibold">
-                2 Selected Spaces
+                {commercialProjects.length} Selected Spaces
               </span>
             </div>
             <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-brown font-normal leading-[1.08]">

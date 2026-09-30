@@ -12,6 +12,8 @@ import {
   KORAMANGALA_VILLA_MATERIALS,
   THE_MODERNIST_3BHK_MATERIALS,
   URBAN_SCANDI_3BHK_MATERIALS,
+  HITESH_RIA_RESIDENCE_MATERIALS,
+  AKANCHHA_HARSH_RESIDENCE_MATERIALS,
 } from "@/data/fixtures/project-materials";
 import { playTap } from "@/lib/sound";
 
@@ -40,6 +42,10 @@ export function ProjectMoodboardInteractive({
       ? THE_MODERNIST_3BHK_MATERIALS
       : slug === "urban-scandi-3bhk"
       ? URBAN_SCANDI_3BHK_MATERIALS
+      : slug === "the-hitesh-ria-residence"
+      ? HITESH_RIA_RESIDENCE_MATERIALS
+      : slug === "akanchha-harsh-residence"
+      ? AKANCHHA_HARSH_RESIDENCE_MATERIALS
       : THE_CALM_HOUSE_MATERIALS;
 
   const openInspector = (index: number) => {

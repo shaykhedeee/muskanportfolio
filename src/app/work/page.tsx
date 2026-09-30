@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowUpRight, Home, Building2, Armchair } from "lucide-react
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PaperNote } from "@/components/ui/PaperNote";
+import { FEATURED_PROJECTS, FURNITURE_DESIGNS } from "@/data/fixtures/projects";
 
 export const metadata: Metadata = {
   title: "Work | Muskan Pareek — Interior Design Portfolio Directory",
@@ -14,6 +15,16 @@ export const metadata: Metadata = {
 };
 
 export default function WorkDirectoryPage() {
+  const residentialCount = FEATURED_PROJECTS.filter(
+    (p) => p.category === "Residential" || p.category === "Villa"
+  ).length;
+
+  const commercialCount = FEATURED_PROJECTS.filter(
+    (p) => p.category === "Commercial" || p.category === "Hospitality" || p.category === "Café Interior"
+  ).length;
+
+  const furnitureCount = FURNITURE_DESIGNS.length;
+
   const categories = [
     {
       title: "Residential Interiors",
@@ -22,7 +33,7 @@ export default function WorkDirectoryPage() {
         "Full-home transformations, living environments, tranquil bedrooms, and modular storage shaped around real family routines and natural light.",
       href: "/work/residential",
       image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-      stats: "5 Featured Projects · Full Case Studies",
+      stats: `${residentialCount} Curated Works · Apartments & Luxury Villas`,
       icon: Home,
     },
     {
@@ -32,7 +43,7 @@ export default function WorkDirectoryPage() {
         "Boutique retail, hospitality, and office spaces developed around seamless visitor flow, brand character, and efficient spatial layouts.",
       href: "/work/commercial",
       image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
-      stats: "2 Featured Projects · Workspace & Retail",
+      stats: `${commercialCount} Selected Spaces · Workspace, Retail & Café`,
       icon: Building2,
     },
     {
@@ -42,7 +53,7 @@ export default function WorkDirectoryPage() {
         "Bespoke modular kitchens, walk-in wardrobes, TV units, crockery consoles, and pooja units engineered with accurate dimensions and buildability.",
       href: "/work/furniture",
       image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
-      stats: "9 Bespoke Designs · System 32 Joinery",
+      stats: `${furnitureCount} Bespoke Designs · System 32 Joinery`,
       icon: Armchair,
     },
   ];

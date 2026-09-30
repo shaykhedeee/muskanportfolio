@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function ResidentialWorkPage() {
   const residentialProjects = FEATURED_PROJECTS.filter(
-    (p) => p.category === "Residential"
+    (p) => p.category === "Residential" || p.category === "Villa"
   );
 
   return (
@@ -38,7 +38,7 @@ export default function ResidentialWorkPage() {
                 PORTFOLIO CATEGORY
               </span>
               <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-olive/15 text-olive font-semibold">
-                5 Curated Homes
+                {residentialProjects.length} Curated Homes &amp; Villas
               </span>
             </div>
             <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-brown font-normal leading-[1.08]">

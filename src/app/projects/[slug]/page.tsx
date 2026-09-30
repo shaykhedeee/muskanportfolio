@@ -141,6 +141,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ? "AutoCAD 2D: Marble TV Wall & Bar Vitrine (DWG-01)"
       : slug === "urban-scandi-3bhk"
       ? "AutoCAD 2D: Modular Kitchen & Wicker (DWG-K01)"
+      : slug === "the-hitesh-ria-residence"
+      ? "AutoCAD 2D: Foyer Shoe Console (DWG-01)"
+      : slug === "akanchha-harsh-residence"
+      ? "AutoCAD 2D: L-Shaped Modular Kitchen (DWG-K01)"
       : "Living Room Elevation";
 
   const card1Desc =
@@ -170,6 +174,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ? "Full millimeter shop drawing with vertical brass T-profile marble inserts, fluted walnut battens, and illuminated crescent mirror bar credenza."
       : slug === "urban-scandi-3bhk"
       ? "Working CAD joinery drawing for L-shaped kitchen with ventilated wicker baskets, microwave tall unit, and black aluminum tinted glass shutters."
+      : slug === "the-hitesh-ria-residence"
+      ? "Fluted credenza with brushed champagne gold trim, upper storage niches, and vertical screening partition."
+      : slug === "akanchha-harsh-residence"
+      ? "Ultra-matte white PU shaker cabinets, Hafele tandembox pullouts, chimney duct boxing, and seamless quartz counter."
       : "TV unit with open shelving and natural wood finish.";
 
   const card2Title =
@@ -199,6 +207,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ? "AutoCAD 2D: 45° Miter Pooja & Crockery (DWG-02)"
       : slug === "urban-scandi-3bhk"
       ? "AutoCAD 2D: Bay Window Daybed & Wardrobe (DWG-K02)"
+      : slug === "the-hitesh-ria-residence"
+      ? "AutoCAD 2D: Living TV Unit & Acoustic Wall (DWG-02)"
+      : slug === "akanchha-harsh-residence"
+      ? "AutoCAD 2D: Master Sliding Wardrobe (DWG-W01)"
       : "Bedroom Wardrobe Elevation";
 
   const card2Desc =
@@ -228,6 +240,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ? "900mm gold profile fluted glass pooja unit paired with 1,700mm 4-door crockery credenza with Corian top, beveled mirror, and 45° miter-cut drawers."
       : slug === "urban-scandi-3bhk"
       ? "Bay window cushioned daybed with deep pull-out drawers, paired with custom arched dual-tone duco wardrobe and study desk."
+      : slug === "the-hitesh-ria-residence"
+      ? "Full-height vertical charcoal fluted panels, floating walnut console on cantilevered frame, and warm 2700K cove wash."
+      : slug === "akanchha-harsh-residence"
+      ? "Light oak synchronized laminate sliding doors with top-hung silent gear, full-height lofts, and 30mm scribing fillers."
       : "A clean, functional wardrobe with laminate and rattan shutters.";
 
   const card3Title =
@@ -257,6 +273,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ? "AutoCAD 2D: Basketball Suite & Study Alcove (DWG-03)"
       : slug === "urban-scandi-3bhk"
       ? "AutoCAD 2D: Master Wardrobe & Study Suite (DWG-M01)"
+      : slug === "the-hitesh-ria-residence"
+      ? "AutoCAD 2D: Bespoke Fluted-Glass Bar (DWG-03)"
+      : slug === "akanchha-harsh-residence"
+      ? "AutoCAD 2D: Kids Bunk Bed & Study (DWG-B01)"
       : "Kitchen Elevation";
 
   const card3Desc =
@@ -286,6 +306,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ? "Arched backlit fluted study alcove, floating media console, and custom slam-dunk basketball headboard with recessed LED halo."
       : slug === "urban-scandi-3bhk"
       ? "Full-height 5-door System 32 wardrobe with loft storage, 30mm dummy fillers, integrated study desk, and dressing console."
+      : slug === "the-hitesh-ria-residence"
+      ? "Luxury cocktail console with bronze smoked fluted glass vitrines, integrated wine racks, and backlit display."
+      : slug === "akanchha-harsh-residence"
+      ? "Dual-tier bunk bed with safety handrails, deep under-bed pullout toy drawers, and ergonomic corner study desk."
       : "Modular kitchen with warm tones and ample storage.";
 
   const spacePlanningCopy =
@@ -755,6 +779,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
+              ) : slug === "the-hitesh-ria-residence" ? (
+                <Image
+                  src="/images/projects/the-hitesh-ria-residence/foyer-cad.png"
+                  alt="AutoCAD 2D Drawing · Foyer Shoe Console"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "akanchha-harsh-residence" ? (
+                <Image
+                  src="/images/projects/akanchha-harsh-residence/kitchen-cad.png"
+                  alt="AutoCAD 2D Drawing · L-Shaped Modular Kitchen"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <LivingRoomElevationSvg />
               )}
@@ -908,6 +946,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
+              ) : slug === "the-hitesh-ria-residence" ? (
+                <Image
+                  src="/images/projects/the-hitesh-ria-residence/living-tv-cad.png"
+                  alt="AutoCAD 2D Drawing · Living TV Unit & Acoustic Wall"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "akanchha-harsh-residence" ? (
+                <Image
+                  src="/images/projects/akanchha-harsh-residence/wardrobe-cad.png"
+                  alt="AutoCAD 2D Drawing · Master Sliding Wardrobe"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <BedroomWardrobeElevationSvg />
               )}
@@ -1058,6 +1110,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <Image
                   src="/images/projects/urban-scandi-3bhk/master-bedroom-cad.png"
                   alt="AutoCAD 2D Drawing · Master Wardrobe & Study Suite"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "the-hitesh-ria-residence" ? (
+                <Image
+                  src="/images/projects/the-hitesh-ria-residence/bar-unit-cad.png"
+                  alt="AutoCAD 2D Drawing · Bespoke Fluted-Glass Bar"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "akanchha-harsh-residence" ? (
+                <Image
+                  src="/images/projects/akanchha-harsh-residence/kids-bunk-cad.png"
+                  alt="AutoCAD 2D Drawing · Kids Bunk Bed & Study"
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
