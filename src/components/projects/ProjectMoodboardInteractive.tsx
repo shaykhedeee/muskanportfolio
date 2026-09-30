@@ -6,20 +6,40 @@ import { ZoomIn, Sparkles } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { PaperNote } from "@/components/ui/PaperNote";
 import { MaterialSpecModal, MaterialSpecItem } from "@/components/projects/MaterialSpecModal";
-import { THE_CALM_HOUSE_MATERIALS, MR_VIVEK_RESIDENCE_MATERIALS } from "@/data/fixtures/project-materials";
+import {
+  THE_CALM_HOUSE_MATERIALS,
+  MR_VIVEK_RESIDENCE_MATERIALS,
+  KORAMANGALA_VILLA_MATERIALS,
+  THE_MODERNIST_3BHK_MATERIALS,
+  URBAN_SCANDI_3BHK_MATERIALS,
+} from "@/data/fixtures/project-materials";
 import { playTap } from "@/lib/sound";
 
 interface ProjectMoodboardInteractiveProps {
   slug: string;
+  projectMaterials?: MaterialSpecItem[];
 }
 
-export function ProjectMoodboardInteractive({ slug }: ProjectMoodboardInteractiveProps) {
+export function ProjectMoodboardInteractive({
+  slug,
+  projectMaterials,
+}: ProjectMoodboardInteractiveProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(0);
 
   const materials: MaterialSpecItem[] =
-    slug === "mr-vivek-residence"
+    projectMaterials && projectMaterials.length > 0
+      ? projectMaterials
+      : slug === "mr-vivek-residence"
       ? MR_VIVEK_RESIDENCE_MATERIALS
+      : slug === "the-calm-house"
+      ? THE_CALM_HOUSE_MATERIALS
+      : slug === "koramangala-luxury-villa"
+      ? KORAMANGALA_VILLA_MATERIALS
+      : slug === "the-modernist-3bhk"
+      ? THE_MODERNIST_3BHK_MATERIALS
+      : slug === "urban-scandi-3bhk"
+      ? URBAN_SCANDI_3BHK_MATERIALS
       : THE_CALM_HOUSE_MATERIALS;
 
   const openInspector = (index: number) => {

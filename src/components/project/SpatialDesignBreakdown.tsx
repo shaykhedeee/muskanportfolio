@@ -12,11 +12,15 @@ import {
   Eye,
   Info,
   ChevronRight,
+  ChevronLeft,
   Maximize,
+  Camera,
+  Box,
 } from "lucide-react";
 import { SpatialStudy, SpatialHotspot, SpatialHighlight } from "@/types/project";
 import { SpatialFloorPlan } from "./SpatialFloorPlan";
 import { SpatialLightbox } from "./SpatialLightbox";
+import { playTap } from "@/lib/sound";
 
 interface SpatialDesignBreakdownProps {
   study: SpatialStudy;
@@ -30,9 +34,35 @@ export const SpatialDesignBreakdown: React.FC<SpatialDesignBreakdownProps> = ({
   const [activeHotspot, setActiveHotspot] = useState<SpatialHotspot | null>(
     study.hotspots[0] || null
   );
+  const [viewMode, setViewMode] = useState<"axonometric" | "perspective">("axonometric");
   const [hoveredHighlight, setHoveredHighlight] = useState<SpatialHighlight | null>(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const activeIdx = activeHotspot
+    ? study.hotspots.findIndex((h) => h.id === activeHotspot.id)
+    : 0;
+  const currentZoneIdx = activeIdx >= 0 ? activeIdx : 0;
+  const activePerspectiveItem =
+    study.gallery[currentZoneIdx] || study.gallery[0];
+  const activePerspectiveImage = activePerspectiveItem
+    ? activePerspectiveItem.url
+    : study.axonometricImage;
+
+  const goToNextZone = () => {
+    playTap();
+    if (!study.hotspots.length) return;
+    const nextIdx = (currentZoneIdx + 1) % study.hotspots.length;
+    setActiveHotspot(study.hotspots[nextIdx]);
+  };
+
+  const goToPrevZone = () => {
+    playTap();
+    if (!study.hotspots.length) return;
+    const prevIdx =
+      (currentZoneIdx - 1 + study.hotspots.length) % study.hotspots.length;
+    setActiveHotspot(study.hotspots[prevIdx]);
+  };
 
   // Icon mapper helper
   const renderHighlightIcon = (iconName: string) => {
@@ -123,62 +153,130 @@ export const SpatialDesignBreakdown: React.FC<SpatialDesignBreakdownProps> = ({
             />
           </div>
 
-          {/* CENTER: Architectural Axonometric Visual Hero (54%) */}
-          <div className="lg:col-span-6 flex flex-col items-center order-1 lg:order-2">
+          {/* CENTER: Architectural Visual Hero with Dual Camera Modes (54%) */}
+          <div className="lg:col-span-6 flex flex-col items-center order-1 lg:order-2 w-full">
             <div className="relative w-full aspect-[4/4.4] max-w-[620px] rounded-3xl bg-paper-light border-2 border-stone/30 shadow-xl overflow-hidden group">
               
-              {/* Axonometric Architectural Cutaway Model */}
+              {/* Visual Display: Axonometric Model OR Realistic Perspective Render */}
               <div className="relative w-full h-full">
                 <Image
-                  src={study.axonometricImage}
-                  alt={`${study.roomName} Architectural Axonometric Model`}
+                  src={viewMode === "axonometric" ? study.axonometricImage : activePerspectiveImage}
+                  alt={
+                    viewMode === "axonometric"
+                      ? `${study.roomName} Architectural Axonometric Model`
+                      : `${activeHotspot?.title || study.roomName} Realistic Perspective Render`
+                  }
                   fill
                   sizes="(max-width: 1024px) 100vw, 620px"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.02]"
                   priority
                 />
               </div>
 
               {/* Soft Gradient Overlay at edges */}
-              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-charcoal/20 via-transparent to-paper/20" />
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-charcoal/30 via-transparent to-paper/20" />
 
-              {/* Interactive Hotspots 01-05 */}
-              {study.hotspots.map((hs) => {
-                const isActive = activeHotspot?.id === hs.id;
-
-                return (
-                  <div
-                    key={`axon-hs-${hs.id}`}
-                    style={{ left: `${hs.x}%`, top: `${hs.y}%` }}
-                    className="absolute -translate-x-1/2 -translate-y-1/2 z-20"
+              {/* TOP CONTROL BAR: View Mode Toggle & Fullscreen Button */}
+              <div className="absolute top-4 left-4 right-4 z-30 flex items-center justify-between pointer-events-auto">
+                {/* Camera View Mode Switcher */}
+                <div className="flex items-center gap-1 bg-paper/90 backdrop-blur-md p-1 rounded-full border border-stone/40 shadow-md">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      playTap();
+                      setViewMode("axonometric");
+                    }}
+                    className={`px-3 py-1 rounded-full text-xs font-mono font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+                      viewMode === "axonometric"
+                        ? "bg-brown text-paper shadow-sm"
+                        : "text-brown-soft hover:text-brown"
+                    }`}
                   >
-                    {/* Pulsing Ripple if active */}
-                    {isActive && (
-                      <span className="absolute -inset-2 rounded-full bg-sunflower/40 animate-ping pointer-events-none" />
-                    )}
+                    <Box className="w-3.5 h-3.5" />
+                    <span>3D Cutaway</span>
+                  </button>
 
-                    {/* Hotspot Button */}
-                    <button
-                      type="button"
-                      aria-label={`Hotspot ${hs.id}: ${hs.title}`}
-                      aria-expanded={isActive}
-                      onClick={() => setActiveHotspot(hs)}
-                      onMouseEnter={() => setActiveHotspot(hs)}
-                      className={`relative w-8 h-8 rounded-full flex items-center justify-center text-xs font-mono font-bold transition-all duration-300 shadow-md ${
-                        isActive
-                          ? "bg-sunflower text-brown scale-125 ring-4 ring-sunflower/40 shadow-lg"
-                          : "bg-paper text-brown border border-stone/50 hover:bg-sunflower hover:scale-110"
-                      }`}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      playTap();
+                      setViewMode("perspective");
+                    }}
+                    className={`px-3 py-1 rounded-full text-xs font-mono font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+                      viewMode === "perspective"
+                        ? "bg-brown text-paper shadow-sm"
+                        : "text-brown-soft hover:text-brown"
+                    }`}
+                  >
+                    <Camera className="w-3.5 h-3.5" />
+                    <span>Room Perspective</span>
+                  </button>
+                </div>
+
+                {/* Fullscreen Expand Button */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    playTap();
+                    openLightbox(currentZoneIdx);
+                  }}
+                  title="Expand to Fullscreen Lightbox"
+                  className="p-2 rounded-full bg-paper/90 backdrop-blur-md border border-stone/40 text-brown hover:bg-sunflower hover:text-brown transition-all shadow-md cursor-pointer"
+                >
+                  <Maximize className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Perspective Viewport Label Overlay (when in perspective mode) */}
+              {viewMode === "perspective" && activeHotspot && (
+                <div className="absolute top-16 left-4 z-20 pointer-events-none">
+                  <span className="text-[10px] uppercase font-mono tracking-wider text-paper bg-charcoal/80 backdrop-blur-md px-3 py-1 rounded-full shadow-md border border-stone/30">
+                    VIEWPOINT 0{activeHotspot.id.replace(/\D/g, "")} · {activeHotspot.title.toUpperCase()}
+                  </span>
+                </div>
+              )}
+
+              {/* Interactive Hotspots 01-05 (Visible in Axonometric Mode) */}
+              {viewMode === "axonometric" &&
+                study.hotspots.map((hs) => {
+                  const isActive = activeHotspot?.id === hs.id;
+
+                  return (
+                    <div
+                      key={`axon-hs-${hs.id}`}
+                      style={{ left: `${hs.x}%`, top: `${hs.y}%` }}
+                      className="absolute -translate-x-1/2 -translate-y-1/2 z-20"
                     >
-                      {hs.id}
-                    </button>
-                  </div>
-                );
-              })}
+                      {/* Pulsing Ripple if active */}
+                      {isActive && (
+                        <span className="absolute -inset-2 rounded-full bg-sunflower/50 animate-ping pointer-events-none" />
+                      )}
+
+                      {/* Hotspot Button */}
+                      <button
+                        type="button"
+                        aria-label={`Hotspot ${hs.id}: ${hs.title}`}
+                        aria-expanded={isActive}
+                        onClick={() => {
+                          playTap();
+                          setActiveHotspot(hs);
+                        }}
+                        onMouseEnter={() => setActiveHotspot(hs)}
+                        className={`relative w-8 h-8 rounded-full flex items-center justify-center text-xs font-mono font-bold transition-all duration-300 shadow-md cursor-pointer ${
+                          isActive
+                            ? "bg-sunflower text-brown scale-125 ring-4 ring-sunflower/50 shadow-lg z-30"
+                            : "bg-paper text-brown border border-stone/50 hover:bg-sunflower hover:scale-110"
+                        }`}
+                      >
+                        {hs.id}
+                      </button>
+                    </div>
+                  );
+                })}
 
               {/* FLOATING ANNOTATION CARD (Desktop Overlaid inside model) */}
               {activeHotspot && (
-                <div className="hidden sm:flex absolute bottom-4 left-4 right-4 z-30 bg-paper/95 backdrop-blur-md p-4 rounded-2xl border border-stone/40 shadow-lg flex-col gap-1 animate-fadeIn">
+                <div className="hidden sm:flex absolute bottom-4 left-4 right-4 z-30 bg-paper/95 backdrop-blur-md p-4 rounded-2xl border border-stone/40 shadow-lg flex-col gap-2 animate-fadeIn">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="w-5 h-5 rounded-full bg-sunflower text-brown font-mono font-bold text-[10px] flex items-center justify-center">
@@ -188,22 +286,94 @@ export const SpatialDesignBreakdown: React.FC<SpatialDesignBreakdownProps> = ({
                         {activeHotspot.title}
                       </h4>
                     </div>
-                    {activeHotspot.category && (
-                      <span className="text-[9px] uppercase font-mono tracking-widest text-olive bg-olive/10 px-2 py-0.5 rounded">
-                        {activeHotspot.category}
-                      </span>
-                    )}
+                    
+                    {/* Tour navigation & Category */}
+                    <div className="flex items-center gap-2">
+                      {activeHotspot.category && (
+                        <span className="text-[9px] uppercase font-mono tracking-widest text-olive bg-olive/10 px-2 py-0.5 rounded">
+                          {activeHotspot.category}
+                        </span>
+                      )}
+                      <div className="flex items-center gap-1 border-l border-stone/30 pl-2">
+                        <button
+                          type="button"
+                          onClick={goToPrevZone}
+                          title="Previous Zone"
+                          className="p-1 rounded-full hover:bg-stone/20 text-brown transition-colors cursor-pointer"
+                        >
+                          <ChevronLeft className="w-3.5 h-3.5" />
+                        </button>
+                        <span className="text-[9px] font-mono text-brown-soft">
+                          {currentZoneIdx + 1}/{study.hotspots.length}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={goToNextZone}
+                          title="Next Zone"
+                          className="p-1 rounded-full hover:bg-stone/20 text-brown transition-colors cursor-pointer"
+                        >
+                          <ChevronRight className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
+
                   <p className="text-xs font-sans text-brown-soft leading-relaxed">
                     {activeHotspot.description}
                   </p>
+
+                  {/* Mode switch helper in annotation card */}
+                  <div className="pt-1 border-t border-stone/20 flex items-center justify-between text-[10px] font-mono">
+                    <span className="text-brown-soft/80">
+                      {viewMode === "axonometric"
+                        ? "Click pins or switch mode to view real perspective"
+                        : "Viewing photorealistic room perspective render"}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        playTap();
+                        setViewMode(viewMode === "axonometric" ? "perspective" : "axonometric");
+                      }}
+                      className="text-brown hover:text-charcoal font-semibold underline underline-offset-2 cursor-pointer"
+                    >
+                      {viewMode === "axonometric" ? "See Perspective View →" : "See 3D Cutaway →"}
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
 
+            {/* Mobile / Small Screen Quick-Select Hotspot Pill Strip */}
+            <div className="w-full flex items-center gap-2 overflow-x-auto py-2.5 mt-2 sm:hidden no-scrollbar">
+              {study.hotspots.map((hs) => {
+                const isSelected = activeHotspot?.id === hs.id;
+                return (
+                  <button
+                    key={`mobile-pill-${hs.id}`}
+                    type="button"
+                    onClick={() => {
+                      playTap();
+                      setActiveHotspot(hs);
+                    }}
+                    className={`px-3 py-1.5 rounded-full text-xs font-mono font-medium shrink-0 flex items-center gap-1.5 transition-all cursor-pointer ${
+                      isSelected
+                        ? "bg-sunflower text-brown font-bold shadow-sm ring-1 ring-brown/30"
+                        : "bg-paper-card text-brown-soft border border-stone/30"
+                    }`}
+                  >
+                    <span className="w-4 h-4 rounded-full bg-brown/10 flex items-center justify-center text-[10px] font-bold">
+                      {hs.id}
+                    </span>
+                    <span className="truncate max-w-[120px]">{hs.title}</span>
+                  </button>
+                );
+              })}
+            </div>
+
             {/* Mobile / Small Screen Active Hotspot Card (Below model) */}
             {activeHotspot && (
-              <div className="sm:hidden w-full mt-3 bg-paper-card p-4 rounded-2xl border border-stone/30 shadow-xs flex flex-col gap-1">
+              <div className="sm:hidden w-full mt-2 bg-paper-card p-4 rounded-2xl border border-stone/30 shadow-xs flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="w-5 h-5 rounded-full bg-sunflower text-brown font-mono font-bold text-[10px] flex items-center justify-center">
@@ -213,15 +383,41 @@ export const SpatialDesignBreakdown: React.FC<SpatialDesignBreakdownProps> = ({
                       {activeHotspot.title}
                     </h4>
                   </div>
-                  {activeHotspot.category && (
-                    <span className="text-[9px] uppercase font-mono tracking-widest text-olive bg-olive/10 px-2 py-0.5 rounded">
-                      {activeHotspot.category}
+                  <div className="flex items-center gap-1">
+                    <button
+                      type="button"
+                      onClick={goToPrevZone}
+                      className="p-1 rounded-full bg-stone/20 text-brown cursor-pointer"
+                    >
+                      <ChevronLeft className="w-3.5 h-3.5" />
+                    </button>
+                    <span className="text-[9px] font-mono text-brown-soft px-1">
+                      {currentZoneIdx + 1}/{study.hotspots.length}
                     </span>
-                  )}
+                    <button
+                      type="button"
+                      onClick={goToNextZone}
+                      className="p-1 rounded-full bg-stone/20 text-brown cursor-pointer"
+                    >
+                      <ChevronRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
+
                 <p className="text-xs font-sans text-brown-soft leading-relaxed">
                   {activeHotspot.description}
                 </p>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    playTap();
+                    setViewMode(viewMode === "axonometric" ? "perspective" : "axonometric");
+                  }}
+                  className="w-full py-1.5 rounded-lg bg-stone/20 text-xs font-mono text-brown font-semibold text-center mt-1 cursor-pointer"
+                >
+                  {viewMode === "axonometric" ? "Switch to Perspective View" : "Switch to 3D Cutaway"}
+                </button>
               </div>
             )}
           </div>

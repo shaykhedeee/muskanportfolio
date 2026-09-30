@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { SpatialHotspot } from "@/types/project";
+import { playTap } from "@/lib/sound";
 
 interface SpatialFloorPlanProps {
   activeHotspot: SpatialHotspot | null;
@@ -48,7 +49,8 @@ export const SpatialFloorPlan: React.FC<SpatialFloorPlanProps> = ({
         {/* Floor Plan Display: Image or SVG */}
         {floorPlanImage ? (
           <div className="relative w-full h-full pt-8 pb-7 flex items-center justify-center">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden bg-white/40 border border-stone/20 shadow-inner">
+            {/* 1:1 Aspect Square Container ensures percentage pins match drawing geometry perfectly without letterbox drift */}
+            <div className="relative w-full aspect-square max-w-[280px] sm:max-w-[300px] mx-auto rounded-2xl overflow-hidden bg-white/40 border border-stone/20 shadow-inner">
               <Image
                 src={floorPlanImage}
                 alt={title}
@@ -64,12 +66,15 @@ export const SpatialFloorPlan: React.FC<SpatialFloorPlanProps> = ({
                   <button
                     key={`plan-hs-${hs.id}`}
                     type="button"
-                    onClick={() => onSelectHotspot?.(hs)}
+                    onClick={() => {
+                      playTap();
+                      onSelectHotspot?.(hs);
+                    }}
                     style={{ left: `${hs.planX}%`, top: `${hs.planY}%` }}
-                    className={`absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full transition-all duration-300 z-20 ${
+                    className={`absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full transition-all duration-300 z-20 cursor-pointer ${
                       isSelected
-                        ? "w-8 h-8 bg-sunflower border-2 border-brown shadow-lg scale-110"
-                        : "w-6 h-6 bg-[#FAF6EE] border border-brown/70 hover:bg-sunflower hover:border-brown shadow-sm"
+                        ? "w-8 h-8 bg-sunflower border-2 border-brown shadow-lg scale-115 z-30"
+                        : "w-7 h-7 bg-[#FAF6EE] border border-brown/70 hover:bg-sunflower hover:border-brown shadow-sm"
                     }`}
                     title={hs.title}
                   >
@@ -450,7 +455,10 @@ export const SpatialFloorPlan: React.FC<SpatialFloorPlanProps> = ({
               <g
                 key={`plan-hs-${hs.id}`}
                 className="cursor-pointer transition-transform duration-300 group/pin"
-                onClick={() => onSelectHotspot?.(hs)}
+                onClick={() => {
+                  playTap();
+                  onSelectHotspot?.(hs);
+                }}
               >
                 {/* Ripple ring when active */}
                 {isSelected && (

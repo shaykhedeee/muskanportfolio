@@ -151,7 +151,7 @@ export function BeforeAfterSlider({
         aria-valuemin={0}
         aria-valuemax={100}
         className={cn(
-          "relative w-full rounded-3xl overflow-hidden shadow-xl border border-stone/30 select-none cursor-ew-resize focus:outline-none focus:ring-2 focus:ring-sunflower",
+          "relative w-full rounded-3xl overflow-hidden shadow-xl border border-stone/30 select-none cursor-ew-resize focus:outline-none focus:ring-2 focus:ring-sunflower touch-none",
           aspectRatio
         )}
       >

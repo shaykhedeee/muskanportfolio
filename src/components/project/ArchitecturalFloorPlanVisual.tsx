@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Layers, Compass, Eye, Sparkles } from "lucide-react";
+import { Layers, Compass, Eye, Sparkles, Maximize, X, ZoomIn } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { playTap } from "@/lib/sound";
 import { SarthakArchitecturalFloorPlanSvg } from "./SarthakArchitecturalFloorPlanSvg";
@@ -19,8 +19,8 @@ export function ArchitecturalFloorPlanVisual({
   slug?: string;
   className?: string;
 }) {
-  const hasCustomCadSvg = slug === "the-calm-house" || slug === "mr-vivek-residence";
   const [viewMode, setViewMode] = useState<"cad" | "colored">("cad");
+  const [isZoomOpen, setIsZoomOpen] = useState(false);
 
   return (
     <div className={cn("space-y-4", className)}>
@@ -74,6 +74,72 @@ export function ArchitecturalFloorPlanVisual({
           <SarthakArchitecturalFloorPlanSvg />
         ) : slug === "mr-vivek-residence" ? (
           <VivekArchitecturalFloorPlanSvg />
+        ) : floorPlanImage ? (
+          /* Render project's actual CAD blueprint SVG/image */
+          <div className="relative w-full aspect-[16/11] bg-[#F4F1EA] rounded-3xl overflow-hidden border-2 border-stone/50 shadow-lg group">
+            {/* Blueprint Grid Watermark */}
+            <div
+              className="absolute inset-0 opacity-[0.12] pointer-events-none"
+              style={{
+                backgroundImage:
+                  "radial-gradient(#49352C 1px, transparent 1px), radial-gradient(#49352C 1px, #F4F1EA 1px)",
+                backgroundSize: "24px 24px",
+                backgroundPosition: "0 0, 12px 12px",
+              }}
+            />
+
+            {/* Architectural Header Strip */}
+            <div className="absolute top-4 left-6 right-6 flex items-center justify-between z-10 pointer-events-none border-b border-stone/30 pb-2 bg-paper/80 backdrop-blur-xs px-3 py-1 rounded-xl">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-sunflower inline-block" />
+                <span className="text-[10px] font-mono tracking-widest uppercase text-brown font-bold">
+                  AUTOCAD 2D VECTOR BLUEPRINT · {projectTitle.toUpperCase()}
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-[9px] font-mono uppercase px-2 py-0.5 rounded-md bg-brown text-paper font-bold tracking-wider">
+                  SCALE 1:50 · DWG-01
+                </span>
+              </div>
+            </div>
+
+            {/* Inspect / Zoom Button */}
+            <button
+              type="button"
+              onClick={() => {
+                playTap();
+                setIsZoomOpen(true);
+              }}
+              title="Inspect Fullscreen"
+              className="absolute top-4 right-6 z-20 p-2 rounded-full bg-paper/90 border border-stone/40 text-brown hover:bg-sunflower transition-all shadow-sm cursor-pointer"
+            >
+              <Maximize className="w-4 h-4" />
+            </button>
+
+            {/* Blueprint Image */}
+            <div className="relative w-full h-full pt-12 pb-10 px-4 flex items-center justify-center">
+              <Image
+                src={floorPlanImage}
+                alt={`${projectTitle} Vector Architectural Floor Plan`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 800px"
+                className="object-contain p-4 group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                priority
+              />
+            </div>
+
+            {/* Architectural Footer Stamp */}
+            <div className="absolute bottom-3 left-6 right-6 flex items-center justify-between text-[10px] font-mono text-brown-soft border-t border-stone/30 pt-2 z-10 pointer-events-none bg-paper/80 backdrop-blur-xs px-3 py-1 rounded-xl">
+              <div className="flex items-center gap-2">
+                <span className="font-semibold text-brown">ORIGINAL DWG VECTOR</span>
+                <span className="text-stone-dark">·</span>
+                <span className="text-brown">COORDINATES &amp; ZONES SYNCHRONIZED</span>
+              </div>
+              <span className="text-olive font-bold uppercase tracking-wider">
+                APPROVED FOR CONSTRUCTION
+              </span>
+            </div>
+          </div>
         ) : (
           <DefaultColoredFloorPlan projectTitle={projectTitle} />
         )
@@ -96,6 +162,19 @@ export function ArchitecturalFloorPlanVisual({
                 : "AUTOCAD 2D/3D DWG · LEVEL 03"}
             </span>
           </div>
+
+          {/* Inspect Button */}
+          <button
+            type="button"
+            onClick={() => {
+              playTap();
+              setIsZoomOpen(true);
+            }}
+            title="Inspect Fullscreen"
+            className="absolute top-4 right-6 z-20 p-2 rounded-full bg-paper/90 border border-stone/40 text-brown hover:bg-sunflower transition-all shadow-sm cursor-pointer"
+          >
+            <Maximize className="w-4 h-4" />
+          </button>
 
           {/* Floor Plan Image */}
           <div className="relative w-full h-full pt-12 pb-10 px-4 flex items-center justify-center">
@@ -139,6 +218,57 @@ export function ArchitecturalFloorPlanVisual({
         </div>
       ) : (
         <DefaultColoredFloorPlan projectTitle={projectTitle} />
+      )}
+
+      {/* Fullscreen CAD Inspector Modal */}
+      {isZoomOpen && floorPlanImage && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-charcoal/90 backdrop-blur-md p-4 md:p-8 animate-fadeIn"
+          onClick={() => setIsZoomOpen(false)}
+        >
+          <div
+            className="relative max-w-5xl w-full bg-paper rounded-3xl overflow-hidden shadow-2xl border border-stone/40 flex flex-col max-h-[92vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-6 py-4 border-b border-stone/30 bg-paper-card">
+              <div className="flex items-center gap-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-sunflower inline-block" />
+                <span className="text-xs uppercase tracking-[0.2em] font-sans font-bold text-brown">
+                  {projectTitle} · AutoCAD Vector Blueprint
+                </span>
+                <span className="text-stone/60">/</span>
+                <span className="text-xs font-mono text-olive bg-olive/10 px-2 py-0.5 rounded">
+                  Scale 1:50 High-Res
+                </span>
+              </div>
+              <button
+                onClick={() => setIsZoomOpen(false)}
+                className="p-1.5 rounded-full hover:bg-stone/20 text-brown transition-colors cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="relative w-full h-[65vh] md:h-[75vh] bg-[#F7F4EC] p-6 flex items-center justify-center overflow-auto">
+              <div className="relative w-full h-full min-w-[300px]">
+                <Image
+                  src={floorPlanImage}
+                  alt={`${projectTitle} Fullscreen Blueprint`}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+
+            <div className="px-6 py-3 bg-paper border-t border-stone/20 flex items-center justify-between text-xs font-mono text-brown-soft">
+              <span>AutoCAD 2026 Architectural Spatial Specification · Verified Dimensions</span>
+              <span className="text-brown font-semibold">1:50 Vector Plot</span>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

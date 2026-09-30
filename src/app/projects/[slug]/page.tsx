@@ -45,6 +45,8 @@ import { AnimatedHeading } from "@/components/ui/AnimatedHeading";
 import { ProjectMoodboardInteractive } from "@/components/projects/ProjectMoodboardInteractive";
 import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { ArchitecturalFloorPlanWatermark } from "@/components/ui/ArchitecturalFloorPlanWatermark";
+import { CadZoomTrigger } from "@/components/project/CadZoomTrigger";
+import { Project3DGallery } from "@/components/project/Project3DGallery";
 
 const villaProject = FEATURED_PROJECTS.find((p) => p.slug === "terracotta-villa");
 const alias5BhkVilla = villaProject
@@ -110,6 +112,181 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       : slug === "mr-vivek-residence"
       ? "Mr. Vivek envisioned a modern, warm 3 BHK apartment where every architectural zone had purpose and visual calm. He wanted a statement living TV unit that did not overpower the room, a highly functional modular kitchen with Gola profile hardware and smoked glass vitrines, and bedrooms that offered both generous storage and quiet study alcoves. Natural materials like woven rattan, satin walnut, and fluted acoustic battens were central to the brief."
       : project.shortDescription;
+
+  
+  const card1Title =
+    slug === "the-calm-house"
+      ? "Living TV Media Wall Elevation"
+      : slug === "mr-vivek-residence"
+      ? "AutoCAD 2D: Living TV Unit (DWG-01)"
+      : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+      ? "AutoCAD 2D: Bespoke Study Unit (DWG-04)"
+      : slug === "ekkat-boutique"
+      ? "AutoCAD 2D: Reception Counter (RC-002)"
+      : slug === "wonderwall-penthouse"
+      ? "AutoCAD 2D: Modular Kitchen (DWG-K01)"
+      : slug === "casagrand-florella-villa"
+      ? "AutoCAD 2D: Living Wall Beading (DWG-L01)"
+      : slug === "platinum-greenfields-residence"
+      ? "AutoCAD 2D: Living TV Feature Wall (DWG-TV01)"
+      : slug === "sattva-greenage-residence"
+      ? "AutoCAD 2D: Living TV Wall (DWG-01)"
+      : slug === "mahaveer-ranches-residence"
+      ? "AutoCAD 2D: Modular Kitchen (DWG-K01)"
+      : slug === "cafe-aroma-express"
+      ? "Commercial Detail: Espresso Bar Counter"
+      : slug === "koramangala-luxury-villa"
+      ? "AutoCAD 2D: Drawing Room & Sunken Cove (DWG-D01)"
+      : slug === "the-modernist-3bhk"
+      ? "AutoCAD 2D: Marble TV Wall & Bar Vitrine (DWG-01)"
+      : slug === "urban-scandi-3bhk"
+      ? "AutoCAD 2D: Modular Kitchen & Wicker (DWG-K01)"
+      : "Living Room Elevation";
+
+  const card1Desc =
+    slug === "the-calm-house"
+      ? "Bas-relief slate plaster panel with 2700K perimeter halo LED, vertical acoustic walnut battens, and floating ball-foot credenza."
+      : slug === "mr-vivek-residence"
+      ? "Dimensioned shop drawing (DWG-01) with acoustic oak rafters, 2700K strip light cove, 45° corner bevel, and curved floating console."
+      : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+      ? "5 BHK Villa ergonomic study lounge: upper fluted glass cabinetry, arched open book display with warm cove LED, and cantilevered walnut desk."
+      : slug === "ekkat-boutique"
+      ? "Official shop drawing (DWG RC-002, 1:10 A3): 1500W×900H×1200D mm counter, 100mm plinth, 750mm desk, sage green laminate with 300mm fluted timber feature panel."
+      : slug === "wonderwall-penthouse"
+      ? "Dual-counter modular kitchen elevations with overhead fluted glass vitrines and integrated pantry."
+      : slug === "casagrand-florella-villa"
+      ? "Classical PVC double-frame wall mouldings with warm brass sconces and floating marble console."
+      : slug === "platinum-greenfields-residence"
+      ? "Full-height vertical charcoal acoustic louvres with floating monolithic stone credenza."
+      : slug === "sattva-greenage-residence"
+      ? "Stone veneer feature wall backer with warm perimeter cove wash and floating walnut drawer ledge."
+      : slug === "mahaveer-ranches-residence"
+      ? "560mm base carcass with 300mm wall units and dedicated 320mm chimney duct encasement."
+      : slug === "cafe-aroma-express"
+      ? "Bespoke fluted blonde oak service counter with leathered Absolute Black granite espresso workstation."
+      : slug === "koramangala-luxury-villa"
+      ? "Formal drawing salon elevation featuring sunken linear profile LED lighting, chevron walnut battens, and concentric nested marble tables."
+      : slug === "the-modernist-3bhk"
+      ? "Full millimeter shop drawing with vertical brass T-profile marble inserts, fluted walnut battens, and illuminated crescent mirror bar credenza."
+      : slug === "urban-scandi-3bhk"
+      ? "Working CAD joinery drawing for L-shaped kitchen with ventilated wicker baskets, microwave tall unit, and black aluminum tinted glass shutters."
+      : "TV unit with open shelving and natural wood finish.";
+
+  const card2Title =
+    slug === "the-calm-house"
+      ? "Arched Crockery & Bar Elevation"
+      : slug === "mr-vivek-residence"
+      ? "AutoCAD 2D: Modular Kitchen (DWG-02)"
+      : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+      ? "AutoCAD 2D: Master Bed Wall (DWG-05)"
+      : slug === "ekkat-boutique"
+      ? "AutoCAD 2D: Modular Console (1:10)"
+      : slug === "wonderwall-penthouse"
+      ? "AutoCAD 2D: Curved Kids Joinery"
+      : slug === "casagrand-florella-villa"
+      ? "AutoCAD 2D: Arched Crockery & Pooja"
+      : slug === "platinum-greenfields-residence"
+      ? "AutoCAD 2D: Fluted Gold Bar Unit"
+      : slug === "sattva-greenage-residence"
+      ? "AutoCAD 2D: Parallel Kitchen Layout"
+      : slug === "mahaveer-ranches-residence"
+      ? "AutoCAD 2D: Master Wardrobe Carcass"
+      : slug === "cafe-aroma-express"
+      ? "Hospitality Design: Dining Salon & Canopy"
+      : slug === "koramangala-luxury-villa"
+      ? "AutoCAD 2D: Grand Dining & Breakfast Bar (DWG-D02)"
+      : slug === "the-modernist-3bhk"
+      ? "AutoCAD 2D: 45° Miter Pooja & Crockery (DWG-02)"
+      : slug === "urban-scandi-3bhk"
+      ? "AutoCAD 2D: Bay Window Daybed & Wardrobe (DWG-K02)"
+      : "Bedroom Wardrobe Elevation";
+
+  const card2Desc =
+    slug === "the-calm-house"
+      ? "Deep Roman arch vitrine with brass stemware hanging racks, fluted glass upper shutters, and charcoal lower console."
+      : slug === "mr-vivek-residence"
+      ? "Working elevation showing black profile tinted glass shutters, CNC hydraulic lift-ups, Gola profiles, cutlery and thali pull-outs."
+      : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+      ? "Backlit translucent quartzite stone slab (2000×1700mm) framed in fluted walnut with classic wainscoting boiserie and brass torch sconces."
+      : slug === "ekkat-boutique"
+      ? "Technical furniture detail (1:10): 2400W×450D×750H mm modular console with 18mm timber top, plain ply back, and 6 equal 394mm storage shutters."
+      : slug === "wonderwall-penthouse"
+      ? "Curved organic forest-green headboard integrated with an undulating cat perch and floating desk."
+      : slug === "casagrand-florella-villa"
+      ? "Deep arched crockery vitrine with tinted fluted glass and internal sensor LED illumination."
+      : slug === "platinum-greenfields-residence"
+      ? "Signature cocktail bar unit with gold profile frames, reeded glass vitrines, and quartz counter."
+      : slug === "sattva-greenage-residence"
+      ? "High-efficiency parallel kitchen corridor with wicker pull-outs and Häfele lift-up mechanisms."
+      : slug === "mahaveer-ranches-residence"
+      ? "Full-height 3-door sliding wardrobe with overhead lofts and internal drawer dividers."
+      : slug === "cafe-aroma-express"
+      ? "Hand-woven cane and rattan pendant light cluster casting warm amber glow across Scandinavian banquettes."
+      : slug === "koramangala-luxury-villa"
+      ? "8.1m dining hall CAD layout with 10-seater Calacatta table, fluted charcoal wall paneling, and integrated 3-seater marble breakfast island."
+      : slug === "the-modernist-3bhk"
+      ? "900mm gold profile fluted glass pooja unit paired with 1,700mm 4-door crockery credenza with Corian top, beveled mirror, and 45° miter-cut drawers."
+      : slug === "urban-scandi-3bhk"
+      ? "Bay window cushioned daybed with deep pull-out drawers, paired with custom arched dual-tone duco wardrobe and study desk."
+      : "A clean, functional wardrobe with laminate and rattan shutters.";
+
+  const card3Title =
+    slug === "the-calm-house"
+      ? "Pill-Shaped Foyer Console Elevation"
+      : slug === "mr-vivek-residence"
+      ? "AutoCAD 2D: Wardrobe & Study Desk (DWG-03)"
+      : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+      ? "AutoCAD 2D: Show & Wet Kitchen Architecture (DWG-06)"
+      : slug === "ekkat-boutique"
+      ? "AutoCAD 2D: Window Wall & Seating Storage"
+      : slug === "wonderwall-penthouse"
+      ? "AutoCAD 2D: Master Suite Teal Vanity"
+      : slug === "casagrand-florella-villa"
+      ? "AutoCAD 2D: Master Sliding Wardrobe"
+      : slug === "platinum-greenfields-residence"
+      ? "AutoCAD 2D: Foyer Floating Console"
+      : slug === "sattva-greenage-residence"
+      ? "AutoCAD 2D: Guest Wardrobe & Lofts"
+      : slug === "mahaveer-ranches-residence"
+      ? "AutoCAD 2D: Kids Study & Desk"
+      : slug === "cafe-aroma-express"
+      ? "Site Execution: Outdoor Terrace Patio"
+      : slug === "koramangala-luxury-villa"
+      ? "3D Joinery & Finish: Chef's Kitchen (DWG-K01)"
+      : slug === "the-modernist-3bhk"
+      ? "AutoCAD 2D: Basketball Suite & Study Alcove (DWG-03)"
+      : slug === "urban-scandi-3bhk"
+      ? "AutoCAD 2D: Master Wardrobe & Study Suite (DWG-M01)"
+      : "Kitchen Elevation";
+
+  const card3Desc =
+    slug === "the-calm-house"
+      ? "Pill-shaped backlit architectural wall niche with floating tambour-fluted walnut console and travertine marble top."
+      : slug === "mr-vivek-residence"
+      ? "Detailed shop drawing with 1200mm sliding shutters, aluminum profile glass vitrine, 750mm study desk, and overhead lofts."
+      : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+      ? "Dual-zone culinary architecture: high-output wok extraction in the rear heavy kitchen paired with seamless entertaining island in the show kitchen."
+      : slug === "ekkat-boutique"
+      ? "Full architectural elevation: 1439W×2992H mm window wall with 900×1200mm glass, 550H upholstered seat cushion, four 350mm shutters, and 19/20mm site filler dummies."
+      : slug === "wonderwall-penthouse"
+      ? "Vertical teal finger-tile vanity splash with floating walnut console and rounded arch grooming mirror."
+      : slug === "casagrand-florella-villa"
+      ? "Floor-to-ceiling 3-track sliding wardrobe with bronze tinted mirror inserts and sensor lighting."
+      : slug === "platinum-greenfields-residence"
+      ? "Cantilevered shoe credenza with vertical slatted brass divider and concealed drawer runners."
+      : slug === "sattva-greenage-residence"
+      ? "Full-height wardrobe with modular internal organization and overhead loft storage."
+      : slug === "mahaveer-ranches-residence"
+      ? "Integrated study station with overhead bookshelf, pin-up surface, and flexible bunk configuration."
+      : slug === "cafe-aroma-express"
+      ? "All-weather garden dining area with powder-coated bistro sets and hanging botanical planters."
+      : slug === "koramangala-luxury-villa"
+      ? "3D faceted bronze metallic hexagonal tile splashback, matte greige shaker cabinetry, quartz prep island, and integrated appliance housings."
+      : slug === "the-modernist-3bhk"
+      ? "Arched backlit fluted study alcove, floating media console, and custom slam-dunk basketball headboard with recessed LED halo."
+      : slug === "urban-scandi-3bhk"
+      ? "Full-height 5-door System 32 wardrobe with loft storage, 30mm dummy fillers, integrated study desk, and dressing console."
+      : "Modular kitchen with warm tones and ample storage.";
 
   const spacePlanningCopy =
     slug === "the-calm-house"
@@ -496,7 +673,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             data-cursor="inspect"
             className="bg-paper-card p-6 rounded-3xl border border-stone/40 shadow-sm flex flex-col justify-between hover:border-sunflower/80 transition-all hover-lift"
           >
-            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-4 border border-stone/30 shadow-xs bg-white">
+            <CadZoomTrigger title={card1Title} description={card1Desc} sheetRef="DWG-01" scale="SCALE 1:20">
               {slug === "the-calm-house" ? (
                 <SarthakTvUnitElevationSvg />
               ) : slug === "mr-vivek-residence" ? (
@@ -581,7 +758,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ) : (
                 <LivingRoomElevationSvg />
               )}
-            </div>
+            </CadZoomTrigger>
             <div>
               <h3 className="font-display text-2xl text-brown font-normal mb-1">
                 {slug === "the-calm-house"
@@ -649,7 +826,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             data-cursor="inspect"
             className="bg-paper-card p-6 rounded-3xl border border-stone/40 shadow-sm flex flex-col justify-between hover:border-sunflower/80 transition-all hover-lift"
           >
-            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-4 border border-stone/30 shadow-xs bg-white">
+            <CadZoomTrigger title={card2Title} description={card2Desc} sheetRef="DWG-02" scale="SCALE 1:20">
               {slug === "the-calm-house" ? (
                 <SarthakCrockeryBarElevationSvg />
               ) : slug === "mr-vivek-residence" ? (
@@ -734,7 +911,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ) : (
                 <BedroomWardrobeElevationSvg />
               )}
-            </div>
+            </CadZoomTrigger>
             <div>
               <h3 className="font-display text-2xl text-brown font-normal mb-1">
                 {slug === "the-calm-house"
@@ -802,7 +979,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             data-cursor="inspect"
             className="bg-paper-card p-6 rounded-3xl border border-stone/40 shadow-sm flex flex-col justify-between hover:border-sunflower/80 transition-all hover-lift"
           >
-            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-4 border border-stone/30 shadow-xs bg-white">
+            <CadZoomTrigger title={card3Title} description={card3Desc} sheetRef="DWG-03" scale="SCALE 1:20">
               {slug === "the-calm-house" ? (
                 <SarthakFoyerConsoleElevationSvg />
               ) : slug === "mr-vivek-residence" ? (
@@ -887,7 +1064,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ) : (
                 <KitchenElevationSvg />
               )}
-            </div>
+            </CadZoomTrigger>
             <div>
               <h3 className="font-display text-2xl text-brown font-normal mb-1">
                 {slug === "the-calm-house"
@@ -1029,27 +1206,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {project.spatialStudy?.gallery && project.spatialStudy.gallery.length > 0 ? (
-              project.spatialStudy.gallery.map((view, i) => (
-                <div key={i} className="space-y-2.5 group">
-                  <div className="relative aspect-[3.8/4.6] rounded-t-[80px] md:rounded-t-[100px] rounded-b-2xl overflow-hidden shadow-sm border border-stone/30">
-                    <Image
-                      src={view.url}
-                      alt={view.viewLabel}
-                      fill
-                      className={
-                        view.url.includes("cad") || view.url.includes("floor-plan")
-                          ? "object-contain bg-white p-3 group-hover:scale-105 transition-transform duration-500 ease-out"
-                          : "object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                      }
-                    />
-                  </div>
-                  <div className="font-display text-xl text-brown">{view.viewLabel}</div>
-                  <div className="text-xs text-brown-soft line-clamp-2">{view.caption}</div>
-                </div>
-              ))
-            ) : (
+          {project.spatialStudy?.gallery && project.spatialStudy.gallery.length > 0 ? (
+            <Project3DGallery
+              gallery={project.spatialStudy.gallery}
+              projectTitle={project.title}
+            />
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               <>
                 {/* View 1: Living Room */}
                 <div className="space-y-2.5 group">
@@ -1107,8 +1270,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <div className="text-xs text-brown-soft">Slatted oak joinery and 2700K ambient illumination</div>
                 </div>
               </>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 
