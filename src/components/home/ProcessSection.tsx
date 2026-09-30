@@ -107,7 +107,7 @@ export function ProcessSection() {
 
           {/* Right 5-Step Flow (cols 5-12) matching mockup */}
           <div className="lg:col-span-8 flex flex-col justify-center space-y-8">
-            <div className="grid grid-cols-5 gap-3 items-start">
+            <div className="grid grid-cols-5 gap-1.5 sm:gap-2.5 md:gap-3 items-start">
               {steps.map((step, idx) => {
                 const IconComponent = step.icon;
                 const isActive = activeStep === idx;
@@ -119,16 +119,16 @@ export function ProcessSection() {
                     className="flex flex-col items-center text-center group cursor-pointer"
                   >
                     {/* Circle Icon Container */}
-                    <div className="relative mb-3 flex items-center justify-center">
+                    <div className="relative mb-2 sm:mb-3 flex items-center justify-center">
                       <div
-                        className={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 border-2 ${
+                        className={`w-10 h-10 sm:w-13 sm:h-13 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 border-2 ${
                           isActive
                             ? "bg-sunflower border-brown shadow-lg scale-110"
                             : "bg-paper-card border-stone/50 group-hover:border-sunflower group-hover:scale-105"
                         }`}
                       >
                         <IconComponent
-                          className={`w-5 h-5 md:w-6 md:h-6 transition-colors ${
+                          className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-colors ${
                             isActive ? "text-charcoal" : "text-brown"
                           }`}
                         />
@@ -143,13 +143,13 @@ export function ProcessSection() {
                     </div>
 
                     {/* Step Number & Title */}
-                    <div className="font-mono text-xs font-bold text-sunflower-deep mb-0.5">
+                    <div className="font-mono text-[10px] sm:text-xs font-bold text-sunflower-deep mb-0.5">
                       {step.num}
                     </div>
-                    <div className="font-display text-base md:text-lg text-brown font-normal mb-1">
+                    <div className="font-display text-xs sm:text-sm md:text-lg text-brown font-normal mb-1 truncate max-w-full">
                       {step.title}
                     </div>
-                    <p className="font-sans text-[11px] text-brown-soft leading-tight max-w-[120px] hidden sm:block">
+                    <p className="font-sans text-[11px] text-brown-soft leading-tight max-w-[120px] hidden md:block">
                       {step.desc}
                     </p>
                   </div>

@@ -150,12 +150,12 @@ export function HeroSection() {
               </div>
 
               {/* Yellow Circular Sun Badge */}
-              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 z-20 w-20 sm:w-24 h-20 sm:h-24 rounded-full bg-sunflower/95 backdrop-blur-xs shadow-lg border border-sunflower-deep/30 flex flex-col items-center justify-center text-charcoal select-none group-hover:rotate-6 transition-transform duration-500">
-                <span className="text-[7.5px] sm:text-[9px] font-mono uppercase font-bold tracking-wider text-center leading-[1.1] px-1">
+              <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 left-2 sm:left-4 md:left-6 z-20 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 rounded-full bg-sunflower/95 backdrop-blur-xs shadow-lg border border-sunflower-deep/30 flex flex-col items-center justify-center text-charcoal select-none group-hover:rotate-6 transition-transform duration-500">
+                <span className="text-[6.5px] sm:text-[7.5px] md:text-[9px] font-mono uppercase font-bold tracking-wider text-center leading-[1.1] px-1">
                   GOOD<br />SPACES<br />BRIGHTER<br />DAYS
                 </span>
                 {/* Radiating Sun Icon */}
-                <svg className="w-4 sm:w-5 h-4 sm:h-5 text-charcoal mt-1 animate-spin-slow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <svg className="w-3.5 sm:w-4 md:w-5 h-3.5 sm:h-4 md:h-5 text-charcoal mt-0.5 sm:mt-1 animate-spin-slow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <circle cx="12" cy="12" r="4" />
                   <line x1="12" y1="2" x2="12" y2="4" />
                   <line x1="12" y1="20" x2="12" y2="22" />
@@ -169,13 +169,13 @@ export function HeroSection() {
               </div>
 
               {/* Floating Bottom-Right Taped Quote Card */}
-              <div className="absolute bottom-3 sm:bottom-6 right-3 sm:right-6 z-20 bg-paper/95 backdrop-blur-md p-3.5 sm:p-5 rounded-2xl shadow-xl border border-stone/30 max-w-[210px] sm:max-w-[270px]">
+              <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 right-2 sm:right-4 md:right-6 z-20 bg-paper/95 backdrop-blur-md p-2.5 sm:p-3.5 md:p-5 rounded-2xl shadow-xl border border-stone/30 max-w-[160px] sm:max-w-[210px] md:max-w-[270px]">
                 {/* Washi Tape strip */}
-                <div className="w-10 sm:w-12 h-3 sm:h-3.5 bg-sunflower/50 mx-auto -mt-5 sm:-mt-7 mb-1.5 sm:mb-2 rounded-xs rotate-[-1deg] shadow-2xs" />
-                <p className="font-display italic text-xs sm:text-sm text-brown leading-snug">
+                <div className="w-8 sm:w-10 md:w-12 h-2.5 sm:h-3 md:h-3.5 bg-sunflower/50 mx-auto -mt-4 sm:-mt-5 md:-mt-7 mb-1 sm:mb-1.5 md:mb-2 rounded-xs rotate-[-1deg] shadow-2xs" />
+                <p className="font-display italic text-[11px] sm:text-xs md:text-sm text-brown leading-snug">
                   &ldquo;A well-designed space can change the way you feel every day.&rdquo;
                 </p>
-                <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-brown-soft font-bold mt-1.5 sm:mt-2">
+                <div className="text-[8px] sm:text-[9px] md:text-[10px] font-mono uppercase tracking-widest text-brown-soft font-bold mt-1 sm:mt-1.5 md:mt-2">
                   — MUSKAN PAREEK
                 </div>
               </div>

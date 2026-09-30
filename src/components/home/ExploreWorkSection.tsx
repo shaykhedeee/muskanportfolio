@@ -41,7 +41,7 @@ export function ExploreWorkSection() {
         </div>
 
         {/* 3 Interactive Portals with Roman Arches matching mockup */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch aspect-[16/7.5] max-h-[460px] lg:max-h-[500px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch md:aspect-[16/7.5] md:max-h-[460px] lg:max-h-[500px]">
           {CATEGORY_PORTALS.map((cat) => {
             const isHovered = hoveredId === cat.id;
 
@@ -53,7 +53,7 @@ export function ExploreWorkSection() {
                 onMouseLeave={() => setHoveredId(null)}
                 data-cursor="view"
                 className={cn(
-                  "group relative rounded-[28px] overflow-hidden shadow-lg border-2 border-stone/30 flex flex-col justify-between transition-all duration-500 ease-out cursor-pointer p-7 md:p-9",
+                  "group relative rounded-[28px] overflow-hidden shadow-lg border-2 border-stone/30 flex flex-col justify-between transition-all duration-500 ease-out cursor-pointer p-6 sm:p-7 md:p-9 min-h-[220px] md:min-h-0",
                   isHovered
                     ? "ring-2 ring-sunflower shadow-2xl scale-[1.02]"
                     : "opacity-100 scale-100"

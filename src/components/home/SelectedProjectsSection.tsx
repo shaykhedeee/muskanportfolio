@@ -111,8 +111,34 @@ export function SelectedProjectsSection({
         {/* Main Content Grid: Left List (4 cols) + Right Cards (8 cols) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           
-          {/* Left Project Index Rail (cols 1-4) with smooth scrolling */}
-          <div className="lg:col-span-4 flex flex-col space-y-2 pr-2">
+          {/* Mobile Project Selector Pill Bar (lg:hidden) */}
+          <div className="flex lg:hidden overflow-x-auto gap-2 pb-2 -mx-2 px-2 no-scrollbar snap-x">
+            {featuredList.map((proj, idx) => {
+              const isPrimary = idx === startIndex;
+              return (
+                <button
+                  key={proj.id}
+                  onClick={() => handleSelect(idx <= maxStart ? idx : maxStart)}
+                  className={cn(
+                    "shrink-0 snap-start px-3.5 py-2 rounded-xl transition-all duration-300 flex items-center gap-2 cursor-pointer text-left border",
+                    isPrimary
+                      ? "bg-paper-card shadow-sm border-sunflower text-brown font-medium"
+                      : "bg-paper-card/60 border-stone/30 text-brown-soft hover:bg-paper-card"
+                  )}
+                >
+                  <span className={cn("font-mono text-xs font-bold", isPrimary ? "text-sunflower" : "text-brown-soft")}>
+                    {proj.number}
+                  </span>
+                  <span className="font-display text-sm whitespace-nowrap text-brown">
+                    {proj.title}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Left Project Index Rail (cols 1-4) on Desktop */}
+          <div className="hidden lg:flex lg:col-span-4 flex-col space-y-2 pr-2">
             {featuredList.map((proj, idx) => {
               const isPrimary = idx === startIndex;
 

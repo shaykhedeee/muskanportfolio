@@ -995,7 +995,7 @@ export const FEATURED_PROJECTS: Project[] = [
     number: "07",
     title: "Ekkat Boutique",
     category: "Commercial",
-    location: "Jaipur",
+    location: "Sarjapur, Bangalore",
     headline: "Ekkat — An Ethnic Saga | Boutique Flagship Storefront, Sage Green Joinery, Arched Botanical Alcoves & AutoCAD Reception Detail",
     shortDescription: "A luxury artisanal ethnic wear boutique for Ekkat, featuring a grand neoclassical arched storefront facade, sage green fluted modular cabinetry, botanical wallpaper alcoves, and bespoke AutoCAD reception counter joinery.",
     heroImage: "/images/projects/ekkat-boutique/storefront-facade.jpg",
@@ -1230,7 +1230,7 @@ export const HOMEPAGE_FEATURED_PROJECTS: Project[] = [
     number: "05",
     title: "Ekkat Boutique",
     category: "Commercial",
-    location: "Jaipur",
+    location: "Sarjapur, Bangalore",
     shortDescription: "Artisanal luxury concept store celebrating handcrafted textiles with sculptural arches and travertine plinths.",
   },
 ];

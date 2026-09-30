@@ -51,7 +51,7 @@ const TESTIMONIALS: Testimonial[] = [
     id: "ananya",
     name: "Ananya Sen",
     role: "Creative Director",
-    location: "Jaipur",
+    location: "Sarjapur, Bangalore",
     project: "Ekkat Boutique Store",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
     quote:
