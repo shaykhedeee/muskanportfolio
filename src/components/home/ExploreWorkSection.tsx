@@ -19,14 +19,14 @@ export function ExploreWorkSection() {
       data-section="2"
       className="relative min-h-[100svh] lg:h-[100svh] lg:max-h-[100svh] w-full bg-paper flex flex-col justify-between py-10 md:py-12 lg:py-14 overflow-hidden content-visibility-auto"
     >
-      <div className="max-w-master mx-auto w-full px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
+      <div className="max-w-master mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 pb-3 border-b border-stone/40">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-6 pb-3 border-b border-stone/40">
           <div>
             <AnimatedHeading
               as="h2"
-              className="font-display text-4xl sm:text-5xl lg:text-6xl text-brown font-normal tracking-tight"
+              className="font-display text-3xl sm:text-5xl lg:text-6xl text-brown font-normal tracking-tight"
               subtitle="Different spaces. A common purpose. Thoughtful design for a better everyday."
             >
               Explore All My Work

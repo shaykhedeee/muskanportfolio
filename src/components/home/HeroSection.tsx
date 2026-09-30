@@ -26,15 +26,15 @@ export function HeroSection() {
       <div className="absolute inset-0 paper-grain pointer-events-none opacity-25" />
       <div className="absolute top-1/4 left-1/3 w-[650px] h-[650px] rounded-full bg-sunflower/10 blur-3xl pointer-events-none" />
 
-      <div className="max-w-master mx-auto w-full px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center my-auto relative z-10">
+      <div className="max-w-master mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center my-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
           {/* =========================================================
               LEFT COLUMN: Typography, Story, CTA & Proof (cols 1-5)
              ========================================================= */}
-          <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 pt-4 lg:pt-0">
+          <div className="lg:col-span-5 flex flex-col justify-center order-1 lg:order-1 pt-2 lg:pt-0">
             {/* Top Eyebrow Tag: Minimalist Architectural Studio Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-paper/95 backdrop-blur-xs border border-stone/35 shadow-xs mb-5 w-fit">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-paper/95 backdrop-blur-xs border border-stone/35 shadow-xs mb-4 sm:mb-5 w-fit">
               <span className="w-2 h-2 rounded-full bg-sunflower animate-pulse" />
               <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] font-mono font-semibold text-brown">
                 Studio Muskan Pareek · Interior Architecture
@@ -42,7 +42,7 @@ export function HeroSection() {
             </div>
 
             {/* Main Headline: Designing spaces that feel like home. */}
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[70px] xl:text-[78px] leading-[1.04] text-brown font-normal tracking-tight mb-5">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[70px] xl:text-[78px] leading-[1.06] text-brown font-normal tracking-tight mb-4 sm:mb-5">
               Designing<br className="hidden sm:inline" />
               {" "}spaces that<br className="hidden sm:inline" />
               {" "}feel like{" "}
@@ -71,11 +71,11 @@ export function HeroSection() {
             </p>
 
             {/* Action Row: Primary CTA + Secondary Link + Handwritten Note */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-8">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-7 sm:mb-8">
               <Link
                 href="#projects"
                 onClick={() => playTap()}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-sunflower text-charcoal font-semibold text-sm shadow-md hover:bg-sunflower-deep transition-all duration-300 hover:scale-105 active:scale-95 group cursor-pointer shrink-0"
+                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-sunflower text-charcoal font-semibold text-xs sm:text-sm shadow-md hover:bg-sunflower-deep transition-all duration-300 hover:scale-105 active:scale-95 group cursor-pointer shrink-0"
               >
                 <span>View My Work</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -95,18 +95,18 @@ export function HeroSection() {
             </div>
 
             {/* Bottom Proof Metrics Bar (divide-x) */}
-            <div className="grid grid-cols-3 divide-x divide-stone/40 pt-5 border-t border-stone/35 max-w-md">
-              <div className="pr-3 sm:pr-4">
-                <div className="font-display text-3xl sm:text-4xl text-brown font-normal leading-none">50+</div>
-                <div className="text-[10px] uppercase font-mono tracking-wider text-brown-soft mt-1">Projects</div>
+            <div className="grid grid-cols-3 divide-x divide-stone/40 pt-4 sm:pt-5 border-t border-stone/35 max-w-md">
+              <div className="pr-2 sm:pr-4">
+                <div className="font-display text-2xl sm:text-3xl md:text-4xl text-brown font-normal leading-none">50+</div>
+                <div className="text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-brown-soft mt-1">Projects</div>
               </div>
-              <div className="px-3 sm:px-4">
-                <div className="font-display text-3xl sm:text-4xl text-brown font-normal leading-none">4+</div>
-                <div className="text-[10px] uppercase font-mono tracking-wider text-brown-soft mt-1">Years Practice</div>
+              <div className="px-2 sm:px-4">
+                <div className="font-display text-2xl sm:text-3xl md:text-4xl text-brown font-normal leading-none">4+</div>
+                <div className="text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-brown-soft mt-1">Years Practice</div>
               </div>
-              <div className="pl-3 sm:pl-4">
-                <div className="font-display text-3xl sm:text-4xl text-brown font-normal leading-none">100%</div>
-                <div className="text-[10px] uppercase font-mono tracking-wider text-brown-soft mt-1">Turnkey Delivery</div>
+              <div className="pl-2 sm:pl-4">
+                <div className="font-display text-2xl sm:text-3xl md:text-4xl text-brown font-normal leading-none">100%</div>
+                <div className="text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-brown-soft mt-1">Turnkey Delivery</div>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ export function HeroSection() {
               RIGHT COLUMN: Signature Twin Roman Arches & Muskan
               (cols 6-12) - Architectural Composition
              ========================================================= */}
-          <div className="lg:col-span-7 relative order-1 lg:order-2 flex justify-center items-center">
+          <div className="lg:col-span-7 relative order-2 lg:order-2 flex justify-center items-center">
             
             {/* The Twin Roman Arches Composition Container */}
             <div className="relative w-full max-w-2xl lg:max-w-none aspect-[4/4.2] sm:aspect-[4/3.6] lg:aspect-[16/10.2] rounded-t-[140px] sm:rounded-t-[200px] lg:rounded-t-[260px] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-stone/30 bg-[#F4EEE2] group ring-8 ring-stone/15 transition-all duration-500 hover:ring-sunflower/20">

@@ -73,7 +73,7 @@ export default async function FurnitureCaseStudyPage({ params }: FurniturePagePr
       <Header />
 
       {/* Top Breadcrumb Navigation */}
-      <div className="pt-28 pb-4 px-6 md:px-12 lg:px-16 max-w-master mx-auto flex items-center justify-between">
+      <div className="pt-28 pb-4 px-4 sm:px-6 md:px-12 lg:px-16 max-w-master mx-auto flex items-center justify-between">
         <Link
           href="/work/furniture"
           className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-brown-soft hover:text-charcoal transition-colors font-semibold"
@@ -87,7 +87,7 @@ export default async function FurnitureCaseStudyPage({ params }: FurniturePagePr
       </div>
 
       {/* SECTION 1: HERO OVERVIEW */}
-      <section className="pb-16 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
+      <section className="pb-16 px-4 sm:px-6 md:px-12 lg:px-16 max-w-master mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Title & Metadata */}
           <div className="lg:col-span-6 space-y-5">
@@ -101,7 +101,7 @@ export default async function FurnitureCaseStudyPage({ params }: FurniturePagePr
               </span>
             </div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-brown font-normal leading-[1.08] tracking-tight">
+            <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl text-brown font-normal leading-[1.08] tracking-tight">
               {item.title}
             </h1>
 

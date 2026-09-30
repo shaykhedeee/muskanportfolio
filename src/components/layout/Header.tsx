@@ -21,6 +21,18 @@ export function Header() {
     setSoundActive(sound.getSoundEnabled());
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
@@ -115,9 +127,9 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 lg:px-16",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 sm:py-4 px-4 sm:px-6 md:px-12 lg:px-16",
           isScrolled
-            ? "bg-paper/90 backdrop-blur-md shadow-xs border-b border-stone/30 py-3"
+            ? "bg-paper/90 backdrop-blur-md shadow-xs border-b border-stone/30 py-2.5 sm:py-3"
             : "bg-transparent"
         )}
       >

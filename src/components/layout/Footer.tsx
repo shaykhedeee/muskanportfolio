@@ -4,7 +4,7 @@ import { Download, Linkedin, Mail, MapPin, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-paper border-t border-stone/40 pt-16 pb-10 px-6 md:px-12 lg:px-16">
+    <footer className="w-full bg-paper border-t border-stone/40 pt-12 sm:pt-16 pb-8 sm:pb-10 px-4 sm:px-6 md:px-12 lg:px-16">
       <div className="max-w-master mx-auto">
         
         {/* Top Editorial Call to Action (Section 4 of Spec) */}
@@ -82,7 +82,7 @@ export function Footer() {
             </span>
           </div>
 
-          <nav className="flex flex-wrap items-center justify-center gap-6 font-medium" aria-label="Footer Navigation">
+          <nav className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-6 font-medium" aria-label="Footer Navigation">
             <Link href="/#home" className="hover:text-charcoal transition-colors">
               Home
             </Link>

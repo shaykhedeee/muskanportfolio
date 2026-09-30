@@ -22,7 +22,7 @@ export default async function ProjectsIndexPage() {
       <Header />
 
       {/* Top Breadcrumb Navigation */}
-      <div className="pt-28 pb-4 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
+      <div className="pt-28 pb-4 px-4 sm:px-6 md:px-12 lg:px-16 max-w-master mx-auto">
         <div className="flex items-center justify-between border-b border-stone/30 pb-4">
           <Link
             href="/#projects"
@@ -42,18 +42,18 @@ export default async function ProjectsIndexPage() {
       </div>
 
       {/* Hero Header Section */}
-      <section className="py-12 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
+      <section className="py-12 px-4 sm:px-6 md:px-12 lg:px-16 max-w-master mx-auto">
         <div className="mb-12 border-b border-stone/40 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
               <span className="text-xs uppercase tracking-[0.25em] font-sans font-bold text-brown-soft">
                 COMPLETE PORTFOLIO INDEX
               </span>
-              <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-olive/15 text-olive font-semibold">
+              <span className="text-[10px] sm:text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-olive/15 text-olive font-semibold">
                 16 Curated Works (5 Residential · 2 Commercial · 9 Furniture)
               </span>
             </div>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-brown font-normal leading-tight">
+            <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl text-brown font-normal leading-tight">
               Selected Projects
             </h1>
             <p className="font-sans text-brown-soft text-base md:text-lg leading-relaxed pt-1">

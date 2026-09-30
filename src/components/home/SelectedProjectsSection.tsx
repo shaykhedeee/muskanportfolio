@@ -63,14 +63,14 @@ export function SelectedProjectsSection({
         opacity="opacity-[0.035]"
         className="pointer-events-none"
       />
-      <div className="max-w-master mx-auto w-full px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
+      <div className="max-w-master mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
         
         {/* Section Header Row */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 pb-3 border-b border-stone/40">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-5 sm:mb-6 pb-3 border-b border-stone/40">
           <div className="flex flex-wrap items-baseline gap-4 md:gap-6">
             <AnimatedHeading
               as="h2"
-              className="font-display text-4xl sm:text-5xl lg:text-6xl text-brown font-normal tracking-tight"
+              className="font-display text-3xl sm:text-5xl lg:text-6xl text-brown font-normal tracking-tight"
               eyebrow="REAL SPACES · REAL STORIES"
             >
               Featured Projects
@@ -109,10 +109,10 @@ export function SelectedProjectsSection({
         </div>
 
         {/* Main Content Grid: Left List (4 cols) + Right Cards (8 cols) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10 items-center">
           
           {/* Mobile Project Selector Pill Bar (lg:hidden) */}
-          <div className="flex lg:hidden overflow-x-auto gap-2 pb-2 -mx-2 px-2 no-scrollbar snap-x">
+          <div className="flex lg:hidden overflow-x-auto gap-2 pb-2 -mx-4 px-4 no-scrollbar snap-x">
             {featuredList.map((proj, idx) => {
               const isPrimary = idx === startIndex;
               return (
@@ -182,7 +182,7 @@ export function SelectedProjectsSection({
                 data-cursor="view"
                 className={cn(
                   "group relative rounded-t-[140px] md:rounded-t-[180px] rounded-b-3xl overflow-hidden shadow-xl border-2 border-stone/30 bg-paper-card flex flex-col justify-end transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl aspect-[3.5/4.6] max-h-[460px] lg:max-h-[500px]",
-                  i === 0 ? "scale-[1.01] shadow-2xl z-10 ring-2 ring-sunflower/40" : "scale-100 opacity-95"
+                  i === 0 ? "scale-[1.01] shadow-2xl z-10 ring-2 ring-sunflower/40 flex" : "hidden md:flex scale-100 opacity-95"
                 )}
               >
                 {/* Project Image */}

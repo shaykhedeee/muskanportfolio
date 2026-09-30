@@ -28,7 +28,7 @@ export function StyleOfWorkSection() {
         variant="minimal"
       />
 
-      <div className="max-w-master mx-auto w-full px-5 sm:px-8 md:px-12 lg:px-16 flex-1 flex flex-col justify-center relative z-10">
+      <div className="max-w-master mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 pb-3 border-b border-stone/40">
           <div>

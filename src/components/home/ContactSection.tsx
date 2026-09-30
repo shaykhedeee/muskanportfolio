@@ -15,7 +15,7 @@ export function ContactSection() {
       data-section="6"
       className="relative min-h-[100svh] lg:h-[100svh] lg:max-h-[100svh] w-full bg-paper flex flex-col justify-between pt-8 md:pt-10 pb-2 overflow-hidden content-visibility-auto"
     >
-      <div className="max-w-master mx-auto w-full px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
+      <div className="max-w-master mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
         
         {/* Main Grid: 3-column layout matching mockup */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center mb-3">
@@ -24,7 +24,7 @@ export function ContactSection() {
           <div className="lg:col-span-4 relative flex justify-center">
             <div
               data-cursor="view"
-              className="relative w-full max-w-[290px] aspect-[3/3.8] rounded-t-full rounded-b-3xl overflow-hidden shadow-xl border-4 border-paper-card bg-paper-card group cursor-pointer"
+              className="relative w-full max-w-[220px] sm:max-w-[290px] aspect-[3/3.6] rounded-t-full rounded-b-3xl overflow-hidden shadow-xl border-4 border-paper-card bg-paper-card group cursor-pointer"
             >
               <Image
                 src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=1200&q=80"
@@ -127,12 +127,12 @@ export function ContactSection() {
       </div>
 
       {/* Integrated Minimal Brand Footer matching mockup */}
-      <div className="border-t border-stone/30 py-3 px-6 md:px-12 lg:px-16 max-w-master mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-brown-soft">
+      <div className="border-t border-stone/30 py-3 px-4 sm:px-6 md:px-12 lg:px-16 max-w-master mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-brown-soft text-center sm:text-left">
         <div className="flex items-center gap-2">
           <span className="font-display text-sm text-brown font-normal">Muskan Pareek</span>
           <span className="text-[10px] uppercase font-mono tracking-widest text-brown-soft/80">INTERIOR DESIGNER</span>
         </div>
-        <div className="flex items-center gap-4 text-[11px] font-sans">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[11px] font-sans">
           <Link href="/#home" className="hover:text-charcoal">Home</Link>
           <Link href="/about" className="hover:text-charcoal">About</Link>
           <Link href="/projects" className="hover:text-charcoal">Projects</Link>

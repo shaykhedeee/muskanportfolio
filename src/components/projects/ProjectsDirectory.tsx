@@ -352,7 +352,7 @@ export function ProjectsDirectory({
                       <Armchair className="w-4 h-4" />
                       <span>BESPOKE FURNITURE COLLECTION</span>
                     </div>
-                    <h3 className="font-display text-3xl text-brown">
+                    <h3 className="font-display text-2xl sm:text-3xl text-brown">
                       Custom Millwork &amp; System 32 Furniture
                     </h3>
                   </div>

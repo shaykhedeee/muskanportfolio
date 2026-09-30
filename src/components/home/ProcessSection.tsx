@@ -58,14 +58,14 @@ export function ProcessSection() {
         opacity="opacity-[0.035]"
         className="pointer-events-none"
       />
-      <div className="max-w-master mx-auto w-full px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
+      <div className="max-w-master mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 pb-3 border-b border-stone/40">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-6 pb-3 border-b border-stone/40">
           <div className="flex flex-wrap items-baseline gap-4 md:gap-6">
             <AnimatedHeading
               as="h2"
-              className="font-display text-4xl sm:text-5xl lg:text-6xl text-brown font-normal tracking-tight"
+              className="font-display text-3xl sm:text-5xl lg:text-6xl text-brown font-normal tracking-tight"
               eyebrow="FROM IDEAS TO SPACES THAT MATTER"
             >
               My Design Process
@@ -83,7 +83,7 @@ export function ProcessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center mb-6">
           
           {/* Left Arch Container (cols 1-4) with Roman Arch */}
-          <div className="lg:col-span-4 relative rounded-t-full rounded-b-3xl overflow-hidden shadow-xl border-4 border-paper-card aspect-[3/4.2] max-h-[440px] bg-paper-card group">
+          <div className="lg:col-span-4 relative rounded-t-full rounded-b-3xl overflow-hidden shadow-xl border-4 border-paper-card aspect-[3/3.8] sm:aspect-[3/4.2] max-h-[360px] sm:max-h-[440px] bg-paper-card group order-2 lg:order-1">
             <Image
               src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80"
               alt="Architectural space with arched doorway and daylight"
@@ -92,11 +92,11 @@ export function ProcessSection() {
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-black/25 to-transparent" />
-            <div className="absolute bottom-8 left-6 right-6 text-paper space-y-2 text-center">
+            <div className="absolute bottom-6 sm:bottom-8 left-4 sm:left-6 right-4 sm:right-6 text-paper space-y-1.5 sm:space-y-2 text-center">
               <span className="text-[10px] uppercase font-mono tracking-widest text-sunflower font-bold px-3 py-1 rounded-full bg-charcoal/60 backdrop-blur-xs inline-block">
                 STAGE 0{activeStep + 1} · {steps[activeStep].title}
               </span>
-              <div className="font-display text-2xl sm:text-3xl font-normal leading-snug text-white">
+              <div className="font-display text-xl sm:text-2xl md:text-3xl font-normal leading-snug text-white">
                 A clear process for beautiful results.
               </div>
               <p className="text-xs font-sans text-paper/85 leading-relaxed max-w-xs mx-auto">
@@ -106,7 +106,7 @@ export function ProcessSection() {
           </div>
 
           {/* Right 5-Step Flow (cols 5-12) matching mockup */}
-          <div className="lg:col-span-8 flex flex-col justify-center space-y-8">
+          <div className="lg:col-span-8 flex flex-col justify-center space-y-6 sm:space-y-8 order-1 lg:order-2">
             <div className="grid grid-cols-5 gap-1.5 sm:gap-2.5 md:gap-3 items-start">
               {steps.map((step, idx) => {
                 const IconComponent = step.icon;

@@ -123,7 +123,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <Header />
 
       {/* Top Back Link */}
-      <div className="pt-28 pb-4 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
+      <div className="pt-28 pb-4 px-4 sm:px-6 md:px-12 lg:px-16 max-w-master mx-auto">
         <Link
           href="/#projects"
           className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-brown-soft hover:text-charcoal transition-colors font-semibold"
@@ -136,7 +136,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {/* =========================================================
           1. PROJECT HERO (Matching media_1789888902621.png reference)
          ========================================================= */}
-      <section className="pb-16 px-6 md:px-12 lg:px-16 max-w-master mx-auto relative">
+      <section className="pb-16 px-4 sm:px-6 md:px-12 lg:px-16 max-w-master mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Title & Metadata */}

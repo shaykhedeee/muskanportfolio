@@ -15,14 +15,14 @@ export function ExperienceSection() {
       data-section="5"
       className="relative min-h-[100svh] lg:h-[100svh] lg:max-h-[100svh] w-full bg-paper flex flex-col justify-between py-10 md:py-12 lg:py-14 overflow-hidden content-visibility-auto"
     >
-      <div className="max-w-master mx-auto w-full px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
+      <div className="max-w-master mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-center">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 pb-3 border-b border-stone/40">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-6 pb-3 border-b border-stone/40">
           <div>
             <AnimatedHeading
               as="h2"
-              className="font-display text-4xl sm:text-5xl lg:text-6xl text-brown font-normal tracking-tight"
+              className="font-display text-3xl sm:text-5xl lg:text-6xl text-brown font-normal tracking-tight"
               subtitle="Design experience grounded in real projects, modular detailing, and technical execution."
             >
               Experience &amp; Capabilities
@@ -40,7 +40,7 @@ export function ExperienceSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
           
           {/* Left: Experience Timeline (cols 1-7) */}
-          <div className="lg:col-span-7 bg-paper-card p-6 rounded-2xl border border-stone/40 shadow-sm">
+          <div className="lg:col-span-7 bg-paper-card p-4 sm:p-6 rounded-2xl border border-stone/40 shadow-sm">
             <div className="font-sans text-xs uppercase tracking-widest text-brown-soft font-semibold mb-4">
               Verified Career Timeline
             </div>
@@ -84,12 +84,12 @@ export function ExperienceSection() {
 
           {/* Right: Technical Capabilities (cols 8-12) */}
           <div className="lg:col-span-5 flex flex-col space-y-4">
-            <div className="bg-paper-card p-6 rounded-2xl border border-stone/40 shadow-sm space-y-3">
+            <div className="bg-paper-card p-4 sm:p-6 rounded-2xl border border-stone/40 shadow-sm space-y-3">
               <div className="font-sans text-xs uppercase tracking-widest text-brown-soft font-semibold">
                 Technical Execution
               </div>
 
-              <div className="grid grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
                 {[
                   "AutoCAD 2D Working Sets",
                   "3D SketchUp & Enscape",
