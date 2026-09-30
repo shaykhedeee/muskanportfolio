@@ -177,7 +177,7 @@ export default function ResumePage() {
 
       {/* Resume Document Content */}
       <div className="pb-24 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
-        <div className="bg-paper-light rounded-3xl p-8 md:p-14 border border-stone/30 shadow-md">
+        <div className="bg-paper-light rounded-3xl p-5 sm:p-8 md:p-14 border border-stone/30 shadow-md">
           
           {/* Header Block */}
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-8 pb-10 border-b border-stone/40">

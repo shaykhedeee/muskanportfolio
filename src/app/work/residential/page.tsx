@@ -41,7 +41,7 @@ export default function ResidentialWorkPage() {
                 5 Curated Homes
               </span>
             </div>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-brown font-normal">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-brown font-normal leading-[1.08]">
               Residential Interiors
             </h1>
             <p className="font-sans text-brown-soft text-base md:text-lg mt-3 max-w-xl">

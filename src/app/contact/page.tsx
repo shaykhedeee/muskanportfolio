@@ -60,7 +60,7 @@ export default function ContactPage() {
                 </span>
               </div>
 
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-brown font-normal tracking-tight leading-[1.05]">
+              <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-brown font-normal tracking-tight leading-[1.08]">
                 Let&apos;s build thoughtful spaces together.
               </h1>
 

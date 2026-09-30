@@ -156,7 +156,7 @@ export default function ServicesPage() {
             <span className="text-xs uppercase tracking-[0.25em] font-sans font-bold text-brown-soft block">
               COMPREHENSIVE DESIGN DISCIPLINES
             </span>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-brown font-normal leading-[1.08]">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-brown font-normal leading-[1.08]">
               Design Services Built on Precision &amp; Soul.
             </h1>
             <p className="font-sans text-brown-soft text-base md:text-lg leading-relaxed pt-1">

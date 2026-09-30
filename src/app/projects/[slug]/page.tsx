@@ -145,7 +145,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               PROJECT CASE STUDY
             </span>
 
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-[76px] text-brown font-normal leading-[1.05] tracking-tight">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[76px] text-brown font-normal leading-[1.08] tracking-tight">
               {project.title}
             </h1>
 

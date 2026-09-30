@@ -119,7 +119,7 @@ export default function ProcessPage() {
                 DESIGN METHODOLOGY &amp; WORKFLOW
               </span>
             </div>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-brown font-normal leading-[1.05] tracking-tight">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-brown font-normal leading-[1.08] tracking-tight">
               From requirement to refined interior.
             </h1>
             <p className="font-sans text-brown-soft text-base md:text-lg leading-relaxed">
@@ -142,7 +142,7 @@ export default function ProcessPage() {
           return (
             <div
               key={stage.step}
-              className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 md:p-12 rounded-3xl bg-paper-card border border-stone/40 shadow-xs ${
+              className={`grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center p-5 sm:p-8 md:p-12 rounded-3xl bg-paper-card border border-stone/40 shadow-xs ${
                 isEven ? "lg:flex-row-reverse" : ""
               }`}
             >

@@ -169,7 +169,7 @@ export default function AboutPage() {
               ABOUT ME
             </span>
 
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-[76px] leading-[1.05] text-brown font-normal mb-6 tracking-tight">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[1.08] text-brown font-normal mb-6 tracking-tight">
               Designing spaces with{" "}
               <span className="italic text-sunflower font-normal">
                 purpose, warmth
