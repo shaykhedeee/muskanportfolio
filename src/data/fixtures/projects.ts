@@ -3159,41 +3159,53 @@ export const FEATURED_PROJECTS: Project[] = [
 ];
 export const HOMEPAGE_FEATURED_PROJECTS: Project[] = [
   {
-    ...FEATURED_PROJECTS[0],
+    ...FEATURED_PROJECTS.find((p) => p.slug === "the-calm-house")!,
     number: "01",
     title: "The Sarthak Residence",
     category: "Residential",
     location: "Bengaluru",
   },
   {
-    ...FEATURED_PROJECTS[1],
+    ...FEATURED_PROJECTS.find((p) => p.slug === "koramangala-luxury-villa")!,
     number: "02",
-    category: "Residential",
-    location: "Jodhpur",
-    shortDescription: "A warm and inviting home filled with natural light and earthy textures.",
-  },
-  {
-    ...FEATURED_PROJECTS[2],
-    number: "03",
+    title: "Koramangala Villa F",
     category: "Villa",
-    location: "Alwar",
-    shortDescription: "A serene retreat designed for modern living.",
+    location: "Koramangala, Bengaluru",
   },
   {
-    ...FEATURED_PROJECTS[5], // Olive & Oak
+    ...FEATURED_PROJECTS.find((p) => p.slug === "the-modernist-3bhk")!,
+    number: "03",
+    title: "The Modernist 3BHK",
+    category: "Residential",
+    location: "Bengaluru",
+  },
+  {
+    ...FEATURED_PROJECTS.find((p) => p.slug === "urban-scandi-3bhk")!,
     number: "04",
-    title: "Olive & Oak",
-    category: "Café Interior",
-    location: "Jaipur",
-    shortDescription: "Warm hospitality and bespoke seating crafted with organic timbers and gentle archways.",
+    title: "Urban Scandi 3BHK",
+    category: "Residential",
+    location: "Bengaluru",
   },
   {
-    ...FEATURED_PROJECTS[6], // Ekkat Boutique
+    ...FEATURED_PROJECTS.find((p) => p.slug === "the-hitesh-ria-residence")!,
     number: "05",
-    title: "Ekkat Boutique",
-    category: "Commercial",
-    location: "Sarjapur, Bangalore",
-    shortDescription: "Artisanal luxury concept store celebrating handcrafted textiles with sculptural arches and travertine plinths.",
+    title: "The Hitesh & Ria Residence",
+    category: "Residential",
+    location: "Bengaluru",
+  },
+  {
+    ...FEATURED_PROJECTS.find((p) => p.slug === "akanchha-harsh-residence")!,
+    number: "06",
+    title: "The Akanchha & Harsh Residence",
+    category: "Residential",
+    location: "Bengaluru",
+  },
+  {
+    ...FEATURED_PROJECTS.find((p) => p.slug === "mr-vivek-residence")!,
+    number: "07",
+    title: "Mr. Vivek Residence",
+    category: "Residential",
+    location: "Bengaluru",
   },
 ];
 

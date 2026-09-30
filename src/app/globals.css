@@ -317,6 +317,35 @@
   .animate-cad-pulse {
     animation: cadPulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+
+  /* Center-aligned Swipable Carousel Track Padding */
+  .carousel-center-padding {
+    padding-left: calc(50vw - min(41vw, 160px));
+    padding-right: calc(50vw - min(41vw, 160px));
+  }
+  @media (min-width: 640px) {
+    .carousel-center-padding {
+      padding-left: calc(50vw - 195px);
+      padding-right: calc(50vw - 195px);
+    }
+  }
+  @media (min-width: 768px) {
+    .carousel-center-padding {
+      padding-left: calc(50vw - 225px);
+      padding-right: calc(50vw - 225px);
+    }
+  }
+  @media (min-width: 1024px) {
+    .carousel-center-padding {
+      padding-left: calc(50vw - 240px);
+      padding-right: calc(50vw - 240px);
+    }
+  }
+
+  /* GPU-Accelerated Luxury Card Glow */
+  .card-sexy-glow {
+    box-shadow: 0 30px 60px -12px rgba(230, 180, 50, 0.32), 0 18px 36px -18px rgba(73, 53, 44, 0.35);
+  }
 }
 
 
