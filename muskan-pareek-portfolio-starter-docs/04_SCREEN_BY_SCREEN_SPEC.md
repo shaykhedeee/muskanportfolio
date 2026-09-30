@@ -243,7 +243,7 @@ Subtext:
 `Available for interior design, visualization, project-based collaborations and stronger career opportunities.`
 
 Display:
-- pareekmuskan01@gmail.com
+- pareekmuskan1999@gmail.com
 - Bengaluru, Karnataka, India
 - Hybrid · Remote · Bengaluru
 - LinkedIn

@@ -473,7 +473,7 @@ export default async function FurnitureCaseStudyPage({ params }: FurniturePagePr
 
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <a
-                href={`mailto:pareekmuskan01@gmail.com?subject=Custom%20Furniture%20Commission:%20${encodeURIComponent(item.title)}%20(${encodeURIComponent(item.number)})`}
+                href={`mailto:pareekmuskan1999@gmail.com?subject=Custom%20Furniture%20Commission:%20${encodeURIComponent(item.title)}%20(${encodeURIComponent(item.number)})`}
                 className="px-6 py-3 rounded-full bg-sunflower text-brown font-semibold text-xs uppercase tracking-widest hover:bg-white transition-colors cursor-pointer inline-flex items-center gap-2"
               >
                 <Mail className="w-4 h-4" />

@@ -5,7 +5,7 @@ const resumeDir = path.join(__dirname, '..', 'public', 'resume');
 fs.mkdirSync(resumeDir, { recursive: true });
 
 function makeSimplePdf(title, author) {
-  const content = `BT /F1 24 Tf 72 712 Td (${title}) Tj 0 -36 Td /F1 14 Tf (${author}) Tj 0 -24 Td /F1 12 Tf (Interior Designer - Bengaluru, India) Tj 0 -20 Td (Email: pareekmuskan01@gmail.com) Tj ET`;
+  const content = `BT /F1 24 Tf 72 712 Td (${title}) Tj 0 -36 Td /F1 14 Tf (${author}) Tj 0 -24 Td /F1 12 Tf (Interior Designer - Bengaluru, India) Tj 0 -20 Td (Email: pareekmuskan1999@gmail.com) Tj ET`;
   const len = Buffer.byteLength(content, 'utf8');
   return `%PDF-1.4
 1 0 obj

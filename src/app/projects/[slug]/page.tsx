@@ -1561,13 +1561,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   Let&apos;s Create Something Beautiful Together.
                 </div>
                 <div className="flex flex-wrap items-center gap-4 text-xs text-brown-soft mt-1">
-                  <span className="flex items-center gap-1.5 font-mono">
+                  <a
+                    href="mailto:pareekmuskan1999@gmail.com"
+                    className="flex items-center gap-1.5 font-mono hover:text-charcoal transition-colors"
+                  >
                     <Mail className="w-3.5 h-3.5 text-sunflower-deep" />
-                    muskanpareek.design@gmail.com
-                  </span>
+                    <span>pareekmuskan1999@gmail.com</span>
+                  </a>
                   <span className="flex items-center gap-1.5 font-mono">
                     <MapPin className="w-3.5 h-3.5 text-olive" />
-                    Jaipur, Rajasthan
+                    Bengaluru &amp; Jaipur, India
                   </span>
                 </div>
               </div>

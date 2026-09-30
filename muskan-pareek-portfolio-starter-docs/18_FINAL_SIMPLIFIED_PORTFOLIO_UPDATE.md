@@ -96,7 +96,7 @@ The site should not ask users to complete a form.
 
 Email may be displayed as plain contact information:
 
-`pareekmuskan01@gmail.com`
+`pareekmuskan1999@gmail.com`
 
 Location:
 
@@ -181,7 +181,7 @@ Footer micro-information:
 
 `Muskan Pareek — Interior Designer`  
 `Bengaluru, Karnataka, India`  
-`pareekmuskan01@gmail.com`
+`pareekmuskan1999@gmail.com`
 
 No form. No newsletter. No unnecessary social-media list.
 

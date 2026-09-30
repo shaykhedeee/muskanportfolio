@@ -297,7 +297,7 @@ export function Header() {
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
               <div className="text-center text-[10px] font-mono text-brown-soft">
-                pareekmuskan01@gmail.com · Bengaluru, India
+                pareekmuskan1999@gmail.com · Bengaluru, India
               </div>
             </div>
           </div>

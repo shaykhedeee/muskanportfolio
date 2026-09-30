@@ -23,11 +23,11 @@ export function Footer() {
             {/* Direct Contact Metadata */}
             <div className="flex flex-wrap items-center gap-y-2 gap-x-5 pt-2 text-xs font-sans text-brown-soft">
               <a
-                href="mailto:pareekmuskan01@gmail.com"
+                href="mailto:pareekmuskan1999@gmail.com"
                 className="flex items-center gap-1.5 hover:text-charcoal transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-sunflower-deep" />
-                <span>pareekmuskan01@gmail.com</span>
+                <span>pareekmuskan1999@gmail.com</span>
               </a>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-olive" />

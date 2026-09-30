@@ -76,7 +76,7 @@ export default function ContactPage() {
 
                 <div className="space-y-3 pt-1">
                   <a
-                    href="mailto:pareekmuskan01@gmail.com"
+                    href="mailto:pareekmuskan1999@gmail.com"
                     className="flex items-center gap-3 text-base md:text-lg font-medium text-brown hover:text-charcoal transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-full bg-paper border border-stone/40 flex items-center justify-center text-sunflower-deep group-hover:bg-sunflower group-hover:text-charcoal transition-all">
@@ -84,7 +84,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[10px] uppercase font-mono text-brown-soft">Primary Email</div>
-                      <span className="group-hover:underline">pareekmuskan01@gmail.com</span>
+                      <span className="group-hover:underline">pareekmuskan1999@gmail.com</span>
                     </div>
                   </a>
 

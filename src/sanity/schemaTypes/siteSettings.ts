@@ -28,7 +28,7 @@ export const siteSettings = {
       name: "email",
       title: "Direct Email Address",
       type: "string",
-      initialValue: "pareekmuskan01@gmail.com",
+      initialValue: "pareekmuskan1999@gmail.com",
       validation: (Rule: any) => Rule.required(),
     },
     {

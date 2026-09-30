@@ -30,7 +30,7 @@ export function ScopeProjectLauncher() {
   const handleCopyEmail = () => {
     sound.playTap();
     if (typeof navigator !== "undefined" && navigator.clipboard) {
-      navigator.clipboard.writeText("pareekmuskan01@gmail.com");
+      navigator.clipboard.writeText("pareekmuskan1999@gmail.com");
       setCopied(true);
       setTimeout(() => setCopied(false), 2200);
     }
@@ -42,7 +42,7 @@ export function ScopeProjectLauncher() {
   const mailtoBody = encodeURIComponent(
     `Hi Muskan,\n\nI would love to discuss an interior design project with you:\n\n• Space Type: ${spaceType}\n• Primary Focus: ${projectFocus}\n• Location: ${location}\n\nLooking forward to hearing from you!\n\nBest regards,`
   );
-  const mailtoUrl = `mailto:pareekmuskan01@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+  const mailtoUrl = `mailto:pareekmuskan1999@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
   return (
     <div className="bg-paper-card p-6 md:p-8 rounded-3xl border border-stone/40 shadow-sm space-y-6">

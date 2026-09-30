@@ -203,8 +203,8 @@ export default function ResumePage() {
             <div className="p-5 bg-paper rounded-2xl border border-stone/30 flex flex-col gap-3 shrink-0 text-xs">
               <div className="flex items-center gap-2.5 text-brown">
                 <Mail className="w-4 h-4 text-olive shrink-0" />
-                <a href="mailto:pareekmuskan01@gmail.com" className="hover:underline font-medium">
-                  pareekmuskan01@gmail.com
+                <a href="mailto:pareekmuskan1999@gmail.com" className="hover:underline font-medium">
+                  pareekmuskan1999@gmail.com
                 </a>
               </div>
 
@@ -423,10 +423,10 @@ export default function ResumePage() {
                     Download Resume PDF ↓
                   </a>
                   <a
-                    href="mailto:pareekmuskan01@gmail.com"
+                    href="mailto:pareekmuskan1999@gmail.com"
                     className="w-full py-2 rounded-full bg-paper border border-stone/40 text-brown font-semibold text-xs hover:border-sunflower transition-all"
                   >
-                    Email: pareekmuskan01@gmail.com
+                    Email: pareekmuskan1999@gmail.com
                   </a>
                 </div>
               </div>

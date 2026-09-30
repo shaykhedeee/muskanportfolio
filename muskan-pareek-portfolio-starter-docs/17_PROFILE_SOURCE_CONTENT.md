@@ -15,7 +15,7 @@ Bengaluru, Karnataka, India
 Hybrid · Remote · Bengaluru
 
 ## Email
-pareekmuskan01@gmail.com
+pareekmuskan1999@gmail.com
 
 ## Professional summary
 

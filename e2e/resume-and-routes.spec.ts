@@ -111,7 +111,7 @@ test.describe("Resume, Navigation & New Directory Routes", () => {
     await page.goto("/contact");
 
     await expect(page.getByRole("heading", { name: "Let's build thoughtful spaces together.", level: 1 })).toBeVisible();
-    await expect(page.getByText("pareekmuskan01@gmail.com").first()).toBeVisible();
+    await expect(page.getByText("pareekmuskan1999@gmail.com").first()).toBeVisible();
     await expect(page.getByRole("link", { name: "Connect on LinkedIn ↗" })).toBeVisible();
 
     // Verify there is NO <form> or text area

@@ -35,7 +35,7 @@ Check actual availability before purchase.
 Contact form:
 - Resend
 - sender from verified website domain
-- deliver to `pareekmuskan01@gmail.com`
+- deliver to `pareekmuskan1999@gmail.com`
 - use Turnstile to reduce spam
 
 ## Environment variables
@@ -48,7 +48,7 @@ NEXT_PUBLIC_SANITY_PROJECT_ID=
 NEXT_PUBLIC_SANITY_DATASET=production
 SANITY_API_READ_TOKEN=
 RESEND_API_KEY=
-CONTACT_TO_EMAIL=pareekmuskan01@gmail.com
+CONTACT_TO_EMAIL=pareekmuskan1999@gmail.com
 TURNSTILE_SITE_KEY=
 TURNSTILE_SECRET_KEY=
 ```

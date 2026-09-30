@@ -163,7 +163,7 @@ Copy:
 `Available for interior design, visualization, design collaborations and stronger career opportunities in Bengaluru, hybrid or remote.`
 
 Email:
-`pareekmuskan01@gmail.com`
+`pareekmuskan1999@gmail.com`
 
 Location:
 `Bengaluru, Karnataka, India`

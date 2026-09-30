@@ -70,7 +70,7 @@ CTA: `View Resume`
 Copy: `Let's create spaces that feel considered, useful and alive.`
 
 Show:
-- pareekmuskan01@gmail.com
+- pareekmuskan1999@gmail.com
 - Bengaluru, Karnataka, India
 - Hybrid · Remote · Bengaluru
 - LinkedIn button

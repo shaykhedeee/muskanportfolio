@@ -17,7 +17,7 @@ The approved visual reference is `docs/design-reference.png` or the supplied ref
 Name: Muskan Pareek
 Role: Interior Designer
 Location: Bengaluru, Karnataka, India
-Email: pareekmuskan01@gmail.com
+Email: pareekmuskan1999@gmail.com
 Work preference: Hybrid · Remote · Bengaluru
 Experience statement: 3+ years
 
@@ -166,7 +166,7 @@ Full screen.
 H2: `Let's create something considered.`
 
 Show:
-- pareekmuskan01@gmail.com
+- pareekmuskan1999@gmail.com
 - Bengaluru, Karnataka, India
 - Hybrid · Remote · Bengaluru
 - LinkedIn link placeholder until supplied

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Download, Linkedin, Instagram, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Download, Linkedin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { PaperNote } from "@/components/ui/PaperNote";
 import { SunBadge } from "@/components/ui/SunBadge";
@@ -51,7 +51,7 @@ export function ContactSection() {
 
             <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 pt-1">
               <Button
-                href="mailto:pareekmuskan01@gmail.com"
+                href="mailto:pareekmuskan1999@gmail.com"
                 variant="primary"
                 size="lg"
                 icon="arrow"
@@ -88,13 +88,13 @@ export function ContactSection() {
             {/* Direct Contact Information */}
             <div className="bg-paper-card/80 p-4 rounded-xl border border-stone/30 flex flex-col gap-2">
               <a
-                href="mailto:pareekmuskan01@gmail.com"
+                href="mailto:pareekmuskan1999@gmail.com"
                 className="flex items-center gap-2 text-xs md:text-sm font-medium text-brown hover:text-charcoal transition-colors group"
               >
                 <div className="group-hover:rotate-12 transition-transform duration-300">
                   <SunBadge size={16} />
                 </div>
-                <span>pareekmuskan01@gmail.com</span>
+                <span>pareekmuskan1999@gmail.com</span>
               </a>
               <div className="flex items-center gap-2 text-xs text-brown-soft">
                 <MapPin className="w-3.5 h-3.5 text-olive shrink-0" />
