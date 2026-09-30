@@ -515,6 +515,48 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
+              ) : slug === "wonderwall-penthouse" ? (
+                <Image
+                  src="/images/projects/wonderwall-penthouse/kitchen-cad.png"
+                  alt="AutoCAD 2D Drawing · Kitchen Working Elevations & 3D"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "casagrand-florella-villa" ? (
+                <Image
+                  src="/images/projects/casagrand-florella/living-elevation.png"
+                  alt="AutoCAD 2D Drawing · Living Wall Beading & Console"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "platinum-greenfields-residence" ? (
+                <Image
+                  src="/images/projects/platinum-greenfields/living-tv-cad.png"
+                  alt="AutoCAD 2D Drawing · Living TV Feature Wall"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "sattva-greenage-residence" ? (
+                <Image
+                  src="/images/projects/sattva-greenage/living-passage-cad.png"
+                  alt="AutoCAD 2D Drawing · Living Room TV Wall"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "mahaveer-ranches-residence" ? (
+                <Image
+                  src="/images/projects/mahaveer-ranches/kitchen-cad.png"
+                  alt="AutoCAD 2D Drawing · L-Shaped Modular Kitchen"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "cafe-aroma-express" ? (
+                <Image
+                  src="/images/projects/cafe-aroma-express/service-bar.png"
+                  alt="Specialty Coffee Bar & Service Counter"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <LivingRoomElevationSvg />
               )}
@@ -529,6 +571,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "AutoCAD 2D: Bespoke Study Unit (DWG-04)"
                   : slug === "ekkat-boutique"
                   ? "AutoCAD 2D: Reception Counter (RC-002)"
+                  : slug === "wonderwall-penthouse"
+                  ? "AutoCAD 2D: Modular Kitchen (DWG-K01)"
+                  : slug === "casagrand-florella-villa"
+                  ? "AutoCAD 2D: Living Wall Beading (DWG-L01)"
+                  : slug === "platinum-greenfields-residence"
+                  ? "AutoCAD 2D: Living TV Feature Wall (DWG-TV01)"
+                  : slug === "sattva-greenage-residence"
+                  ? "AutoCAD 2D: Living TV Wall (DWG-01)"
+                  : slug === "mahaveer-ranches-residence"
+                  ? "AutoCAD 2D: Modular Kitchen (DWG-K01)"
+                  : slug === "cafe-aroma-express"
+                  ? "Commercial Detail: Espresso Bar Counter"
                   : "Living Room Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -540,6 +594,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "5 BHK Villa ergonomic study lounge: upper fluted glass cabinetry, arched open book display with warm cove LED, and cantilevered walnut desk."
                   : slug === "ekkat-boutique"
                   ? "Official shop drawing (DWG RC-002, 1:10 A3): 1500W×900H×1200D mm counter, 100mm plinth, 750mm desk, sage green laminate with 300mm fluted timber feature panel."
+                  : slug === "wonderwall-penthouse"
+                  ? "Dual-counter modular kitchen elevations with overhead fluted glass vitrines and integrated pantry."
+                  : slug === "casagrand-florella-villa"
+                  ? "Classical PVC double-frame wall mouldings with warm brass sconces and floating marble console."
+                  : slug === "platinum-greenfields-residence"
+                  ? "Full-height vertical charcoal acoustic louvres with floating monolithic stone credenza."
+                  : slug === "sattva-greenage-residence"
+                  ? "Stone veneer feature wall backer with warm perimeter cove wash and floating walnut drawer ledge."
+                  : slug === "mahaveer-ranches-residence"
+                  ? "560mm base carcass with 300mm wall units and dedicated 320mm chimney duct encasement."
+                  : slug === "cafe-aroma-express"
+                  ? "Bespoke fluted blonde oak service counter with leathered Absolute Black granite espresso workstation."
                   : "TV unit with open shelving and natural wood finish."}
               </p>
             </div>
@@ -569,6 +635,48 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
+              ) : slug === "wonderwall-penthouse" ? (
+                <Image
+                  src="/images/projects/wonderwall-penthouse/kids-bedroom-cad.png"
+                  alt="AutoCAD 2D Drawing · Curved Kids Joinery"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "casagrand-florella-villa" ? (
+                <Image
+                  src="/images/projects/casagrand-florella/dining-crockery-cad.png"
+                  alt="AutoCAD 2D Drawing · Dining Crockery & Pooja"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "platinum-greenfields-residence" ? (
+                <Image
+                  src="/images/projects/platinum-greenfields/bar-unit-cad.png"
+                  alt="AutoCAD 2D Drawing · Fluted Gold Bar Unit"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "sattva-greenage-residence" ? (
+                <Image
+                  src="/images/projects/sattva-greenage/kitchen-cad.png"
+                  alt="AutoCAD 2D Drawing · Parallel Kitchen Layout"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "mahaveer-ranches-residence" ? (
+                <Image
+                  src="/images/projects/mahaveer-ranches/wardrobe-cad.png"
+                  alt="AutoCAD 2D Drawing · Master Wardrobe Carcass"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "cafe-aroma-express" ? (
+                <Image
+                  src="/images/projects/cafe-aroma-express/hero.png"
+                  alt="Hospitality Dining Salon & Canopy"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <BedroomWardrobeElevationSvg />
               )}
@@ -583,6 +691,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "AutoCAD 2D: Master Bed Wall (DWG-05)"
                   : slug === "ekkat-boutique"
                   ? "AutoCAD 2D: Modular Console (1:10)"
+                  : slug === "wonderwall-penthouse"
+                  ? "AutoCAD 2D: Curved Kids Joinery"
+                  : slug === "casagrand-florella-villa"
+                  ? "AutoCAD 2D: Arched Crockery & Pooja"
+                  : slug === "platinum-greenfields-residence"
+                  ? "AutoCAD 2D: Fluted Gold Bar Unit"
+                  : slug === "sattva-greenage-residence"
+                  ? "AutoCAD 2D: Parallel Kitchen Layout"
+                  : slug === "mahaveer-ranches-residence"
+                  ? "AutoCAD 2D: Master Wardrobe Carcass"
+                  : slug === "cafe-aroma-express"
+                  ? "Hospitality Design: Dining Salon & Canopy"
                   : "Bedroom Wardrobe Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -594,6 +714,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "Backlit translucent quartzite stone slab (2000×1700mm) framed in fluted walnut with classic wainscoting boiserie and brass torch sconces."
                   : slug === "ekkat-boutique"
                   ? "Technical furniture detail (1:10): 2400W×450D×750H mm modular console with 18mm timber top, plain ply back, and 6 equal 394mm storage shutters."
+                  : slug === "wonderwall-penthouse"
+                  ? "Curved organic forest-green headboard integrated with an undulating cat perch and floating desk."
+                  : slug === "casagrand-florella-villa"
+                  ? "Deep arched crockery vitrine with tinted fluted glass and internal sensor LED illumination."
+                  : slug === "platinum-greenfields-residence"
+                  ? "Signature cocktail bar unit with gold profile frames, reeded glass vitrines, and quartz counter."
+                  : slug === "sattva-greenage-residence"
+                  ? "High-efficiency parallel kitchen corridor with wicker pull-outs and Häfele lift-up mechanisms."
+                  : slug === "mahaveer-ranches-residence"
+                  ? "Full-height 3-door sliding wardrobe with overhead lofts and internal drawer dividers."
+                  : slug === "cafe-aroma-express"
+                  ? "Hand-woven cane and rattan pendant light cluster casting warm amber glow across Scandinavian banquettes."
                   : "A clean, functional wardrobe with laminate and rattan shutters."}
               </p>
             </div>
@@ -623,6 +755,48 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
+              ) : slug === "wonderwall-penthouse" ? (
+                <Image
+                  src="/images/projects/wonderwall-penthouse/master-bedroom-cad.png"
+                  alt="AutoCAD 2D Drawing · Master Suite Teal Vanity"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "casagrand-florella-villa" ? (
+                <Image
+                  src="/images/projects/casagrand-florella/master-wardrobe-cad.png"
+                  alt="AutoCAD 2D Drawing · Master Sliding Wardrobe"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "platinum-greenfields-residence" ? (
+                <Image
+                  src="/images/projects/platinum-greenfields/foyer-cad.png"
+                  alt="AutoCAD 2D Drawing · Foyer Floating Console"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "sattva-greenage-residence" ? (
+                <Image
+                  src="/images/projects/sattva-greenage/guest-wardrobe-cad.png"
+                  alt="AutoCAD 2D Drawing · Guest Wardrobe & Lofts"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "mahaveer-ranches-residence" ? (
+                <Image
+                  src="/images/projects/mahaveer-ranches/kids-study-cad.png"
+                  alt="AutoCAD 2D Drawing · Kids Study & Desk"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "cafe-aroma-express" ? (
+                <Image
+                  src="/images/projects/cafe-aroma-express/patio-terrace.png"
+                  alt="Site Execution · Outdoor Terrace Patio"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <KitchenElevationSvg />
               )}
@@ -637,6 +811,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "AutoCAD 2D: Heavy & Show Kitchen (DWG-06)"
                   : slug === "ekkat-boutique"
                   ? "AutoCAD 2D: Window Wall & Seating Storage"
+                  : slug === "wonderwall-penthouse"
+                  ? "AutoCAD 2D: Master Suite Teal Vanity"
+                  : slug === "casagrand-florella-villa"
+                  ? "AutoCAD 2D: Master Sliding Wardrobe"
+                  : slug === "platinum-greenfields-residence"
+                  ? "AutoCAD 2D: Foyer Floating Console"
+                  : slug === "sattva-greenage-residence"
+                  ? "AutoCAD 2D: Guest Wardrobe & Lofts"
+                  : slug === "mahaveer-ranches-residence"
+                  ? "AutoCAD 2D: Kids Study & Desk"
+                  : slug === "cafe-aroma-express"
+                  ? "Site Execution: Outdoor Terrace Patio"
                   : "Kitchen Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -648,6 +834,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "Dual-zone culinary architecture: high-output wok extraction in the rear heavy kitchen paired with seamless entertaining island in the show kitchen."
                   : slug === "ekkat-boutique"
                   ? "Full architectural elevation: 1439W×2992H mm window wall with 900×1200mm glass, 550H upholstered seat cushion, four 350mm shutters, and 19/20mm site filler dummies."
+                  : slug === "wonderwall-penthouse"
+                  ? "Vertical teal finger-tile vanity splash with floating walnut console and rounded arch grooming mirror."
+                  : slug === "casagrand-florella-villa"
+                  ? "Floor-to-ceiling 3-track sliding wardrobe with bronze tinted mirror inserts and sensor lighting."
+                  : slug === "platinum-greenfields-residence"
+                  ? "Cantilevered shoe credenza with vertical slatted brass divider and concealed drawer runners."
+                  : slug === "sattva-greenage-residence"
+                  ? "Full-height wardrobe with modular internal organization and overhead loft storage."
+                  : slug === "mahaveer-ranches-residence"
+                  ? "Integrated study station with overhead bookshelf, pin-up surface, and flexible bunk configuration."
+                  : slug === "cafe-aroma-express"
+                  ? "All-weather garden dining area with powder-coated bistro sets and hanging botanical planters."
                   : "Modular kitchen with warm tones and ample storage."}
               </p>
             </div>

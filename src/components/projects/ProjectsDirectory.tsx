@@ -40,13 +40,13 @@ export function ProjectsDirectory({
     {
       id: "Residential",
       label: "Residential",
-      count: initialProjects.filter((p) => p.category === "Residential").length,
+      count: initialProjects.filter((p) => p.category === "Residential" || p.category === "Villa").length,
     },
     {
       id: "Commercial",
       label: "Commercial",
       count: initialProjects.filter(
-        (p) => p.category === "Commercial" || p.category === "Hospitality"
+        (p) => p.category === "Commercial" || p.category === "Hospitality" || p.category === "Café Interior"
       ).length,
     },
     {
@@ -63,7 +63,9 @@ export function ProjectsDirectory({
       const matchesCategory =
         selectedCategory === "all" ||
         (selectedCategory === "Commercial"
-          ? project.category === "Commercial" || project.category === "Hospitality"
+          ? project.category === "Commercial" || project.category === "Hospitality" || project.category === "Café Interior"
+          : selectedCategory === "Residential"
+          ? project.category === "Residential" || project.category === "Villa"
           : project.category === selectedCategory);
 
       const q = searchQuery.toLowerCase().trim();

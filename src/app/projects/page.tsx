@@ -50,7 +50,7 @@ export default async function ProjectsIndexPage() {
                 COMPLETE PORTFOLIO INDEX
               </span>
               <span className="text-[10px] sm:text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-olive/15 text-olive font-semibold">
-                16 Curated Works (5 Residential · 2 Commercial · 9 Furniture)
+                22 Curated Works (10 Residential & Villa · 3 Commercial · 9 Furniture)
               </span>
             </div>
             <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl text-brown font-normal leading-tight">
