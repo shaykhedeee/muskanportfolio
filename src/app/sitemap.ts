@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { FEATURED_PROJECTS } from "@/data/fixtures/projects";
 import { DETAILED_FURNITURE_DESIGNS } from "@/data/fixtures/furniture-cad";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://muskanpareek.com";
 
