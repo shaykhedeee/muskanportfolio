@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Parchment Paper Filter & Hatching Patterns -->
+    <pattern id="brickHatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#3D3A34" stroke-width="1.2" opacity="0.3" />
+    </pattern>
+    <pattern id="concreteHatch" width="8" height="8" patternTransform="rotate(-45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#5A5348" stroke-width="1.0" opacity="0.25" />
+    </pattern>
+    <pattern id="tileGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="none" stroke="#D3CBC0" stroke-width="0.75" />
+    </pattern>
+    <pattern id="woodFloor" width="60" height="12" patternUnits="userSpaceOnUse">
+      <rect width="60" height="12" fill="none" stroke="#D8CFC2" stroke-width="0.6" />
+      <line x1="30" y1="0" x2="30" y2="12" stroke="#D8CFC2" stroke-width="0.6" />
+    </pattern>
+    <!-- Drop Shadow for Structure -->
+    <filter id="wallShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#2D2820" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Parchment Sheet Background -->
+  <rect width="100%" height="100%" fill="#FAF6EE" />
+  
+  <!-- Architectural Drawing Grid (Subtle 50mm Cad Grid) -->
+  <g opacity="0.15">
+    <line x1="50" y1="40" x2="50" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="100" y1="40" x2="100" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="150" y1="40" x2="150" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="200" y1="40" x2="200" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="250" y1="40" x2="250" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="300" y1="40" x2="300" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="350" y1="40" x2="350" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="400" y1="40" x2="400" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="450" y1="40" x2="450" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="500" y1="40" x2="500" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="550" y1="40" x2="550" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="600" y1="40" x2="600" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="650" y1="40" x2="650" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="700" y1="40" x2="700" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="750" y1="40" x2="750" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="800" y1="40" x2="800" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="850" y1="40" x2="850" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="900" y1="40" x2="900" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="950" y1="40" x2="950" y2="960" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="50" x2="960" y2="50" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="100" x2="960" y2="100" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="150" x2="960" y2="150" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="200" x2="960" y2="200" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="250" x2="960" y2="250" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="300" x2="960" y2="300" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="350" x2="960" y2="350" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="400" x2="960" y2="400" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="450" x2="960" y2="450" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="500" x2="960" y2="500" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="550" x2="960" y2="550" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="600" x2="960" y2="600" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="650" x2="960" y2="650" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="700" x2="960" y2="700" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="750" x2="960" y2="750" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="800" x2="960" y2="800" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="850" x2="960" y2="850" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="900" x2="960" y2="900" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+    <line x1="40" y1="950" x2="960" y2="950" stroke="#B8AEA2" stroke-width="0.5" stroke-dasharray="2 4" />
+  </g>
+
+  <!-- Title Block & Sheet Border -->
+  <rect x="25" y="25" width="950" height="950" fill="none" stroke="#3D3A34" stroke-width="2.5" />
+  <rect x="30" y="30" width="940" height="940" fill="none" stroke="#8C8275" stroke-width="0.75" />
+
+  <!-- Sheet Title Block Header -->
+  <g id="titleBlock">
+    <!-- North Arrow -->
+    <g transform="translate(910, 70)">
+      <circle cx="0" cy="0" r="22" fill="#FAF6EE" stroke="#3D3A34" stroke-width="1.5" />
+      <polygon points="0,-18 6,10 0,6" fill="#3D3A34" />
+      <polygon points="0,-18 -6,10 0,6" fill="#8C8275" />
+      <text x="0" y="-22" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#3D3A34" text-anchor="middle">N</text>
+    </g>
+
+    <!-- Project Header Text -->
+    <text x="50" y="65" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="18" font-weight="bold" fill="#2C2822" letter-spacing="1.5">URBAN SCANDI 3BHK · PRECISION MODULAR PLAN</text>
+    <text x="50" y="85" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#5F6F52" letter-spacing="1">LEVEL 01 · FINISHED FLOOR PLAN · SCALE 1:50 @ A3 · DIMENSIONS IN MM</text>
+    <text x="50" y="100" font-family="'Courier New', monospace" font-size="9" fill="#7A7063">DWG NO: SCANDI-3BHK-03 · TOTAL AREA: 1,650 SQ.FT. · MUSKAN PAREEK INTERIORS</text>
+    <line x1="50" y1="110" x2="950" y2="110" stroke="#3D3A34" stroke-width="1.2" />
+  </g>
+
+  <!-- Flooring Textures & Zones -->
+  <g id="flooringZones">
+    
+    <g id="room-foyer">
+      <rect x="100" y="640" width="160" height="260" fill="#F5EFE6" opacity="1" />
+      <rect x="100" y="640" width="160" height="260" fill="url(#tileGrid)" />
+    </g>
+    <g id="room-living">
+      <rect x="280" y="440" width="340" height="460" fill="#EDE5D8" opacity="1" />
+      <rect x="280" y="440" width="340" height="460" fill="url(#woodFloor)" />
+    </g>
+    <g id="room-kitchen">
+      <rect x="640" y="640" width="260" height="260" fill="#F2EDE4" opacity="1" />
+      <rect x="640" y="640" width="260" height="260" fill="url(#tileGrid)" />
+    </g>
+    <g id="room-kids">
+      <rect x="100" y="160" width="260" height="260" fill="#FAF6EE" opacity="1" />
+      <rect x="100" y="160" width="260" height="260" fill="url(#woodFloor)" />
+    </g>
+    <g id="room-guest">
+      <rect x="380" y="160" width="240" height="260" fill="#EDE5D8" opacity="1" />
+      <rect x="380" y="160" width="240" height="260" fill="url(#tileGrid)" />
+    </g>
+    <g id="room-master">
+      <rect x="640" y="160" width="260" height="440" fill="#EDE5D8" opacity="1" />
+      <rect x="640" y="160" width="260" height="440" fill="url(#woodFloor)" />
+    </g>
+  </g>
+
+  <!-- Built-In Joinery & Furniture -->
+  <g id="architecturalJoinery">
+    <rect x="100" y="875" width="90" height="22" fill="#FAF6EE" stroke="#5A5348" stroke-width="1.2" />
+    <text x="145" y="890" font-family="'Courier New', monospace" font-size="7" fill="#3D3A34" text-anchor="middle">SHOE CABINET</text>
+    <rect x="320" y="440" width="180" height="18" fill="#C5B69E" stroke="#5A5348" stroke-width="1.2" />
+    <text x="410" y="452" font-family="'Courier New', monospace" font-size="7.5" fill="#2C2822" text-anchor="middle">BACKLIT MARBLE TV WALL</text>
+    <rect x="660" y="660" width="220" height="35" fill="#D3CBC0" stroke="#5A5348" stroke-width="1.2" />
+    <rect x="845" y="695" width="35" height="180" fill="#D3CBC0" stroke="#5A5348" stroke-width="1.2" />
+    <rect x="660" y="695" width="45" height="55" fill="#C5A880" stroke="#7A6D52" stroke-width="1.2" />
+    <text x="682" y="725" font-family="'Courier New', monospace" font-size="6.5" fill="#2C2822" text-anchor="middle">WICKER</text>
+    <rect x="100" y="160" width="70" height="150" fill="#FAF6EE" stroke="#E29578" stroke-width="1.5" />
+    <text x="135" y="240" font-family="'Courier New', monospace" font-size="7" fill="#8C3A27" text-anchor="middle" transform="rotate(-90 135 240)">BAY DAYBED</text>
+    <rect x="180" y="160" width="170" height="35" fill="#FFDDD2" stroke="#E29578" stroke-width="1.5" />
+    <text x="265" y="182" font-family="'Courier New', monospace" font-size="7.5" fill="#8C3A27" text-anchor="middle">ARCHED DUCO WARDROBE</text>
+    <rect x="660" y="160" width="220" height="35" fill="#D3CBC0" stroke="#5A5348" stroke-width="1.5" />
+    <text x="770" y="182" font-family="'Courier New', monospace" font-size="7.5" fill="#2C2822" text-anchor="middle">5-DOOR SYSTEM 32 WARDROBE</text>
+  </g>
+
+  <!-- Door Swings & Openings -->
+  <g id="doorSwings" stroke="#5A5348" stroke-width="1.2" fill="none">
+    <path d="M 260,700 A 40,40 0 0,0 220,660" stroke-dasharray="2 3" />
+    <path d="M 620,700 A 40,40 0 0,1 660,660" stroke-dasharray="2 3" />
+    <path d="M 360,260 A 35,35 0 0,0 325,225" stroke-dasharray="2 3" />
+  </g>
+
+  <!-- Structural Walls (Filled Masonry with Drop Shadow) -->
+  <g id="structuralWalls" filter="url(#wallShadow)">
+    <rect x="80" y="140" width="840" height="20" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+    <rect x="80" y="140" width="20" height="780" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+    <rect x="900" y="140" width="20" height="780" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+    <rect x="80" y="900" width="840" height="20" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+    <rect x="360" y="140" width="20" height="280" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+    <rect x="620" y="140" width="20" height="760" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+    <rect x="80" y="420" width="560" height="20" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+    <rect x="260" y="620" width="20" height="280" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+    <rect x="80" y="620" width="200" height="20" fill="#2C2822" stroke="#1A1815" stroke-width="1" />
+  </g>
+
+  <!-- Room Labels & Dimensions -->
+  <g id="roomLabels">
+    
+    <g transform="translate(180, 770)" text-anchor="middle">
+      <rect x="-85" y="-18" width="170" height="34" fill="#FAF6EE" fill-opacity="0.88" rx="3" stroke="#C5BCB0" stroke-width="0.5" />
+      <text y="-2" font-family="'Cinzel', Georgia, serif" font-size="11" font-weight="bold" fill="#2C2822" letter-spacing="0.5">ENTRY FOYER</text>
+      <text y="11" font-family="'Courier New', monospace" font-size="8.5" font-weight="bold" fill="#756D63">2.40m x 2.10m [7'-10" x 6'-11"]</text>
+    </g>
+    <g transform="translate(450, 670)" text-anchor="middle">
+      <rect x="-85" y="-18" width="170" height="34" fill="#FAF6EE" fill-opacity="0.88" rx="3" stroke="#C5BCB0" stroke-width="0.5" />
+      <text y="-2" font-family="'Cinzel', Georgia, serif" font-size="11" font-weight="bold" fill="#2C2822" letter-spacing="0.5">LIVING & DINING</text>
+      <text y="11" font-family="'Courier New', monospace" font-size="8.5" font-weight="bold" fill="#756D63">6.40m x 4.80m [21'-0" x 15'-9"]</text>
+    </g>
+    <g transform="translate(770, 770)" text-anchor="middle">
+      <rect x="-85" y="-18" width="170" height="34" fill="#FAF6EE" fill-opacity="0.88" rx="3" stroke="#C5BCB0" stroke-width="0.5" />
+      <text y="-2" font-family="'Cinzel', Georgia, serif" font-size="11" font-weight="bold" fill="#2C2822" letter-spacing="0.5">MODULAR KITCHEN</text>
+      <text y="11" font-family="'Courier New', monospace" font-size="8.5" font-weight="bold" fill="#756D63">3.60m x 3.10m [11'-10" x 10'-2"]</text>
+    </g>
+    <g transform="translate(230, 290)" text-anchor="middle">
+      <rect x="-85" y="-18" width="170" height="34" fill="#FAF6EE" fill-opacity="0.88" rx="3" stroke="#C5BCB0" stroke-width="0.5" />
+      <text y="-2" font-family="'Cinzel', Georgia, serif" font-size="11" font-weight="bold" fill="#2C2822" letter-spacing="0.5">KIDS SUITE</text>
+      <text y="11" font-family="'Courier New', monospace" font-size="8.5" font-weight="bold" fill="#756D63">3.90m x 3.60m [12'-9" x 11'-10"]</text>
+    </g>
+    <g transform="translate(500, 290)" text-anchor="middle">
+      <rect x="-85" y="-18" width="170" height="34" fill="#FAF6EE" fill-opacity="0.88" rx="3" stroke="#C5BCB0" stroke-width="0.5" />
+      <text y="-2" font-family="'Cinzel', Georgia, serif" font-size="11" font-weight="bold" fill="#2C2822" letter-spacing="0.5">GUEST ROOM</text>
+      <text y="11" font-family="'Courier New', monospace" font-size="8.5" font-weight="bold" fill="#756D63">3.40m x 3.60m [11'-2" x 11'-10"]</text>
+    </g>
+    <g transform="translate(770, 380)" text-anchor="middle">
+      <rect x="-85" y="-18" width="170" height="34" fill="#FAF6EE" fill-opacity="0.88" rx="3" stroke="#C5BCB0" stroke-width="0.5" />
+      <text y="-2" font-family="'Cinzel', Georgia, serif" font-size="11" font-weight="bold" fill="#2C2822" letter-spacing="0.5">MASTER SUITE</text>
+      <text y="11" font-family="'Courier New', monospace" font-size="8.5" font-weight="bold" fill="#756D63">4.40m x 4.20m [14'-5" x 13'-9"]</text>
+    </g>
+  </g>
+
+  <!-- Architectural Dimension Strings & Callouts -->
+  <g id="dimensionCallouts">
+    <text x="450" y="925" font-family="'Courier New', monospace" font-size="8.5" font-weight="bold" fill="#8C6D3B">▲ DIAMOND-BEVELED FOYER MIRROR &amp; CONCEALED WIRING</text>
+  </g>
+
+  <!-- Graphic Scale Bar Bottom -->
+  <g transform="translate(680, 935)">
+    <rect x="0" y="0" width="240" height="7" fill="#2C2822" stroke="#2C2822" stroke-width="1" />
+    <rect x="0" y="0" width="60" height="7" fill="#FAF6EE" />
+    <rect x="120" y="0" width="60" height="7" fill="#FAF6EE" />
+    <text x="0" y="-4" font-family="'Courier New', monospace" font-size="8" fill="#5A5348">0</text>
+    <text x="60" y="-4" font-family="'Courier New', monospace" font-size="8" fill="#5A5348">1.5m</text>
+    <text x="120" y="-4" font-family="'Courier New', monospace" font-size="8" fill="#5A5348">3.0m</text>
+    <text x="180" y="-4" font-family="'Courier New', monospace" font-size="8" fill="#5A5348">4.5m</text>
+    <text x="240" y="-4" font-family="'Courier New', monospace" font-size="8" fill="#5A5348">6.0m</text>
+    <text x="120" y="18" font-family="'Courier New', monospace" font-size="8.5" fill="#7A7063" text-anchor="middle">GRAPHIC METRIC SCALE</text>
+  </g>
+</svg>

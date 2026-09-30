@@ -557,6 +557,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
+              ) : slug === "koramangala-luxury-villa" ? (
+                <Image
+                  src="/images/projects/koramangala-luxury-villa/drawing-details.png"
+                  alt="AutoCAD 2D Drawing · Drawing Room & Sunken Cove"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "the-modernist-3bhk" ? (
+                <Image
+                  src="/images/projects/the-modernist-3bhk/living-tv-bar.png"
+                  alt="AutoCAD 2D Drawing · Marble TV Wall & Bar Vitrine"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "urban-scandi-3bhk" ? (
+                <Image
+                  src="/images/projects/urban-scandi-3bhk/kitchen-cad.png"
+                  alt="AutoCAD 2D Drawing · Modular Kitchen & Wicker"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <LivingRoomElevationSvg />
               )}
@@ -583,6 +604,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "AutoCAD 2D: Modular Kitchen (DWG-K01)"
                   : slug === "cafe-aroma-express"
                   ? "Commercial Detail: Espresso Bar Counter"
+                  : slug === "koramangala-luxury-villa"
+                  ? "AutoCAD 2D: Drawing Room & Sunken Cove (DWG-D01)"
+                  : slug === "the-modernist-3bhk"
+                  ? "AutoCAD 2D: Marble TV Wall & Bar Vitrine (DWG-01)"
+                  : slug === "urban-scandi-3bhk"
+                  ? "AutoCAD 2D: Modular Kitchen & Wicker (DWG-K01)"
                   : "Living Room Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -606,6 +633,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "560mm base carcass with 300mm wall units and dedicated 320mm chimney duct encasement."
                   : slug === "cafe-aroma-express"
                   ? "Bespoke fluted blonde oak service counter with leathered Absolute Black granite espresso workstation."
+                  : slug === "koramangala-luxury-villa"
+                  ? "Formal drawing salon elevation featuring sunken linear profile LED lighting, chevron walnut battens, and concentric nested marble tables."
+                  : slug === "the-modernist-3bhk"
+                  ? "Full millimeter shop drawing with vertical brass T-profile marble inserts, fluted walnut battens, and illuminated crescent mirror bar credenza."
+                  : slug === "urban-scandi-3bhk"
+                  ? "Working CAD joinery drawing for L-shaped kitchen with ventilated wicker baskets, microwave tall unit, and black aluminum tinted glass shutters."
                   : "TV unit with open shelving and natural wood finish."}
               </p>
             </div>
@@ -677,6 +710,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
+              ) : slug === "koramangala-luxury-villa" ? (
+                <Image
+                  src="/images/projects/koramangala-luxury-villa/dining-area.png"
+                  alt="AutoCAD 2D Drawing · Grand Dining & Breakfast Bar"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "the-modernist-3bhk" ? (
+                <Image
+                  src="/images/projects/the-modernist-3bhk/pooja-crockery-cad.png"
+                  alt="AutoCAD 2D Drawing · 45° Miter Pooja & Crockery"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "urban-scandi-3bhk" ? (
+                <Image
+                  src="/images/projects/urban-scandi-3bhk/kids-bedroom-cad.png"
+                  alt="AutoCAD 2D Drawing · Bay Window Daybed & Wardrobe"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <BedroomWardrobeElevationSvg />
               )}
@@ -703,6 +757,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "AutoCAD 2D: Master Wardrobe Carcass"
                   : slug === "cafe-aroma-express"
                   ? "Hospitality Design: Dining Salon & Canopy"
+                  : slug === "koramangala-luxury-villa"
+                  ? "AutoCAD 2D: Grand Dining & Breakfast Bar (DWG-D02)"
+                  : slug === "the-modernist-3bhk"
+                  ? "AutoCAD 2D: 45° Miter Pooja & Crockery (DWG-02)"
+                  : slug === "urban-scandi-3bhk"
+                  ? "AutoCAD 2D: Bay Window Daybed & Wardrobe (DWG-K02)"
                   : "Bedroom Wardrobe Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -726,6 +786,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "Full-height 3-door sliding wardrobe with overhead lofts and internal drawer dividers."
                   : slug === "cafe-aroma-express"
                   ? "Hand-woven cane and rattan pendant light cluster casting warm amber glow across Scandinavian banquettes."
+                  : slug === "koramangala-luxury-villa"
+                  ? "8.1m dining hall CAD layout with 10-seater Calacatta table, fluted charcoal wall paneling, and integrated 3-seater marble breakfast island."
+                  : slug === "the-modernist-3bhk"
+                  ? "900mm gold profile fluted glass pooja unit paired with 1,700mm 4-door crockery credenza with Corian top, beveled mirror, and 45° miter-cut drawers."
+                  : slug === "urban-scandi-3bhk"
+                  ? "Bay window cushioned daybed with deep pull-out drawers, paired with custom arched dual-tone duco wardrobe and study desk."
                   : "A clean, functional wardrobe with laminate and rattan shutters."}
               </p>
             </div>
@@ -797,6 +863,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
+              ) : slug === "koramangala-luxury-villa" ? (
+                <Image
+                  src="/images/projects/koramangala-luxury-villa/kitchen.png"
+                  alt="3D Joinery & Finish · Chef's Kitchen"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "the-modernist-3bhk" ? (
+                <Image
+                  src="/images/projects/the-modernist-3bhk/kids-bedroom-cad.png"
+                  alt="AutoCAD 2D Drawing · Basketball Suite & Study Alcove"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
+              ) : slug === "urban-scandi-3bhk" ? (
+                <Image
+                  src="/images/projects/urban-scandi-3bhk/master-bedroom-cad.png"
+                  alt="AutoCAD 2D Drawing · Master Wardrobe & Study Suite"
+                  fill
+                  className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                />
               ) : (
                 <KitchenElevationSvg />
               )}
@@ -823,6 +910,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "AutoCAD 2D: Kids Study & Desk"
                   : slug === "cafe-aroma-express"
                   ? "Site Execution: Outdoor Terrace Patio"
+                  : slug === "koramangala-luxury-villa"
+                  ? "3D Joinery & Finish: Chef's Kitchen (DWG-K01)"
+                  : slug === "the-modernist-3bhk"
+                  ? "AutoCAD 2D: Basketball Suite & Study Alcove (DWG-03)"
+                  : slug === "urban-scandi-3bhk"
+                  ? "AutoCAD 2D: Master Wardrobe & Study Suite (DWG-M01)"
                   : "Kitchen Elevation"}
               </h3>
               <p className="font-sans text-xs text-brown-soft leading-relaxed">
@@ -846,6 +939,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   ? "Integrated study station with overhead bookshelf, pin-up surface, and flexible bunk configuration."
                   : slug === "cafe-aroma-express"
                   ? "All-weather garden dining area with powder-coated bistro sets and hanging botanical planters."
+                  : slug === "koramangala-luxury-villa"
+                  ? "3D faceted bronze metallic hexagonal tile splashback, matte greige shaker cabinetry, quartz prep island, and integrated appliance housings."
+                  : slug === "the-modernist-3bhk"
+                  ? "Arched backlit fluted study alcove, floating media console, and custom slam-dunk basketball headboard with recessed LED halo."
+                  : slug === "urban-scandi-3bhk"
+                  ? "Full-height 5-door System 32 wardrobe with loft storage, 30mm dummy fillers, integrated study desk, and dressing console."
                   : "Modular kitchen with warm tones and ample storage."}
               </p>
             </div>
