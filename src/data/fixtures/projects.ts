@@ -232,7 +232,8 @@ export const FEATURED_PROJECTS: Project[] = [
       roomName: "Great Room & Kitchen",
       subtitle: "From plan to experience.",
       designIntention: "An open social core bathed in Rajasthan sun, pairing handcrafted limewash walls with streamlined joinery.",
-      floorPlanTitle: "Furniture Layout",
+      floorPlanTitle: "Sunlit Abode · Courtyard Residence Architectural Layout",
+      floorPlanImage: "/images/projects/sunlit-abode/floor-plan.svg",
       axonometricImage: "/references/4f1a68a2-f9d9-4baf-b6d9-a65e45da5431.jpg",
       hotspots: [
         {
@@ -399,7 +400,8 @@ export const FEATURED_PROJECTS: Project[] = [
       roomName: "Master Suite & Private Lounge",
       subtitle: "From plan to experience.",
       designIntention: "A tranquil sanctuary combining a private morning lounge, fluted timber headboard panelling, and seamless threshold to the garden balcony.",
-      floorPlanTitle: "Master Suite Layout",
+      floorPlanTitle: "The Meadow Home · Master Suite & Private Lounge Layout",
+      floorPlanImage: "/images/projects/the-meadow-home/floor-plan.svg",
       axonometricImage: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
       hotspots: [
         {
@@ -579,8 +581,8 @@ export const FEATURED_PROJECTS: Project[] = [
       roomName: "5 BHK Villa Master Suite & Study Lounge",
       subtitle: "From concept blueprint to spatial reality.",
       designIntention: "A grand 5 BHK villa balancing restorative bedroom sanctuaries with an interconnected social heart, dual culinary zones, and tailored study lounges.",
-      floorPlanTitle: "5 BHK Villa Architectural Spatial Layout",
-      floorPlanImage: "/images/projects/5bhk-villa/extracted/villa_render_30_1672x941.png",
+      floorPlanTitle: "Terracotta Villa · 5 BHK Luxury Villa Master Spatial Layout",
+      floorPlanImage: "/images/projects/5bhk-villa/floor-plan.svg",
       axonometricImage: "/images/projects/5bhk-villa/master-bedroom-botanic-slats.jpg",
       hotspots: [
         {
@@ -787,8 +789,8 @@ export const FEATURED_PROJECTS: Project[] = [
       roomName: "Living, Dining, Kitchen & Master Suite",
       subtitle: "From AutoCAD shop drawing to built reality.",
       designIntention: "Mr. Vivek wanted a seamless contemporary 3 BHK home balancing warm natural textures, acoustic wood battens, and modern modular storage. Every millimeter was drafted in 2D with exact scribing fillers and Gola profiles before 3D rendering.",
-      floorPlanTitle: "AutoCAD 2D Working Drawing (Living TV Wall DWG-01)",
-      floorPlanImage: "/images/projects/mr-vivek-residence/cad-living-tv-unit.png",
+      floorPlanTitle: "Mr. Vivek Residence · 3 BHK Master Architectural Plan",
+      floorPlanImage: "/images/projects/mr-vivek-residence/floor-plan.svg",
       axonometricImage: "/images/projects/mr-vivek-residence/living-room-sofa-moulding.png",
       hotspots: [
         {
@@ -978,6 +980,7 @@ export const FEATURED_PROJECTS: Project[] = [
     title: "Olive & Oak",
     category: "Commercial",
     location: "Jaipur",
+    year: "2024",
     headline: "Bespoke café interior blending artisanal timber, arches and indoor greens",
     shortDescription: "Warm hospitality and bespoke seating crafted with organic timbers and gentle archways.",
     heroImage: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80",
@@ -986,7 +989,139 @@ export const FEATURED_PROJECTS: Project[] = [
       scope: "Commercial Café Interior & Custom Dining Furniture",
       area: "1,800 sq.ft.",
       timeline: "3 Months",
-      deliverables: ["Seating Capacity Optimization", "Custom Counter Joinery", "Working Drawings", "Material Moodboard"],
+      deliverables: [
+        "Seating Capacity Optimization",
+        "Custom Counter Joinery",
+        "Working Drawings",
+        "Material Moodboard",
+        "Artisan Woodworking & Banquettes",
+      ],
+    },
+    designDecisions: {
+      function: "Zoned guest journey with an open barista brew station, intimate perimeter arched banquette alcoves, and a central communal harvest table for social gathering.",
+      material: "Solid white oak timbers, warm oatmeal woven upholstery, lime-washed terracotta arches, brushed brass pendant fixtures, and polished terrazzo flooring.",
+      detail: "Custom arched wall niches with concealed warm 2700K LED glow, mitred oak edge banding, and curved banquette backrests for ergonomic acoustic comfort.",
+    },
+    spatialStudy: {
+      enabled: true,
+      roomName: "Artisan Coffee Bar & Dining Salon",
+      subtitle: "From plan to customer experience.",
+      designIntention: "A welcoming, organic hospitality atmosphere defined by curved oak counters, intimate banquette alcoves, and gentle architectural cove lighting.",
+      floorPlanTitle: "Olive & Oak · Artisan Café & Bakery Spatial Layout",
+      floorPlanImage: "/images/projects/olive-and-oak/floor-plan.svg",
+      axonometricImage: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
+      hotspots: [
+        {
+          id: "01",
+          title: "Artisan Oak Pastry & Espresso Bar",
+          description: "Curved white oak service counter with commercial dual-group espresso station and glass pastry showcase.",
+          x: 52,
+          y: 45,
+          planX: 52,
+          planY: 45,
+          category: "Storage",
+        },
+        {
+          id: "02",
+          title: "Arched Banquette Seating Alcoves",
+          description: "Custom curved upholstered seating alcoves framed within recessed terracotta wall arches.",
+          x: 25,
+          y: 50,
+          planX: 25,
+          planY: 50,
+          category: "Seating",
+        },
+        {
+          id: "03",
+          title: "Communal Harvest Table",
+          description: "Handcrafted 10-seater solid oak harvest table anchored under linear brass suspended pendants.",
+          x: 50,
+          y: 65,
+          planX: 50,
+          planY: 65,
+          category: "Dining",
+        },
+        {
+          id: "04",
+          title: "Ambient Concealed Warm Cove",
+          description: "Perimeter architectural false ceiling cove casting soft 2700K indirect light across limewash walls.",
+          x: 45,
+          y: 28,
+          planX: 45,
+          planY: 28,
+          category: "Lighting",
+        },
+        {
+          id: "05",
+          title: "Outdoor Garden Threshold",
+          description: "Full-height timber pivot doors seamlessly connecting interior seating to the lush garden verandah.",
+          x: 75,
+          y: 70,
+          planX: 75,
+          planY: 70,
+          category: "Circulation",
+        },
+      ],
+      highlights: [
+        {
+          id: "hl-1",
+          label: "Artisan Oak Millwork",
+          iconName: "Layers",
+          description: "Solid white oak service bar with rounded corners and seamless concealed joinery.",
+        },
+        {
+          id: "hl-2",
+          label: "Arched Dining Alcoves",
+          iconName: "Maximize2",
+          description: "Sculptural terracotta archways offering private acoustic dining nooks.",
+        },
+        {
+          id: "hl-3",
+          label: "Communal Harvest Social",
+          iconName: "Palette",
+          description: "10-seater central table encouraging shared community dining and conversation.",
+        },
+        {
+          id: "hl-4",
+          label: "Architectural Cove Glow",
+          iconName: "Lamp",
+          description: "Indirect lighting eliminating glare and highlighting the tactile wall plaster.",
+        },
+      ],
+      materials: [
+        {
+          name: "Natural White Oak",
+          finish: "Matte Organic Hardwax Oil",
+          colorHex: "#C9A77D",
+        },
+        {
+          name: "Terracotta Limewash",
+          finish: "Hand-Applied Mineral Wash",
+          colorHex: "#B85C38",
+        },
+        {
+          name: "Oatmeal Woven Linen",
+          finish: "Commercial Grade Upholstery",
+          colorHex: "#D3CBC0",
+        },
+        {
+          name: "Brushed Champagne Brass",
+          finish: "Architectural Lighting Metal",
+          colorHex: "#D4AF37",
+        },
+        {
+          name: "Polished Terrazzo",
+          finish: "Micro-Aggregate Mineral Floor",
+          colorHex: "#ECE6DB",
+        },
+      ],
+      gallery: [
+        {
+          url: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
+          caption: "Main Dining Salon: Curved oak counters, arched alcoves, and warm ambient illumination.",
+          viewLabel: "Dining Salon & Coffee Bar",
+        },
+      ],
     },
   },
   {
@@ -2070,8 +2205,8 @@ export const FEATURED_PROJECTS: Project[] = [
       roomName: "Espresso Bar, Dining Salon & Garden Patio",
       subtitle: "From plan to customer experience.",
       designIntention: "An inviting artisan coffee house balancing tactile organic textures with frictionless customer ordering flow and an airy outdoor patio.",
-      floorPlanTitle: "Café Spatial Flow & Seating Layout",
-      floorPlanImage: "/images/projects/cafe-aroma-express/hero.png",
+      floorPlanTitle: "Café Aroma Express · Commercial Spatial Flow & Terrace Seating Layout",
+      floorPlanImage: "/images/projects/cafe-aroma-express/floor-plan.svg",
       axonometricImage: "/images/projects/cafe-aroma-express/hero.png",
       hotspots: [
         {
