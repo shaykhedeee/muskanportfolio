@@ -95,6 +95,9 @@ export function Footer() {
             <Link href="/resume" className="hover:text-charcoal transition-colors">
               Resume
             </Link>
+            <Link href="/offline-portfolio" className="hover:text-charcoal transition-colors">
+              Offline Deck
+            </Link>
             <Link href="/process" className="hover:text-charcoal transition-colors">
               Process
             </Link>

@@ -319,6 +319,290 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ? "Circulation in Mr. Vivek's 3 BHK residence flows through a central living and dining spine. The modular kitchen connects smoothly to the dining buffet, buffered by a bespoke fluted glass sliding screen. Bedrooms are strategically zoned away from the living core, each incorporating full-height System 32 joinery, vanity dressers, and study niches."
       : `The layout for ${project.title} was planned to optimize daily human movement and daylight orientation. Clear walkways exceeding 900mm ensure fluid navigation between key functional zones without visual clutter.`;
 
+  // Section 2: Unique authentic images for each project from Canva & PDF decks
+  const storyImage1 =
+    slug === "mr-vivek-residence"
+      ? "/images/projects/mr-vivek-residence/modular-kitchen-island.png"
+      : slug === "the-calm-house"
+      ? "/images/projects/sarthak-residence/dining-crockery-bar.jpg"
+      : slug === "koramangala-luxury-villa"
+      ? "/images/projects/koramangala-luxury-villa/dining-area.png"
+      : slug === "the-modernist-3bhk"
+      ? "/images/projects/the-modernist-3bhk/living-tv-bar.png"
+      : slug === "urban-scandi-3bhk"
+      ? "/images/projects/urban-scandi-3bhk/kitchen-cad.png"
+      : slug === "the-hitesh-ria-residence"
+      ? "/images/projects/the-hitesh-ria-residence/dining-bar-elevation.png"
+      : slug === "akanchha-harsh-residence"
+      ? "/images/projects/akanchha-harsh-residence/living-dining.png"
+      : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+      ? "/images/projects/5bhk-villa/luxury-bed-fluted-walnut.jpg"
+      : slug === "casagrand-florella-villa"
+      ? "/images/projects/casagrand-florella/dining-crockery-3d.png"
+      : slug === "platinum-greenfields-residence"
+      ? "/images/projects/platinum-greenfields/hero.png"
+      : slug === "sattva-greenage-residence"
+      ? "/images/projects/sattva-greenage/hero.png"
+      : slug === "mahaveer-ranches-residence"
+      ? "/images/projects/mahaveer-ranches/hero.png"
+      : slug === "wonderwall-penthouse"
+      ? "/images/projects/wonderwall-penthouse/fluted-credenza-3d.png"
+      : slug === "cafe-aroma-express"
+      ? "/images/projects/cafe-aroma-express/service-bar.png"
+      : slug === "ekkat-boutique"
+      ? "/images/projects/ekkat-boutique/center-island-arched-niche.png"
+      : project.heroImage;
+
+  const storyAlt1 = `${project.title} Architectural Detail 1`;
+
+  const storyImage2 =
+    slug === "mr-vivek-residence"
+      ? "/images/projects/mr-vivek-residence/master-bedroom-arch-headboard.png"
+      : slug === "the-calm-house"
+      ? "/images/projects/sarthak-residence/foyer-console-accent-wall.png"
+      : slug === "koramangala-luxury-villa"
+      ? "/images/projects/koramangala-luxury-villa/family-living.png"
+      : slug === "the-modernist-3bhk"
+      ? "/images/projects/the-modernist-3bhk/living-concept.png"
+      : slug === "urban-scandi-3bhk"
+      ? "/images/projects/urban-scandi-3bhk/living-foyer.png"
+      : slug === "the-hitesh-ria-residence"
+      ? "/images/projects/the-hitesh-ria-residence/foyer-shoe-console.png"
+      : slug === "akanchha-harsh-residence"
+      ? "/images/projects/akanchha-harsh-residence/master-suite.png"
+      : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+      ? "/images/projects/5bhk-villa/bedroom-cove-stone-wall.jpg"
+      : slug === "casagrand-florella-villa"
+      ? "/images/projects/casagrand-florella/living-elevation.png"
+      : slug === "platinum-greenfields-residence"
+      ? "/images/projects/platinum-greenfields/foyer-3d.png"
+      : slug === "sattva-greenage-residence"
+      ? "/images/projects/sattva-greenage/material-board.png"
+      : slug === "mahaveer-ranches-residence"
+      ? "/images/projects/mahaveer-ranches/kitchen-cad.png"
+      : slug === "wonderwall-penthouse"
+      ? "/images/projects/wonderwall-penthouse/living-balcony-3d.png"
+      : slug === "cafe-aroma-express"
+      ? "/images/projects/cafe-aroma-express/patio-terrace.png"
+      : slug === "ekkat-boutique"
+      ? "/images/projects/ekkat-boutique/consultation-office-render.jpg"
+      : project.thumbnailImage || project.heroImage;
+
+  const storyAlt2 = `${project.title} Architectural Detail 2`;
+
+  // Section 3: Dedicated 2D CAD vs 3D Render Slider config for every project
+  const sliderConfig = {
+    beforeImage:
+      slug === "mr-vivek-residence"
+        ? "/images/projects/mr-vivek-residence/cad-living-tv-unit.png"
+        : slug === "the-calm-house"
+        ? "/images/projects/sarthak-residence/floor-plan-3bhk.jpg"
+        : slug === "koramangala-luxury-villa"
+        ? "/images/projects/koramangala-luxury-villa/drawing-details.png"
+        : slug === "the-modernist-3bhk"
+        ? "/images/projects/the-modernist-3bhk/living-tv-bar.png"
+        : slug === "urban-scandi-3bhk"
+        ? "/images/projects/urban-scandi-3bhk/kitchen-cad.png"
+        : slug === "the-hitesh-ria-residence"
+        ? "/images/projects/the-hitesh-ria-residence/living-tv-cad.png"
+        : slug === "akanchha-harsh-residence"
+        ? "/images/projects/akanchha-harsh-residence/kitchen-cad.png"
+        : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+        ? "/images/projects/5bhk-villa/study-unit-variations.jpg"
+        : slug === "casagrand-florella-villa"
+        ? "/images/projects/casagrand-florella/dining-crockery-cad.png"
+        : slug === "platinum-greenfields-residence"
+        ? "/images/projects/platinum-greenfields/foyer-cad.png"
+        : slug === "sattva-greenage-residence"
+        ? "/images/projects/sattva-greenage/living-passage-cad.png"
+        : slug === "mahaveer-ranches-residence"
+        ? "/images/projects/mahaveer-ranches/kitchen-cad.png"
+        : slug === "wonderwall-penthouse"
+        ? "/images/projects/wonderwall-penthouse/kitchen-cad.png"
+        : slug === "cafe-aroma-express"
+        ? "/images/projects/cafe-aroma-express/service-bar.png"
+        : slug === "ekkat-boutique"
+        ? "/images/projects/ekkat-boutique/cad-reception-counter.png"
+        : slug === "sunlit-abode"
+        ? "/images/projects/sunlit-abode/floor-plan.svg"
+        : slug === "the-meadow-home"
+        ? "/images/projects/the-meadow-home/floor-plan.svg"
+        : slug === "olive-and-oak"
+        ? "/images/projects/olive-and-oak/floor-plan.svg"
+        : project.spatialStudy?.floorPlanImage || project.heroImage,
+
+    afterImage:
+      slug === "mr-vivek-residence"
+        ? "/images/projects/mr-vivek-residence/hero-living-tv-unit.png"
+        : slug === "the-calm-house"
+        ? "/images/projects/sarthak-residence/living-dining-panorama.png"
+        : slug === "koramangala-luxury-villa"
+        ? "/images/projects/koramangala-luxury-villa/drawing-room.png"
+        : slug === "the-modernist-3bhk"
+        ? "/images/projects/the-modernist-3bhk/hero.png"
+        : slug === "urban-scandi-3bhk"
+        ? "/images/projects/urban-scandi-3bhk/hero.png"
+        : slug === "the-hitesh-ria-residence"
+        ? "/images/projects/the-hitesh-ria-residence/living-room.png"
+        : slug === "akanchha-harsh-residence"
+        ? "/images/projects/akanchha-harsh-residence/kitchen-3d.png"
+        : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+        ? "/images/projects/5bhk-villa/master-bedroom-quartzite-sconces.jpg"
+        : slug === "casagrand-florella-villa"
+        ? "/images/projects/casagrand-florella/dining-crockery-3d.png"
+        : slug === "platinum-greenfields-residence"
+        ? "/images/projects/platinum-greenfields/foyer-3d.png"
+        : slug === "sattva-greenage-residence"
+        ? "/images/projects/sattva-greenage/hero.png"
+        : slug === "mahaveer-ranches-residence"
+        ? "/images/projects/mahaveer-ranches/hero.png"
+        : slug === "wonderwall-penthouse"
+        ? "/images/projects/wonderwall-penthouse/fluted-credenza-3d.png"
+        : slug === "cafe-aroma-express"
+        ? "/images/projects/cafe-aroma-express/hero.png"
+        : slug === "ekkat-boutique"
+        ? "/images/projects/ekkat-boutique/reception-cash-wrap.png"
+        : slug === "sunlit-abode"
+        ? "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
+        : slug === "the-meadow-home"
+        ? "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80"
+        : slug === "olive-and-oak"
+        ? "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80"
+        : project.heroImage,
+
+    beforeLabel:
+      slug === "mr-vivek-residence"
+        ? "AutoCAD 2D Drawing (DWG-01)"
+        : slug === "the-calm-house"
+        ? "AutoCAD Layout Plan"
+        : slug === "koramangala-luxury-villa"
+        ? "AutoCAD 2D Elevation (DWG-D01)"
+        : slug === "the-modernist-3bhk"
+        ? "AutoCAD Elevation (DWG-01)"
+        : slug === "urban-scandi-3bhk"
+        ? "AutoCAD Working Drawing"
+        : slug === "the-hitesh-ria-residence"
+        ? "AutoCAD Elevation (DWG-02)"
+        : slug === "akanchha-harsh-residence"
+        ? "AutoCAD Joinery Plan"
+        : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+        ? "AutoCAD 2D Elevations (DWG-04)"
+        : slug === "casagrand-florella-villa"
+        ? "AutoCAD Elevation"
+        : slug === "platinum-greenfields-residence"
+        ? "AutoCAD Shop Drawing"
+        : slug === "sattva-greenage-residence"
+        ? "AutoCAD 2D Plan"
+        : slug === "mahaveer-ranches-residence"
+        ? "AutoCAD Joinery Elevation"
+        : slug === "wonderwall-penthouse"
+        ? "AutoCAD Technical Drawing"
+        : slug === "cafe-aroma-express"
+        ? "Architectural Bar Elevation"
+        : slug === "ekkat-boutique"
+        ? "AutoCAD Detail (RC-002)"
+        : "2D Architectural Drawing",
+
+    afterLabel:
+      slug === "mr-vivek-residence"
+        ? "3D Render: Arched TV Wall"
+        : slug === "the-calm-house"
+        ? "Photorealistic 3D Render"
+        : slug === "koramangala-luxury-villa"
+        ? "3D Photorealistic Render"
+        : slug === "the-modernist-3bhk"
+        ? "3D Spatial Visualization"
+        : slug === "urban-scandi-3bhk"
+        ? "3D Rendered Perspective"
+        : slug === "the-hitesh-ria-residence"
+        ? "3D Final Visualization"
+        : slug === "akanchha-harsh-residence"
+        ? "3D Kitchen Perspective"
+        : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+        ? "3D Rendered Perspective"
+        : slug === "casagrand-florella-villa"
+        ? "3D Rendered Vitrine"
+        : slug === "platinum-greenfields-residence"
+        ? "3D Render Perspective"
+        : slug === "sattva-greenage-residence"
+        ? "3D Space Render"
+        : slug === "mahaveer-ranches-residence"
+        ? "3D Kitchen Perspective"
+        : slug === "wonderwall-penthouse"
+        ? "3D Interior Model"
+        : slug === "cafe-aroma-express"
+        ? "3D Customer Experience"
+        : slug === "ekkat-boutique"
+        ? "3D Rendered Perspective"
+        : "3D Photorealistic Render",
+
+    title:
+      slug === "mr-vivek-residence"
+        ? "Living TV Wall: From CAD Drawing to 3D Reality"
+        : slug === "the-calm-house"
+        ? "Living & Dining Flow: Blueprint to 3D Reality"
+        : slug === "koramangala-luxury-villa"
+        ? "Sunken Drawing Salon: 2D Joinery Elevation to 3D Reality"
+        : slug === "the-modernist-3bhk"
+        ? "Marble TV Wall & Bar Vitrine: CAD to 3D Visualization"
+        : slug === "urban-scandi-3bhk"
+        ? "Nordic Modular Kitchen: Joinery Plan to 3D Finish"
+        : slug === "the-hitesh-ria-residence"
+        ? "Acoustic Charcoal TV Wall: CAD Drawing to 3D Reality"
+        : slug === "akanchha-harsh-residence"
+        ? "L-Shaped White PU Shaker Kitchen: CAD to 3D Reality"
+        : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+        ? "Master Suite Architecture: 2D Elevations to 3D Space"
+        : slug === "casagrand-florella-villa"
+        ? "Dining Crockery & Pooja Vitrine: CAD to 3D Execution"
+        : slug === "platinum-greenfields-residence"
+        ? "Entrance Foyer Shoe Credenza: Blueprint to 3D"
+        : slug === "sattva-greenage-residence"
+        ? "Living Passage & TV Console: 2D Blueprint to 3D Reality"
+        : slug === "mahaveer-ranches-residence"
+        ? "Modular Kitchen Architecture: CAD Elevation to 3D Render"
+        : slug === "wonderwall-penthouse"
+        ? "Curved Joinery & Kitchen: CAD Drawing to 3D Reality"
+        : slug === "cafe-aroma-express"
+        ? "Espresso Bar & Dining Canopy: Drawing to 3D Environment"
+        : slug === "ekkat-boutique"
+        ? "Sculptural Cash Wrap & Counter: Shop Drawing to 3D Reality"
+        : `${project.title}: 2D Blueprint to 3D Reality`,
+
+    caption:
+      slug === "mr-vivek-residence"
+        ? "Slide horizontally to compare the technical AutoCAD wall elevation with the final rendered finish featuring 2700K ambient cove lighting and acoustic oak battens."
+        : slug === "the-calm-house"
+        ? "Slide to observe how the furniture layout plan transforms into an airy, interconnected living and dining hall with custom neoclassical fluted mouldings."
+        : slug === "koramangala-luxury-villa"
+        ? "Slide horizontally to compare the dimensioned CAD joinery drawing with the sunken conversation lounge, nested marble cocktail tables, and recessed 2700K cove lighting."
+        : slug === "the-modernist-3bhk"
+        ? "Slide to inspect the transition from millimeter-precision CAD shop drawings to the finished living wall featuring Armonico Grigio bookmatched marble and brushed gold aluminum reeded glass."
+        : slug === "urban-scandi-3bhk"
+        ? "Slide horizontally to compare the L-shaped modular kitchen layout with ventilated wicker pull-out baskets against the finished sage green shaker cabinetry."
+        : slug === "the-hitesh-ria-residence"
+        ? "Slide to compare the technical wall section with vertical acoustic charcoal slats and cantilevered walnut credenza against the final illuminated living space."
+        : slug === "akanchha-harsh-residence"
+        ? "Slide to compare the millimeter working elevation featuring Hafele tandembox drawers with the finished ultra-matte white shaker kitchen."
+        : slug === "terracotta-villa" || slug === "5-bhk-luxury-villa"
+        ? "Slide to observe the technical joinery drawings for the study unit and bedhead cove transforming into a warm sanctuary of walnut, terracotta plaster, and backlit Patagonia quartzite."
+        : slug === "casagrand-florella-villa"
+        ? "Slide to inspect how the classical double-frame wall moulding specifications translate into an illuminated tinted glass vitrine."
+        : slug === "platinum-greenfields-residence"
+        ? "Slide to observe the floating shoe console with vertical slatted brass divider transforming from 2D shop drawings to finished reality."
+        : slug === "sattva-greenage-residence"
+        ? "Slide to compare the living passage wall blueprint with the finished stone veneer and floating walnut drawer ledge."
+        : slug === "mahaveer-ranches-residence"
+        ? "Slide to compare the kitchen base carcass with 300mm wall units and dedicated chimney duct encasement against the final render."
+        : slug === "wonderwall-penthouse"
+        ? "Slide to compare the custom dual-counter modular kitchen elevations with the finished 3D interior model featuring fluted credenzas."
+        : slug === "cafe-aroma-express"
+        ? "Slide to compare the fluted blonde oak service counter drawings with the completed hospitality atmosphere and warm Scandinavian lighting."
+        : slug === "ekkat-boutique"
+        ? "Slide horizontally to compare the dimensioned 1:10 shop drawing (DWG RC-002) with the fully rendered sage green reception counter and fluted timber paneling."
+        : "Slide horizontally to compare the technical 2D AutoCAD drafting with the completed 3D photorealistic visualization.",
+  };
+
   return (
     <main className="min-h-screen bg-paper text-brown selection:bg-sunflower selection:text-brown relative overflow-hidden">
       <Header />
@@ -397,28 +681,40 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <div className="pt-2 flex flex-wrap items-center gap-2">
               <span className="text-[10px] font-mono uppercase tracking-wider text-brown-soft">Jump to:</span>
               <a
+                href="#2d-to-3d"
+                className="px-2.5 py-1 rounded-full bg-paper-card border border-stone/40 text-[10px] font-mono text-brown hover:border-sunflower transition-colors"
+              >
+                03 2D to 3D
+              </a>
+              <a
+                href="#moodboard"
+                className="px-2.5 py-1 rounded-full bg-paper-card border border-stone/40 text-[10px] font-mono text-brown hover:border-sunflower transition-colors"
+              >
+                04 Moodboard
+              </a>
+              <a
                 href="#space-planning"
                 className="px-2.5 py-1 rounded-full bg-paper-card border border-stone/40 text-[10px] font-mono text-brown hover:border-sunflower transition-colors"
               >
-                04 Space Planning
+                05 Space Planning
               </a>
               <a
                 href="#elevations"
                 className="px-2.5 py-1 rounded-full bg-paper-card border border-stone/40 text-[10px] font-mono text-brown hover:border-sunflower transition-colors"
               >
-                05 2D Details
+                06 2D Details
               </a>
               <a
                 href="#visualizations"
                 className="px-2.5 py-1 rounded-full bg-paper-card border border-stone/40 text-[10px] font-mono text-brown hover:border-sunflower transition-colors"
               >
-                06 3D Views
+                07 3D Views
               </a>
               <a
                 href="#decisions"
                 className="px-2.5 py-1 rounded-full bg-paper-card border border-stone/40 text-[10px] font-mono text-brown hover:border-sunflower transition-colors"
               >
-                07 Design Logic
+                08 Design Logic
               </a>
             </div>
           </div>
@@ -515,20 +811,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {/* Image 1 */}
             <div className="sm:col-span-5 relative aspect-[4/4.8] rounded-2xl overflow-hidden shadow-sm border border-stone/30 group">
               <Image
-                src={
-                  slug === "the-calm-house"
-                    ? "/images/projects/sarthak-residence/dining-crockery-bar.jpg"
-                    : slug === "mr-vivek-residence"
-                    ? "/images/projects/mr-vivek-residence/modular-kitchen-island.png"
-                    : "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=80"
-                }
-                alt={
-                  slug === "the-calm-house"
-                    ? "Dining Room & Arched Bar Unit"
-                    : slug === "mr-vivek-residence"
-                    ? "Modular Kitchen in Champagne Taupe with Smoked Glass"
-                    : "Dining Room Perspective with Warm Teak and Cane"
-                }
+                src={storyImage1}
+                alt={storyAlt1}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
               />
@@ -537,20 +821,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {/* Image 2 */}
             <div className="sm:col-span-4 relative aspect-[4/4.8] rounded-2xl overflow-hidden shadow-sm border border-stone/30 group">
               <Image
-                src={
-                  slug === "the-calm-house"
-                    ? "/images/projects/sarthak-residence/foyer-console-accent-wall.png"
-                    : slug === "mr-vivek-residence"
-                    ? "/images/projects/mr-vivek-residence/master-bedroom-arch-headboard.png"
-                    : "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80"
-                }
-                alt={
-                  slug === "the-calm-house"
-                    ? "Entrance Foyer Console & Arched Lighting Wall"
-                    : slug === "mr-vivek-residence"
-                    ? "Master Bedroom Suite with Glowing Arch Headboard"
-                    : "Master Bedroom with Curved Niche Headboard"
-                }
+                src={storyImage2}
+                alt={storyAlt2}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
               />
@@ -572,10 +844,46 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
+      <WavyDivider fill="#FFFDF7" position="bottom" />
+
       {/* =========================================================
-          3. MOODBOARD & MATERIAL DIRECTION
+          3. 2D TO 3D BLUEPRINT-TO-REALITY TRANSFORMATION SLIDER
+             (Section 03: Interactive 2D CAD vs 3D Render Comparison)
          ========================================================= */}
-      <section className="py-20 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
+      <section id="2d-to-3d" className="py-20 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
+        <div className="mb-10 border-b border-stone/40 pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <AnimatedHeading
+              as="h2"
+              className="font-display text-4xl sm:text-5xl text-brown font-normal"
+              eyebrow="AUTOCAD 2D BLUEPRINT ⇄ PHOTOREALISTIC 3D REALITY"
+            >
+              2D to 3D Spatial Transformation
+            </AnimatedHeading>
+          </div>
+          <PaperNote rotate="right" hasTape={false} className="text-xl">
+            Slide with finger to compare ♡
+          </PaperNote>
+        </div>
+
+        <div className="rounded-3xl overflow-hidden border border-stone/40 shadow-xl bg-paper-card">
+          <BeforeAfterSlider
+            beforeImage={sliderConfig.beforeImage}
+            afterImage={sliderConfig.afterImage}
+            beforeLabel={sliderConfig.beforeLabel}
+            afterLabel={sliderConfig.afterLabel}
+            title={sliderConfig.title}
+            caption={sliderConfig.caption}
+          />
+        </div>
+      </section>
+
+      <WavyDivider fill="#FFFDF7" position="bottom" />
+
+      {/* =========================================================
+          4. MOODBOARD & MATERIAL DIRECTION
+         ========================================================= */}
+      <section id="moodboard" className="py-20 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
         <div className="mb-12 border-b border-stone/40 pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <AnimatedHeading
@@ -615,9 +923,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <WavyDivider fill="#FFFDF7" position="bottom" />
 
       {/* =========================================================
-          4. SPACE PLANNING & 2D ARCHITECTURAL FLOOR PLAN
+          5. SPACE PLANNING & 2D ARCHITECTURAL FLOOR PLAN
          ========================================================= */}
-      <section className="py-20 px-6 md:px-12 lg:px-16 bg-paper-card border-b border-stone/30 relative overflow-hidden">
+      <section id="space-planning" className="py-20 px-6 md:px-12 lg:px-16 bg-paper-card border-b border-stone/30 relative overflow-hidden">
         {/* Subtle Architectural CAD Floor Plan Watermark */}
         <ArchitecturalFloorPlanWatermark
           variant="detailed"
@@ -664,9 +972,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </section>
 
       {/* =========================================================
-          5. 2D DESIGN DETAILS (Architectural Elevations)
+          6. 2D DESIGN DETAILS (Architectural Elevations)
          ========================================================= */}
-      <section className="py-20 px-6 md:px-12 lg:px-16 max-w-master mx-auto relative overflow-hidden">
+      <section id="elevations" className="py-20 px-6 md:px-12 lg:px-16 max-w-master mx-auto relative overflow-hidden">
         {/* Subtle Elevation CAD Watermark */}
         <ArchitecturalFloorPlanWatermark
           variant="elevation"
@@ -1199,9 +1507,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <WavyDivider fill="#FFFDF7" position="bottom" />
 
       {/* =========================================================
-          6. 3D VISUALIZATIONS (4 Arched Cards)
+          7. 3D VISUALIZATIONS (Interactive 3D Perspectives & Gallery)
          ========================================================= */}
-      <section className="py-20 px-6 md:px-12 lg:px-16 bg-paper-card border-b border-stone/30">
+      <section id="visualizations" className="py-20 px-6 md:px-12 lg:px-16 bg-paper-card border-b border-stone/30">
         <div className="max-w-master mx-auto">
           <div className="mb-12 border-b border-stone/40 pb-4">
             <h2 className="font-display text-4xl sm:text-5xl text-brown font-normal">
@@ -1210,66 +1518,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <div className="text-[11px] uppercase tracking-[0.2em] font-sans font-semibold text-brown-soft mt-1">
               REAL SPACES · REAL TEXTURES · REAL FEEL
             </div>
-          </div>
-
-          {/* Interactive Blueprint-to-Reality Transformation Slider */}
-          <div className="mb-14">
-            <BeforeAfterSlider
-              beforeImage={
-                slug === "mr-vivek-residence"
-                  ? "/images/projects/mr-vivek-residence/cad-living-tv-unit.png"
-                  : slug === "the-calm-house"
-                  ? "/images/projects/sarthak-residence/floor-plan-3bhk.jpg"
-                  : slug === "ekkat-boutique"
-                  ? "/images/projects/ekkat-boutique/cad-master-floor-plan.png"
-                  : project.spatialStudy?.floorPlanImage || project.heroImage
-              }
-              afterImage={
-                slug === "mr-vivek-residence"
-                  ? "/images/projects/mr-vivek-residence/hero-living-tv-unit.png"
-                  : slug === "the-calm-house"
-                  ? "/images/projects/sarthak-residence/living-dining-panorama.png"
-                  : slug === "ekkat-boutique"
-                  ? "/images/projects/ekkat-boutique/axonometric-furnished-cutaway.jpg"
-                  : project.heroImage
-              }
-              beforeLabel={
-                slug === "mr-vivek-residence"
-                  ? "AutoCAD 2D Drawing (DWG-01)"
-                  : slug === "the-calm-house"
-                  ? "2D Furniture Layout Blueprint"
-                  : slug === "ekkat-boutique"
-                  ? "AutoCAD Master Plan (A-106 REV 06)"
-                  : "Architectural Planning"
-              }
-              afterLabel={
-                slug === "mr-vivek-residence"
-                  ? "3D Render: Arched TV Wall"
-                  : slug === "the-calm-house"
-                  ? "3D Render: Living & Dining Flow"
-                  : slug === "ekkat-boutique"
-                  ? "3D Furnished Cutaway Model"
-                  : "Final Photorealistic Render"
-              }
-              title={
-                slug === "mr-vivek-residence"
-                  ? "Living TV Wall: From CAD Drawing to 3D Reality"
-                  : slug === "the-calm-house"
-                  ? "Open Living & Dining Flow: Blueprint to Reality"
-                  : slug === "ekkat-boutique"
-                  ? "Ekkat Flagship Architecture: Master Plan to 3D Furnished Cutaway"
-                  : "Spatial Blueprint to Reality Transformation"
-              }
-              caption={
-                slug === "mr-vivek-residence"
-                  ? "Slide horizontally to compare the technical AutoCAD wall elevation with the final rendered finish featuring 2700K ambient cove lighting and acoustic oak battens."
-                  : slug === "the-calm-house"
-                  ? "Slide to observe how the furniture layout plan transforms into an airy, interconnected living and dining hall with custom fluted mouldings."
-                  : slug === "ekkat-boutique"
-                  ? "Slide horizontally to compare the dimensioned 20.9m architectural floor plan (Drawing A-106 REV 06) with the fully furnished 3D isometric cutaway assembly showing reception, central display aisles, and rear suites."
-                  : "Slide to compare the technical spatial design with the finished photorealistic visualization."
-              }
-            />
           </div>
 
           {project.spatialStudy?.gallery && project.spatialStudy.gallery.length > 0 ? (
@@ -1342,9 +1590,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </section>
 
       {/* =========================================================
-          7. WHAT WAS DESIGNED & DESIGN DECISIONS
+          8. WHAT WAS DESIGNED & DESIGN DECISIONS
          ========================================================= */}
-      <section className="py-20 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
+      <section id="decisions" className="py-20 px-6 md:px-12 lg:px-16 max-w-master mx-auto">
         <div className="mb-12 border-b border-stone/40 pb-4">
           <h2 className="font-display text-4xl sm:text-5xl text-brown font-normal">
             What Was Designed
