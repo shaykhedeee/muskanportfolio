@@ -202,8 +202,8 @@ export function BeforeAfterSlider({
           className="absolute top-0 bottom-0 w-0.5 bg-white shadow-2xl z-20 pointer-events-none"
           style={{ left: `${sliderPosition}%` }}
         >
-          {/* Centered Circular Handle */}
-          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-sunflower text-charcoal shadow-2xl border-2 border-white flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing hover:scale-110 transition-transform">
+          {/* Centered Circular Handle with enlarged touch hit area */}
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-sunflower text-charcoal shadow-2xl border-2 border-white flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing hover:scale-110 active:scale-95 transition-transform card-sexy-glow ring-4 ring-black/15">
             <MoveHorizontal className="w-5 h-5 text-charcoal" />
           </div>
         </div>

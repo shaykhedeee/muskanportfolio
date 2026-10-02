@@ -63,8 +63,9 @@ export function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [dragOffset, setDragOffset] = useState<number>(0);
 
-  // Auto-advance every 10 seconds (10000ms), pausing on hover
+  // Auto-advance every 10 seconds (10000ms), pausing on hover or touch drag
   useEffect(() => {
     if (isPaused) return;
 
@@ -85,21 +86,40 @@ export function TestimonialSlider() {
     setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsPaused(true);
+    setTouchStart(e.touches[0].clientX);
+    setDragOffset(0);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - touchStart;
+    setDragOffset(diff * 0.75);
+  };
+
+  const handleTouchEnd = () => {
+    if (dragOffset > 45) {
+      handlePrev();
+    } else if (dragOffset < -45) {
+      handleNext();
+    }
+    setTouchStart(null);
+    setDragOffset(0);
+    setIsPaused(false);
+  };
+
   const current = TESTIMONIALS[currentIndex];
 
   return (
     <div
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
-      onTouchEnd={(e) => {
-        if (touchStart === null) return;
-        const diff = touchStart - e.changedTouches[0].clientX;
-        if (diff > 50) handleNext();
-        else if (diff < -50) handlePrev();
-        setTouchStart(null);
-      }}
-      className="bg-paper-card p-4 sm:p-5 rounded-2xl border border-stone/40 shadow-xs relative overflow-hidden transition-all duration-300"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      className="bg-paper-card p-4 sm:p-5 rounded-2xl border border-stone/40 shadow-xs relative overflow-hidden transition-all duration-300 touch-pan-y"
     >
       {/* 10-second progress bar indicator */}
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-stone/20">
@@ -142,42 +162,49 @@ export function TestimonialSlider() {
         </div>
       </div>
 
-      {/* Testimonial Quote with Smooth Fade */}
-      <div className="min-h-[72px] sm:min-h-[64px] flex items-center mb-3">
-        <p
-          key={`quote-${current.id}`}
-          className="font-sans text-brown text-xs sm:text-[13px] italic leading-relaxed animate-fade-in"
-        >
-          &ldquo;{current.quote}&rdquo;
-        </p>
-      </div>
-
-      {/* Author Info & Project Badge */}
-      <div className="flex items-center justify-between pt-2 border-t border-stone/20">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-full bg-paper border border-stone/40 overflow-hidden relative shrink-0">
-            <Image
-              src={current.avatar}
-              alt={current.name}
-              fill
-              sizes="32px"
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <div className="font-display text-sm text-brown font-normal leading-tight">
-              {current.name}
-            </div>
-            <div className="text-[9px] uppercase tracking-wider text-brown-soft">
-              {current.role}, {current.location}
-            </div>
-          </div>
+      {/* Testimonial Quote with Dynamic Finger Drag Feedback */}
+      <div
+        style={{
+          transform: `translateX(${dragOffset}px)`,
+          transition: dragOffset === 0 ? "transform 0.35s cubic-bezier(0.22, 1, 0.36, 1)" : "none",
+        }}
+      >
+        <div className="min-h-[72px] sm:min-h-[64px] flex items-center mb-3">
+          <p
+            key={`quote-${current.id}`}
+            className="font-sans text-brown text-xs sm:text-[13px] italic leading-relaxed animate-fade-in"
+          >
+            &ldquo;{current.quote}&rdquo;
+          </p>
         </div>
 
-        {/* Project Tag */}
-        <span className="text-[9px] font-mono font-medium px-2 py-0.5 rounded-full bg-paper border border-stone/30 text-olive shrink-0">
-          {current.project}
-        </span>
+        {/* Author Info & Project Badge */}
+        <div className="flex items-center justify-between pt-2 border-t border-stone/20">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-full bg-paper border border-stone/40 overflow-hidden relative shrink-0">
+              <Image
+                src={current.avatar}
+                alt={current.name}
+                fill
+                sizes="32px"
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <div className="font-display text-sm text-brown font-normal leading-tight">
+                {current.name}
+              </div>
+              <div className="text-[9px] uppercase tracking-wider text-brown-soft">
+                {current.role}, {current.location}
+              </div>
+            </div>
+          </div>
+
+          {/* Project Tag */}
+          <span className="text-[9px] font-mono font-medium px-2 py-0.5 rounded-full bg-paper border border-stone/30 text-olive shrink-0">
+            {current.project}
+          </span>
+        </div>
       </div>
 
       {/* Interactive Dots Pagination */}

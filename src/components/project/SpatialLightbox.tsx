@@ -32,6 +32,32 @@ export const SpatialLightbox: React.FC<SpatialLightboxProps> = ({
     onIndexChange((currentIndex + 1) % images.length);
   }, [currentIndex, images.length, onIndexChange]);
 
+  const [touchStart, setTouchStart] = React.useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
+
+  const minSwipeDistance = 45;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      handleNext();
+    } else if (isRightSwipe) {
+      handlePrev();
+    }
+  };
+
   // Keyboard navigation
   useEffect(() => {
     if (!isOpen) return;
@@ -87,8 +113,13 @@ export const SpatialLightbox: React.FC<SpatialLightboxProps> = ({
           </div>
         </div>
 
-        {/* Main Render Image Area */}
-        <div className="relative w-full h-[55vh] md:h-[65vh] bg-[#1E1815] flex items-center justify-center overflow-hidden">
+        {/* Main Render Image Area with Touch Swipe */}
+        <div
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+          className="relative w-full h-[55vh] md:h-[65vh] bg-[#1E1815] flex items-center justify-center overflow-hidden touch-pan-y"
+        >
           <Image
             src={currentImage.url}
             alt={currentImage.caption || currentImage.viewLabel}

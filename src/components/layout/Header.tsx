@@ -275,7 +275,7 @@ export function Header() {
                       playTap();
                       setMobileMenuOpen(false);
                     }}
-                    className="text-lg font-display text-brown hover:text-olive transition-colors flex items-center justify-between"
+                    className="text-lg font-display text-brown hover:text-olive transition-colors flex items-center justify-between py-2.5 px-1 cursor-pointer"
                   >
                     <span>{link.label}</span>
                     <span className="text-xs font-mono text-stone-dark">→</span>
