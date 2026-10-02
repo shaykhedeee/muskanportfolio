@@ -16,6 +16,12 @@ export const metadata: Metadata = {
 
 export default async function ProjectsIndexPage() {
   const projects = await getProjects();
+  const residentialCount = projects.filter(
+    (p) => p.category === "Residential" || p.category === "Villa"
+  ).length;
+  const commercialCount = projects.filter(
+    (p) => p.category === "Commercial" || p.category === "Hospitality" || p.category === "Café Interior"
+  ).length;
 
   return (
     <main className="min-h-screen bg-paper text-brown selection:bg-sunflower selection:text-brown">
@@ -50,7 +56,7 @@ export default async function ProjectsIndexPage() {
                 COMPLETE PORTFOLIO INDEX
               </span>
               <span className="text-[10px] sm:text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-olive/15 text-olive font-semibold">
-                25 Curated Works (13 Residential & Villa · 3 Commercial · 9 Furniture)
+                {projects.length + 9} Curated Works ({residentialCount} Residential &amp; Villa · {commercialCount} Commercial · 9 Furniture)
               </span>
             </div>
             <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl text-brown font-normal leading-tight">
