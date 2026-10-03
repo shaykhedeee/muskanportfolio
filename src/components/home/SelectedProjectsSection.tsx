@@ -307,16 +307,13 @@ export function SelectedProjectsSection({
                     <div className="absolute inset-0 rounded-t-[140px] sm:rounded-t-[180px] md:rounded-t-[220px] rounded-b-3xl border border-sunflower/40 pointer-events-none" />
                   )}
 
-                  {/* Top Floating Glassmorphism Tag */}
-                  <div className="absolute top-5 left-6 right-6 flex items-center justify-between z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-charcoal/70 backdrop-blur-md border border-white/20 text-white text-[10px] font-mono tracking-widest uppercase shadow-sm">
-                      <Sparkles className="w-3 h-3 text-sunflower" />
+                  {/* Centered Arch Apex Floating Tag - Placed at arch summit to avoid curved edge clipping */}
+                  <div className="absolute top-6 sm:top-8 inset-x-0 mx-auto flex items-center justify-center z-10 pointer-events-none px-4">
+                    <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-charcoal/85 backdrop-blur-md border border-white/25 text-white text-[10px] font-mono tracking-widest uppercase shadow-lg">
+                      <Sparkles className="w-3 h-3 text-sunflower shrink-0" />
                       <span>{proj.number} · {proj.category}</span>
-                    </span>
-
-                    <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-paper/20 backdrop-blur-md border border-white/20 text-white text-[10px] font-sans font-medium">
-                      <MapPin className="w-3 h-3 text-sunflower" />
-                      <span>{proj.location}</span>
+                      <span className="text-white/40">·</span>
+                      <span className="text-stone-light/90">{proj.location}</span>
                     </span>
                   </div>
 

@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
@@ -48,3 +48,7 @@ desktop.ini
 
 # Unhydrated cloud placeholders
 floorplan.pdf
+
+# Local image slide backups and temporary test files
+public/images/projects_original_slides/
+scripts/slide-index.html
